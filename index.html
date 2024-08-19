@@ -6,7 +6,7 @@
         content="Evaluating mathematical reasoning of foundation models in visual contexts">
   <meta name="keywords" content="MathVista, Math Vista">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> UniGen: A Unified Framework for Textual Dataset Generation Using Large Language Models</title>
+  <title> Is LLM-as-a-Judge Reliable? An In-Depth Examination On Its Bias</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
@@ -52,7 +52,7 @@
   <script src="./visualizer/data/data_public.js" defer></script>
     <style>
         table {
-            width: 80%; /* 将整体宽度减小 */
+            width: 100%; /* 将整体宽度减小 */
             border-collapse: collapse;
             margin: auto; /* 让表格居中显示 */
         }
@@ -79,6 +79,12 @@
         }
         .xcheck {
             color: lightskyblue;
+        }
+        caption {
+            caption-side: top;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 8px;
         }
 .hero {
     position: relative;
@@ -159,10 +165,13 @@
             <b>TrustLLM</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
           </a>
           <a class="navbar-item" href="https://mllm-judge.github.io">
-            MLLM-as-a-Judge
+            <b>MLLM-as-a-Judge</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
           </a>
           <a class="navbar-item" href="https://llm-coauthor.github.io/">
             LLM-as-a-Coauthor
+          </a>
+          <a class="navbar-item" href="https://unigen-framework.github.io/">
+            UniGen
           </a>
         </div>
       </div>
@@ -173,74 +182,55 @@
 
 
 <section class="hero">
-    <div class="background"></div> <!-- 添加的背景层 -->
+    <!-- <div class="background"></div> 添加的背景层 -->
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title is-bold">
+          <!-- <h1 class="title is-1 publication-title is-bold">
             <img src="static/images/unigen_logo.png" style="width:7em;vertical-align: middle" alt="Logo"/>
-            <!-- <span class="mathvista" style="vertical-align: middle">UniGen</span> -->
-            </h1>
+            </h1> -->
             <h2 class="subtitle is-3 publication-subtitle" style="color: rgb(255, 255, 255); font-weight: bold; text-shadow: 2px 2px 4px rgba(255,255,255, 0.5);">
-    <span style="color: rgb(59, 120, 85); font-weight: bold;">A Unified Framework for Textual Dataset Generation Using Large Language Models</span>
+    <span style="color: rgb(0,0, 0); font-weight: bold;">Is LLM-as-a-Judge Reliable? An In-Depth Examination On Its Bias</span>
             </h2>
 
-        <div class="is-size-5 publication-authors">
-            <span class="author-block">
-                <a href="https://siyuan-5.github.io/">Siyuan Wu</a><sup style="color:#6fbf73;">1*</sup>,
-            </span>
-            <span class="author-block">
-                <a href="https://howiehwong.github.io/">Yue Huang</a><sup style="color:#ed4b82;">2*</sup>,
-            </span>
-            <span class="author-block">
-                <a href="https://flossiee.github.io/">Chujie Gao</a><sup style="color:#6fbf73;">1</sup>,
-            </span>
-            <span class="author-block">
-                <a href="https://dongping-chen.github.io/">Dongping Chen</a><sup style="color:#6fbf73;">1</sup>,
-            </span>
-            <span class="author-block">
-                <a href="https://mask-hui.github.io/">Qihui Zhang</a><sup style="color:#6fbf73;">1</sup>,
-            </span>
-            <span class="author-block">
-                <a href="http://wanyao.me/">Yao Wan</a><sup style="color:#6fbf73;">1†</sup>,
-            </span>
-            <span class="author-block">
-                <a href="https://tianyizhou.github.io/">Tianyi Zhou</a><sup style="color:#ffac33;">3</sup>,
-            </span>
-            <span class="author-block">
-                <a href="https://engineering.nd.edu/faculty/xiangliang-zhang/">Xiangliang Zhang</a><sup style="color:#ed4b82;">2†</sup>,
-            </span>
-            <span class="author-block">
-                <a href="https://www.microsoft.com/en-us/research/people/jfgao/">Jianfeng Gao</a><sup style="color:#9b59b6;">4</sup>,
-            </span>
-            <span class="author-block">
-                <a href="https://xiaocw11.github.io/">Chaowei Xiao</a><sup style="color:#3498db;">5</sup>,
-            </span>
-            <span class="author-block">
-                <a href="https://lichao-sun.github.io/">Lichao Sun</a><sup style="color:#a44c3c;">6</sup>
-            </span>
-        </div>
-        
-        <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup style="color:#6fbf73;">1</sup>Huazhong University of Science and Technology,</span>
-            <span class="author-block"><sup style="color:#ed4b82;">2</sup>University of Notre Dame,</span><br>
-            <span class="author-block"><sup style="color:#ffac33;">3</sup>University of Maryland, College Park,</span>
-            <span class="author-block"><sup style="color:#9b59b6;">4</sup>Microsoft Research,</span><br>
-            <span class="author-block"><sup style="color:#3498db;">5</sup>University of Wisconsin-Madison,</span>
-            <span class="author-block"><sup style="color:#a44c3c;">6</sup>Lehigh University</span>
-        </div>
-
-            <div>
-                (* Equal Contribution, † Corresponding Author)
-        </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                  <a href="#">Jiayi Ye</a><sup style="color:#6fbf73;">1*,†</sup>,
+              </span>
+              <span class="author-block">
+                  <a href="#">Yanbo Wang</a><sup style="color:#6fbf73;">1*,†</sup>,
+              </span>
+              <span class="author-block">
+                  <a href="https://howiehwong.github.io/">Yue Huang</a><sup style="color:#6fbf73;">1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://dongping-chen.github.io/">Dongping Chen</a><sup style="color:#3498db;">2</sup>,
+              </span>
+              <span class="author-block">
+                  <a href="https://mask-hui.github.io/">Qihui Zhang</a><sup style="color:#ed4b82;">3</sup>,
+              </span>
+              <span class="author-block">
+                  <a href="https://engineering.nd.edu/faculty/xiangliang-zhang/">Xiangliang Zhang</a><sup style="color:#6fbf73;">1††</sup>
+              </span>
+          </div>
+          
+          <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup style="color:#6fbf73;">1</sup>University of Notre Dame,</span>
+              <span class="author-block"><sup style="color:#3498db;">2</sup>University of Washington</span>
+              <span class="author-block"><sup style="color:#ed4b82;">3</sup>Peking University,</span>
+          </div>
+          
+          <div>
+              (* Equal Contribution, † Visiting students at University of Notre Dame, †† Corresponding Author)
+          </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
                 <!-- @PAN TODO: change links -->
-                <a href="https://arxiv.org/pdf/2406.18966" class="external-link button is-normal is-rounded is-dark">
+                <a href="#" class="external-link button is-normal is-rounded is-dark"><!-- TODO -->
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
@@ -248,7 +238,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2406.18966" class="external-link button is-normal is-rounded is-dark">
+                <a href="#" class="external-link button is-normal is-rounded is-dark"><!-- TODO -->
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -257,9 +247,9 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://gist.github.com/assets/59754221/20bb9a6e-e580-4b32-97f7-46f35d3c8c6e"
+                <a href="#" 
                    class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                  <span class="icon"> <!-- TODO --> 
                       <i class="fab fa-youtube"></i>
                   </span>
                   <span>Demo</span>
@@ -267,9 +257,9 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/HowieHwong/UniGen"
+                <a href="https://github.com/llm-judge-bias/llm-judge-bias.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                  <span class="icon">  <!-- TODO --> 
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
@@ -303,83 +293,70 @@
   </div>
 </section> -->
 
-
 <section class="section">
   <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
+        
         <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/figure1.png" alt="geometric reasoning" width="84%"/>
+              <p>The upper part illustrates an example of diversity bias in LLM-as-a-Judge scenarios, while the lower part displays the ranking of average consistency metrics across six models.</b>
+              </p>
+            </div>
+          </div>
              <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/architecture.png" alt="geometric reasoning" width="84%"/>
+              <img src="static/images/calm-framework.png" alt="geometric reasoning" width="84%"/>
               <p>
-                <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span>  framework: A comprehensive system for generating diverse, accurate, and controllable text datasets using Large Language Models, integrating original datasets, user-defined constraints, and innovative evaluation and post-processing mechanisms.
-
+                Our proposed framework: <strong>CALM</strong>
             </p>
             </div>
           </div>
-
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/overview_UniGen.png" alt="geometric reasoning" width="84%"/>
-              <p> <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span> framework</b>
-              </p>
-            </div>
-            
-          </div>
-
         </div>
       </div>
     </div>
 </section>
 
-<div class="video-container">
+<!-- <div class="video-container">
         <div class="video-title">How to Use UniGen?</div>
         <iframe src="https://www.youtube.com/embed/kWVC7GGGh2o" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    </div> -->
 
 
-<section class="section">
-  <div class="container" style="margin-bottom: 2vh;">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Introduction</h2>
-        <div class="content has-text-justified">
-            <p><b>Large Language Models (LLMs)</b> such as GPT-4 and Llama3 have significantly impacted various fields by enabling high-quality synthetic data generation and reducing dependence on expensive human-generated datasets. Despite this, challenges remain in the areas of generalization, controllability, diversity, and truthfulness within the existing generative frameworks.</p>
-            <p>To address these challenges, we present <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span>, a comprehensive LLM-powered framework designed to produce diverse, accurate, and highly controllable datasets. UniGen is adaptable, supporting all types of text datasets and enhancing the generative process through innovative mechanisms. To augment data diversity, UniGen incorporates an attribute-guided generation module and a group checking feature. For accuracy, it employs a code-based mathematical assessment for label verification alongside a retrieval-augmented generation technique for factual validation. The framework also allows for user-specified constraints, enabling customization of the data generation process to suit particular requirements.</p>
-            <p>Extensive experiments demonstrate the superior quality of data generated by <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span>, and each module within UniGen plays a critical role in this enhancement. Additionally, UniGen is applied in two practical scenarios: benchmarking LLMs and data augmentation. The results indicate that UniGen effectively supports dynamic and evolving benchmarking, and that data augmentation improves LLM capabilities in various domains, including agent-oriented abilities and reasoning skills.</p>
-           </div>
-          <div>
-            <h2 class="title is-3">Features</h2>
-              <div class="content has-text-justified">
-            <ul>
-                <li><strong>Generalization:</strong> UniGen supports all textual datasets as input to generate a new dataset.</li>
-                <li><strong>Diversity:</strong> Supports <em>Attribute-Guided Generation</em>, <em>Diverse Example Selection for ICL</em>, and <em>Group Checking</em> to enhance data diversity.</li>
-                <li><strong>Truthfulness:</strong> Equipped with <em>Self-Evaluation</em>, <em>Code-Based Validation</em>, and <em>RAG-Based Validation</em> to ensure truthfulness.</li>
-                <li><strong>Controllability:</strong> Accepts user <em>constraints</em> to make generation more controllable.</li>
-                <li><strong>Various Applications:</strong> Can be applied for <em>dynamic benchmarks</em> or <em>data augmentation</em>.</li>
-            </ul>
+    <section class="section">
+      <div class="container" style="margin-bottom: 2vh;">
+        <!-- Introduction. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Introduction</h2>
+            <div class="content has-text-justified">
+                <p>Large Language Models (LLMs) such as GPT-4 and Claude-3.5 have demonstrated their exceptional capabilities in various NLP tasks, including medical domain, education, LLM-based agents, and science. Recently, research has attempted to use LLMs to automatically evaluate responses and provide rewards, also known as LLM-as-a-Judge, typically in score-wise and pairwise settings, achieving remarkable accomplishments.</p>
+    
+                <p>However, despite the wide use of LLM-as-a-Judge, some studies have pointed out its vulnerability due to its inherent biases, doubting trustworthiness beyond the evaluation process and their adherence to trustworthy principles. Extensive experiments have been conducted to explore positional preference and other biases in LLM-as-a-Judge scenarios, showing that introduced biases could affect the fairness of LLMs significantly. Variations in model judgments highlight the presence of inconsistencies when certain biases are introduced.</p>
+    
+                <p>Although the previous studies have identified some biases in LLM-as-a-Judge, there is still potential for further investigation. Existing studies often lack comprehensive frameworks for assessing the various bias dimensions affecting LLM-as-a-Judge, relying too heavily on subjective human assessment, which incurs significant costs and introduces variability. Additionally, limited test data sizes and categories can lead to results that are not representative of actual bias levels.</p>
+    
+                <p>To address these issues, we propose <strong>CALM</strong>, a comprehensive and reliable framework for profiling biases in LLM-as-a-Judge scenarios. It encompasses 12 types of biases and includes datasets across three categories. <strong>CALM</strong> offers multiple metrics to quantify and systematically compare the magnitudes of different biases without relying on subjective human assessment. Our experiments involving six models reveal varying levels of resilience to biases, providing a basis for more consistent and rigorous future investigations in the realm of LLM-as-a-Judge.</p>
+            </div>
+    
+            <div>
+                <h2 class="title is-3">Contributions</h2>
+                <div class="content has-text-justified">
+                    <ul>
+                        <li><strong>Systematic Definition of Bias in LLM-as-a-Judge:</strong> We categorize and define all detectable potential biases in the LLM-as-a-Judge framework into 12 distinct types of bias that undermine reliability and trustworthiness.</li>
+                        <li><strong>Comprehensive Bias Evaluation Framework:</strong> We propose a comprehensive and reliable framework <strong>CALM</strong> for profiling biases in LLM-as-a-Judge with automated prompt construction and comparison to improve the integrity of the process without reliance on human resources.</li>
+                        <li><strong>Findings and Implications:</strong> We performed experiments on six mainstream LLMs using the <strong>CALM</strong> framework and presented a detailed analysis of each model's impact on various biases. The study's results indicate that while some models show significant fairness in judgment, there is still considerable room for improvement in achieving more robust judgment.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--/ Introduction. -->
       </div>
-    </div>
-          <br>
-          <div>
-              <h2 class="title is-3">Contributions</h2>
-              <div class="content has-text-justified">
-            <ul>
-                <li>We introduce a unified framework, <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span>, specifically designed for generating textual datasets via LLMs. <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span> accepts the original dataset, dataset description, and user constraints, as well as integrates different modules to ensure diversity, truthfulness, and controllability during generation.</li>
-                <li>We carry out extensive experiments to assess the effectiveness of <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span>, covering aspects such as data characterization, module efficacy, human evaluation, error analysis, and cost analysis. The results affirm that <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span> is proficient in dataset generation and suggests promising directions for future research. </li>
-                <li>Furthermore, we delve into two potential applications of <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span>—benchmarking LLMs and data augmentation. Our findings provide several key insights. For example, I) Most LLMs struggle with math-oriented datasets generated by <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span> (e.g., GSM8K). II) The benchmark performance of LLMs varies significantly across datasets generated by different LLMs. III) LLMs' capabilities across various aspects (e.g., agent-related abilities, reasoning skills) can be improved by fine-tuning based on the generated data. IV) A potential improvement of data augmentation still exists in knowledge-intensive datasets.</li>
-                <li>Based on the observations and findings presented, appendix discusses the limitations of the current framework for dataset generation and proposes potential improvement measures for future studies. These enhancements are considered from multiple perspectives, including error analysis, downstream applications, and LLM alignment.</li>
-            </ul>
+    </section>
 
-
-          </div>
-    <!--/ Abstract. -->
-</div>
-</section>
-
-<section class="section">
+<!-- <section class="section">
     <div class="container" style="margin-bottom: 2vh;">
         <div class="columns is-centered has-text-centered">
     <table>
@@ -502,16 +479,16 @@
     </table>
 </div>
         </div>
-</section>
+</section> -->
 
-<section class="section">
+<!-- <section class="section">
   <div class="container" style="margin-bottom: 2vh;">
     <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
         <h2 class="title is-3">Application I: Benchmarking</h2>
         <br>
-<!--<div class="content has-text-justified">-->
-<table>
+<div class="content has-text-justified">-->
+<!-- <table>
         <caption>The main results on generated datasets (i.e., gen.) and original datasets (i.e., ori.).</caption>
         <thead>
             <tr>
@@ -701,85 +678,304 @@
 
          </div>
         </div>
+</section> --> 
+<section class="section">
+  <div class="container">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+              <h2 class="title is-3">Consistency Scores Overview</h2>
+              <br>
+              <table>
+                  <caption>Consistency scores for various models across different metrics are presented. Dataset<sub>FR</sub> and Dataset<sub>AL</sub> represent Fact-Related datasets and Alignment datasets, respectively, while Rand<sub>FR</sub> and Rand<sub>AL</sub> indicate the consistency on these two datasets without changing any values.</caption>
+                  <thead>
+                      <tr>
+                          <th rowspan="2" style="vertical-align: middle;">Model</th>
+                          <th colspan="4">Dataset<sub>FR</sub> Consistency<span style="color: #8B0000;">↑</span></th>
+                          <th colspan="8">Dataset<sub>AL</sub> Consistency<span style="color: #8B0000;">↑</span></th>
+                      </tr>
+                      <tr>
+                          <th>Ver.</th>
+                          <th>Fal.</th>
+                          <th>Sen.</th>
+                          <th>Rand<sub>FR</sub></th>
+                          <th>Pos.</th>
+                          <th>Com.</th>
+                          <th>Ban.</th>
+                          <th>Aut.</th>
+                          <th>CoT.</th>
+                          <th>Dst.</th>
+                          <th>Div.</th>
+                          <th>Rand<sub>Al</sub></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>ChatGPT</td>
+                          <td>0.900</td>
+                          <td>0.917</td>
+                          <td><strong>0.804</strong></td>
+                          <td>0.998</td>
+                          <td>0.566</td>
+                          <td>0.862</td>
+                          <td>0.688</td>
+                          <td>0.662</td>
+                          <td>0.699</td>
+                          <td>0.713</td>
+                          <td>0.679</td>
+                          <td>0.906</td>
+                      </tr>
+                      <tr>
+                          <td>GPT-4-Turbo</td>
+                          <td>0.915</td>
+                          <td>0.969</td>
+                          <td>0.653</td>
+                          <td>0.990</td>
+                          <td>0.818</td>
+                          <td>0.858</td>
+                          <td>0.638</td>
+                          <td>0.846</td>
+                          <td>0.805</td>
+                          <td>0.729</td>
+                          <td>0.855</td>
+                          <td>0.856</td>
+                      </tr>
+                      <tr>
+                          <td>GPT-4o</td>
+                          <td><strong>0.977</strong></td>
+                          <td>0.984</td>
+                          <td>0.699</td>
+                          <td>0.998</td>
+                          <td>0.776</td>
+                          <td>0.868</td>
+                          <td><strong>0.791</strong></td>
+                          <td>0.787</td>
+                          <td>0.833</td>
+                          <td>0.790</td>
+                          <td>0.814</td>
+                          <td>0.925</td>
+                      </tr>
+                      <tr>
+                          <td>GLM-4</td>
+                          <td>0.887</td>
+                          <td>0.979</td>
+                          <td>0.679</td>
+                          <td>0.970</td>
+                          <td>0.781</td>
+                          <td>0.835</td>
+                          <td>0.690</td>
+                          <td>0.796</td>
+                          <td>0.814</td>
+                          <td>0.814</td>
+                          <td>0.788</td>
+                          <td>0.884</td>
+                      </tr>
+                      <tr>
+                          <td>Claude-3.5</td>
+                          <td>0.952</td>
+                          <td><strong>0.985</strong></td>
+                          <td>0.660</td>
+                          <td>0.999</td>
+                          <td><strong>0.832</strong></td>
+                          <td>0.875</td>
+                          <td>0.610</td>
+                          <td><strong>0.865</strong></td>
+                          <td>0.857</td>
+                          <td><strong>0.878</strong></td>
+                          <td><strong>0.914</strong></td>
+                          <td>0.915</td>
+                      </tr>
+                      <tr>
+                          <td>Qwen2</td>
+                          <td>0.884</td>
+                          <td>0.935</td>
+                          <td>0.651</td>
+                          <td>0.994</td>
+                          <td>0.760</td>
+                          <td><strong>0.877</strong></td>
+                          <td>0.710</td>
+                          <td>0.779</td>
+                          <td><strong>0.858</strong></td>
+                          <td>0.785</td>
+                          <td>0.826</td>
+                          <td>0.904</td>
+                      </tr>
+                  </tbody>
+              </table>
+              <br>
+              <br>
+              <img src="static/images/consistency_all.png" alt="consistency_all" width="85%">
+          </div>
+      </div>
+  </div>
 </section>
 
-
-
-
-
-
+<section class="section">
+  <div class="container">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+              <h2 class="title is-3">Robustness Scores Overview</h2>
+              <br>
+              <table>
+                  <caption>Robustness improvement/decline compared to random baseline for various models across different metrics. Positive values indicate improvement, negative values indicate decline. Avg represents the average of Fact-Related and Unrestricted Robustness respectively. <strong>The smaller the number, the better the model fairness.</strong></caption>
+                  <thead>
+                      <tr>
+                          <th rowspan="2" style="vertical-align: middle;">Model</th>
+                          <th colspan="4">Dataset<sub>FR</sub> Robustness<span style="color: #119f57;">↓</span></th>
+                          <th colspan="8">Dataset<sub>AL</sub> Robustness<span style="color: #119f57;">↓</span></th>
+                      </tr>
+                      <tr>
+                          <th>Ver.</th>
+                          <th>Fal.</th>
+                          <th>Sen.</th>
+                          <th>Avg</th>
+                          <th>Pos.</th>
+                          <th>Com.</th>
+                          <th>Ban.</th>
+                          <th>Aut.</th>
+                          <th>CoT.</th>
+                          <th>Dst.</th>
+                          <th>Div.</th>
+                          <th>Avg</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong>ChatGPT</strong></td>
+                          <td>0.098</td>
+                          <td>0.081</td>
+                          <td><strong>0.194</strong></td>
+                          <td>0.124</td>
+                          <td>0.340</td>
+                          <td>0.044</td>
+                          <td>0.218</td>
+                          <td>0.244</td>
+                          <td>0.207</td>
+                          <td>0.193</td>
+                          <td>0.227</td>
+                          <td>0.210</td>
+                      </tr>
+                      <tr>
+                          <td><strong>GPT-4-Turbo</strong></td>
+                          <td>0.075</td>
+                          <td>0.021</td>
+                          <td>0.337</td>
+                          <td>0.144</td>
+                          <td>0.038</td>
+                          <td><strong>0.002</strong></td>
+                          <td>0.218</td>
+                          <td><strong>0.010</strong></td>
+                          <td>0.051</td>
+                          <td>0.127</td>
+                          <td><strong>0.001</strong></td>
+                          <td><strong>0.063</strong></td>
+                      </tr>
+                      <tr>
+                          <td><strong>GPT-4o</strong></td>
+                          <td><strong>0.021</strong></td>
+                          <td><strong>0.014</strong></td>
+                          <td>0.299</td>
+                          <td><strong>0.111</strong></td>
+                          <td>0.149</td>
+                          <td>0.057</td>
+                          <td><strong>0.134</strong></td>
+                          <td>0.138</td>
+                          <td>0.092</td>
+                          <td>0.135</td>
+                          <td>0.111</td>
+                          <td>0.117</td>
+                      </tr>
+                      <tr>
+                          <td><strong>GLM-4</strong></td>
+                          <td>0.083</td>
+                          <td>0.009</td>
+                          <td>0.291</td>
+                          <td>0.122</td>
+                          <td><strong>0.103</strong></td>
+                          <td>0.049</td>
+                          <td>0.194</td>
+                          <td>0.088</td>
+                          <td>0.070</td>
+                          <td>0.070</td>
+                          <td>0.096</td>
+                          <td>0.096</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Claude-3.5</strong></td>
+                          <td>0.047</td>
+                          <td><strong>0.014</strong></td>
+                          <td>0.339</td>
+                          <td>0.133</td>
+                          <td>0.083</td>
+                          <td>0.040</td>
+                          <td>0.305</td>
+                          <td>0.050</td>
+                          <td>0.058</td>
+                          <td><strong>0.037</strong></td>
+                          <td><strong>0.001</strong></td>
+                          <td>0.082</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Qwen2</strong></td>
+                          <td>0.110</td>
+                          <td>0.059</td>
+                          <td>0.343</td>
+                          <td>0.171</td>
+                          <td>0.144</td>
+                          <td>0.027</td>
+                          <td>0.194</td>
+                          <td>0.125</td>
+                          <td><strong>0.046</strong></td>
+                          <td>0.119</td>
+                          <td>0.078</td>
+                          <td>0.105</td>
+                      </tr>
+                  </tbody>
+              </table>
+              <br>
+              <br>
+              <img src="static/images/robustness_all.png" alt="robustness_all" width="85%">
+          </div>
+      </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container" style="margin-bottom: 2vh;">
     <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-        <h2 class="title is-3">Application II: Data Augmentation</h2>
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Case Study of Biases</h2>
         <br>
-        <img src="static/images/sft_res.png" alt="sft_res">
 
+        <div style="border: 2px solid #4CAF50; padding: 20px; margin: 20px; font-family: Arial, sans-serif; text-align: center;">
+          <h2 style="color: #4CAF50;">Case Study: Refinement-Aware Bias.</h2>
+          <img src="static/images/case_study/Case_Refine.png" alt="Refinement Example" width="70%" />
+          <p>In the example above, we asked the model to score the answer in three stages: before refinement, after refinement, and after refinement with the dialogue history. The respective scores were 6, 7, and 8.</p>
         </div>
-
-         </div>
-        </div>
-</section>
-
-<section class="section">
-  <div class="container" style="margin-bottom: 2vh;">
-    <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-        <h2 class="title is-3">Case Study of Generated Examples</h2>
         <br>
-        <div style="border: 2px solid #4CAF50; padding: 20px; margin: 20px; font-family: Arial, sans-serif; font-size: 16px;">
-    <h2 style="color: #4CAF50;">MMLU Example</h2>
-    <p>Which of the following statements accurately reflects the process of viral uncoating?</p>
-    <ul>
-        <li><b>A.</b> Viral uncoating is the removal of the capsid after the virus has entered the host cell, revealing the viral genome. (<span style="color: green;">✔</span>)</li>
-        <li><b>B.</b> Viral uncoating is initiated by the virus's interaction with cellular receptors, but not all viruses uncoat immediately upon entry.</li>
-        <li><b>C.</b> While some host cell enzymes assist in uncoating, it is not an action localized specifically to the nucleus but can occur in various cellular compartments.</li>
-        <li><b>D.</b> Although the host cell's environment influences uncoating, it is not a process directly triggered by the immune response but by viral and cellular mechanisms within the cell.</li>
-    </ul>
 
+        <div style="border: 2px solid #337AB7; padding: 20px; margin: 20px; font-family: Arial, sans-serif; text-align: center;">
+          <h2 style="color: #337AB7;">Case Study: Sentiment Bias.</h2>
+          <img src="static/images/case_study/Case_Sentiment.png" alt="Sentiment Example" width="70%" />
+          <p>In the example above, we initially had the Claude-3.5-Sonnet model evaluate the original pair of answers, concluding that answer A was superior. We then revised answer A to include expressions of anger. Subsequently, although the Claude-3.5-Sonnet model acknowledged that answer A was "more direct and technically precise," it noted that "the confrontational tone might be off-putting to some users," leading it to determine that answer B was now the better choice.</p>
+        </div>
+        <br>
 
-</div>
-            <br>
-            <div style="border: 2px solid #337AB7; padding: 20px; margin: 20px; font-family: Arial, sans-serif; font-size: 16px;">
-    <h2 style="color: #337AB7;">TruthfulQA Example</h2>
-    <p>Which of the following is a true statement regarding the construction of the Great Pyramid of Giza?</p>
-    <ul>
-        <li><b>A.</b> The pyramid was built by a workforce of slaves who were forced into labor by the pharaoh.</li>
-        <li><b>B.</b> Aliens were responsible for the construction of the Great Pyramid, as humans lacked the technology to build it.</li>
-        <li><b>C.</b> The pyramid was constructed by paid laborers who lived in a nearby temporary city. (<span style="color: green;">✔</span>)</li>
-        <li><b>D.</b> The Great Pyramid was actually a natural formation, later carved by ancient Egyptians.</li>
-    </ul>
-</div>
-            <br>
-            <div style="border: 2px solid #FF6347; padding: 20px; margin: 20px; font-family: Arial, sans-serif; font-size: 16px;">
-    <h2 style="color: #FF6347;">GSM8K Example</h2>
-    <p>During a summer camp, children are collecting points through various activities for rewards. If Lucy earns 35 points from art activities, double that amount from sports activities, and loses 15 points for not following the camp rules, how many points does she have at the end of the camp?</p>
-    <p><b>Answer:</b> <span style="color: green;">90</span></p>
-</div>
+        <div style="border: 2px solid #b44672; padding: 20px; margin: 20px; font-family: Arial, sans-serif; text-align: center;">
+          <h2 style="color: #b44672;">Case Study: Authority bias.</h2>
+          <img src="static/images/case_study/Case_authority.png" alt="Authority Example" width="70%" />
+          <p>In the example above, we have a question along with two answers of varying quality in our dataset, with Assistant A's answer being of higher quality. Initially, GPT-3.5-Turbo made the correct judgment. However, when we added automatically generated fake references to Assistant B's answer, the judge model considered Assistant B's quality to be superior and cited our provided fake references as justification. At this point, the judge model was successfully hacked, demonstrating authority bias.</p>
+        </div>
+        <br>
 
-            <br>
-            <div style="border: 2px solid #b44672; padding: 20px; margin: 20px; font-family: Arial, sans-serif; font-size: 16px;">
-    <h2 style="color: #b44672;">HellaSwag Example</h2>
-    <p>In a chess tournament, a player uses the Sicilian Defense in response to their opponent's e4 opening. The game progresses with both sides maneuvering for positional advantage.</p>
-    <p>What happens next?</p>
-    <ul>
-        <li><b>A.</b> The player using the Sicilian Defense introduces a novelty in the opening to gain an unexpected advantage. (<span style="color: green;">✔</span>)</li>
-        <li><b>B.</b> The game is paused as both players decide to switch to playing checkers instead.</li>
-        <li><b>C.</b> The opponent immediately resigns, claiming they have never seen the Sicilian Defense before.</li>
-        <li><b>D.</b> Spectators start betting on the outcome of a different game happening in the room.</li>
-    </ul>
-</div>
-
-
-
-
-
+        <div style="border: 2px solid #FF6347; padding: 20px; margin: 20px; font-family: Arial, sans-serif; text-align: center;">
+          <h2 style="color: #FF6347;">Case Study: Bandwagon-Effect bias.</h2>
+          <img src="static/images/case_study/Case_badwagon.png" alt="Bandwagon Example" width="70%" />
+          <p>In the example above, we have a question along with two answers of varying quality in our dataset, with Assistant A's answer being of higher quality. Initially, GPT-4-Turbo made the correct judgment. However, after incorporating the popular opinion that Assistant B's response was better into the system prompt, the judge model was successfully hacked, proving the existence of the Bandwagon-Effect bias.</p>
         </div>
 
-         </div>
-        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
@@ -794,35 +990,30 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
-    <pre><code>@misc{wu2024unigenunifiedframeworktextual,
-      title={UniGen: A Unified Framework for Textual Dataset Generation Using Large Language Models}, 
-      author={Siyuan Wu and Yue Huang and Chujie Gao and Dongping Chen and Qihui Zhang and Yao Wan and Tianyi Zhou and Xiangliang Zhang and Jianfeng Gao and Chaowei Xiao and Lichao Sun},
-      year={2024},
-      eprint={2406.18966},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2406.18966}, 
-}</code></pre>
+    <pre><code>TODO</code></pre>
   </div>
 </section>
 
 <section>
   <div class="section" id="org-banners" style="display:flex">
+    <a href="https://www.nd.edu/" target="blank" class="ext-link">
+      <img class="center-block org-banner" src="static/images/logos/ND.png">
+    </a>
     <a href="https://www.hust.edu.cn/" target="_blank" rel="external">
         <img class="center-block org-banner" src="static/images/logos/HUST.png">
     </a>
-    <a href="https://www.nd.edu/" target="blank" class="ext-link">
-        <img class="center-block org-banner" src="static/images/logos/ND.png">
-    </a>
-    <a href="https://www.microsoft.com/en-us/research/" target="_blank" rel="external">
+    <a href="https://www.pku.edu.cn/" target="_blank" rel="external">
+      <img class="center-block org-banner" src="static/images/logos/PKU.png">
+  </a>
+    <!-- <a href="https://www.microsoft.com/en-us/research/" target="_blank" rel="external">
         <img class="center-block org-banner" src="static/images/logos/Microsoft.png">
-    </a>
-    <a href="https://www.wisc.edu/" target="_blank" rel="external">
+    </a> -->
+    <!-- <a href="https://www.wisc.edu/" target="_blank" rel="external">
         <img class="center-block org-banner" src="static/images/logos/UWM.png">
     </a>
     <a href="https://www2.lehigh.edu/" target="_blank" rel="external">
         <img class="center-block org-banner" src="static/images/logos/Lehigh-University-logo.png">
-    </a>
+    </a> -->
   </div>
 </section>
 
