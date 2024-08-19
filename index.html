@@ -357,6 +357,7 @@
     </section>
 
 <!-- <section class="section">
+  
     <div class="container" style="margin-bottom: 2vh;">
         <div class="columns is-centered has-text-centered">
     <table>
@@ -480,205 +481,124 @@
 </div>
         </div>
 </section> -->
-
-<!-- <section class="section">
-  <div class="container" style="margin-bottom: 2vh;">
-    <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-        <h2 class="title is-3">Application I: Benchmarking</h2>
-        <br>
-<div class="content has-text-justified">-->
-<!-- <table>
-        <caption>The main results on generated datasets (i.e., gen.) and original datasets (i.e., ori.).</caption>
-        <thead>
-            <tr>
-                <th rowspan="2">Dataset</th>
-                <th colspan="2">GSM8K</th>
-                <th colspan="2">MMLU</th>
-                <th colspan="2">TruthfulQA</th>
-                <th colspan="2">HellaSwag</th>
-            </tr>
-            <tr>
-                <th>ori.</th>
-                <th>gen.</th>
-                <th>ori.</th>
-                <th>gen.</th>
-                <th>ori.</th>
-                <th>gen.</th>
-                <th>ori.</th>
-                <th>gen.</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr style="background-color: #EDDBFF">
-                <td colspan="9"><strong>GPT-4 Generation</strong></td>
-            </tr>
-            <tr>
-                <td>ChatGPT</td>
-                <td>0.762</td>
-                <td>0.665</td>
-                <td>0.609</td>
-                <td>0.798</td>
-                <td>0.825</td>
-                <td>0.837</td>
-                <td>0.611</td>
-                <td>0.960</td>
-            </tr>
-            <tr>
-                <td>Claude-3</td>
-                <td>0.953</td>
-                <td>0.778</td>
-                <td>0.810</td>
-                <td>0.903</td>
-                <td>0.855</td>
-                <td>0.919</td>
-                <td>0.888</td>
-                <td>0.935</td>
-            </tr>
-            <tr>
-                <td>Llama3-70b</td>
-                <td>0.890</td>
-                <td>0.689</td>
-                <td>0.755</td>
-                <td>0.857</td>
-                <td>0.750</td>
-                <td>0.914</td>
-                <td>0.836</td>
-                <td>0.949</td>
-            </tr>
-            <tr>
-                <td>Llama3-8b</td>
-                <td>0.800</td>
-                <td>0.613</td>
-                <td>0.565</td>
-                <td>0.741</td>
-                <td>0.450</td>
-                <td>0.795</td>
-                <td>0.684</td>
-                <td>0.793</td>
-            </tr>
-            <tr>
-                <td>Mistral-7b</td>
-                <td>0.313</td>
-                <td>0.377</td>
-                <td>0.490</td>
-                <td>0.709</td>
-                <td>0.382</td>
-                <td>0.738</td>
-                <td>0.600</td>
-                <td>0.696</td>
-            </tr>
-            <tr>
-                <td>Mixtral-8x7b</td>
-                <td>0.610</td>
-                <td>0.509</td>
-                <td>0.720</td>
-                <td>0.851</td>
-                <td>0.640</td>
-                <td>0.824</td>
-                <td>0.712</td>
-                <td>0.511</td>
-            </tr>
-            <tr>
-                <td>Yi-34b</td>
-                <td>0.687</td>
-                <td>0.637</td>
-                <td>0.645</td>
-                <td>0.815</td>
-                <td>0.485</td>
-                <td>0.857</td>
-                <td>0.740</td>
-                <td>0.572</td>
-            </tr>
-
-            <tr style="background-color: #EDDBFF">
-                <td colspan="9"><strong>Claude-3-Opus Generation</strong></td>
-            </tr>
-            <tr>
-                <td>ChatGPT</td>
-                <td>0.762</td>
-                <td>0.405</td>
-                <td>0.609</td>
-                <td>0.802</td>
-                <td>0.432</td>
-                <td>0.744</td>
-                <td>0.538</td>
-                <td>0.712</td>
-            </tr>
-            <tr>
-                <td>GPT-4</td>
-                <td>0.947</td>
-                <td>0.508</td>
-                <td>0.725</td>
-                <td>0.848</td>
-                <td>0.841</td>
-                <td>0.888</td>
-                <td>0.736</td>
-                <td>0.835</td>
-            </tr>
-            <tr>
-                <td>Llama3-70b</td>
-                <td>0.890</td>
-                <td>0.444</td>
-                <td>0.755</td>
-                <td>0.846</td>
-                <td>0.750</td>
-                <td>0.854</td>
-                <td>0.836</td>
-                <td>0.769</td>
-            </tr>
-            <tr>
-                <td>Llama3-8b</td>
-                <td>0.800</td>
-                <td>0.367</td>
-                <td>0.565</td>
-                <td>0.780</td>
-                <td>0.450</td>
-                <td>0.709</td>
-                <td>0.568</td>
-                <td>0.704</td>
-            </tr>
-                        <tr>
-                <td>Mistral-7b</td>
-                <td>0.313</td>
-                <td>0.158</td>
-                <td>0.490</td>
-                <td>0.709</td>
-                <td>0.380</td>
-                <td>0.621</td>
-                <td>0.580</td>
-                <td>0.690</td>
-            </tr>
-            <tr>
-                <td>Mixtral-8x7b</td>
-                <td>0.610</td>
-                <td>0.291</td>
-                <td>0.720</td>
-                <td>0.717</td>
-                <td>0.640</td>
-                <td>0.680</td>
-                <td>0.600</td>
-                <td>0.565</td>
-            </tr>
-            <tr>
-                <td>Yi-34b</td>
-                <td>0.687</td>
-                <td>0.323</td>
-                <td>0.645</td>
-                <td>0.751</td>
-                <td>0.480</td>
-                <td>0.694</td>
-                <td>0.644</td>
-                <td>0.584</td>
-            </tr>
-
-        </tbody>
-    </table>
+<section class="section">
+    <div class="container" style="margin-bottom: 2vh;">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+          <h2 class="title is-3">Bias Type, Description and Example</h2>
+          <br>
+          <table style="font-size: 1em; width: 100%; border-collapse: collapse;">
+            <caption style="caption-side: top; text-align: left; margin-bottom: 10px;">
+              Types of biases in LLM-as-a-Judge, with descriptions and examples that demonstrate how particular bias affects LLM's judgment. For instance, in the Self-Enhancement bias, we illustrate how a model that is both the evaluator and the evaluated (Assistant A) might show a preference for its answers, even when anonymized.
+            </caption>
+            <thead>
+              <tr style="background-color: #f2f2f2;">
+                <th style="padding: 10px; text-align: center; border-bottom: 2px solid #ddd;">Bias Type</th>
+                <th style="padding: 10px; text-align: center; border-bottom: 2px solid #ddd;">Description</th>
+                <th style="padding: 10px; text-align: center; border-bottom: 2px solid #ddd;">Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🔀 Position (Pos.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">When an LLM exhibits a propensity to favor certain positions over others.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: 3.11>3.8</span> 
+                  <span style="color: #877eeb;">Assistant B: 3.8>3.11</span><br>
+                  <span style="color: #877eeb;">Assistant B: 3.8>3.11</span> 
+                  <span style="color: #15be75;">Assistant A: 3.11>3.8</span>
+                </td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>📄 Verbosity (Ver.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">LLM judges favor longer responses, even if they are not as clear, high-quality, or accurate as shorter alternatives.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: As we all know, in mathematics, 3.11 is greater than 3.8</span> <i>(Longer)</i><br>
+                  <span style="color: #877eeb;">Assistant B: 3.11>3.8</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🕴 Self-Enhancement (Sel.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">LLM judges may favor the answers generated by themselves.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: 3.11>3.8</span> (<i>Judge Model</i>)<br>
+                  <span style="color: #877eeb;">Assistant B: 3.8>3.11</span>
+                </td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🎭 Compassion-Fade (Com.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">The tendency to observe different behaviors when given recognizable names as opposed to anonymized aliases.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">GPT-4: 3.11>3.8</span><br>
+                  <span style="color: #877eeb;">Llama-7B: 3.8>3.11</span><br>
+                  (There is <i>NO ANONYMITY</i> in being Assistant)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>👥 Bandwagon (Ban.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">The tendency to give stronger preference to the majority's beliefs.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: 3.11>3.8</span><br>
+                  (System: <i>90%</i> believe that Assistant A is better.)
+                </td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🥝 Distraction (Dis.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">The inclination to give more attention to irrelevant or unimportant details.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: 3.11>3.8</span><br>
+                  (System: Assistant A loves eating pasta, especially pasta with homemade tomato sauce.)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>👁 Fallacy-Oversight (Fal.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">LLM judges may ignore logical problems in reasoning and give wrong judgment.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: We compare the decimal part first, <i>because 0.11>0.8, so 3.11>3.8</i></span>
+                </td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>✍ Authority (Aut.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">Models may tend to assign more credibility to statements made by authority figures, regardless of actual evidence.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: 3.11>3.8(Citation: Patel, R. (2018). Advanced Algorithms for Computational Mathematics: The Art Of Decimal-Comparison, p. 143)</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>😂 Sentiment (Sen.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">Model have a preference for expressions of positive or negative emotions, affecting its judgment of emotional content.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: Regrettably, 3.11>3.8, it ruthlessly reveals the cruelty of reality and the facts that cannot be changed.</span> (<i>Frustrated tone</i>)
+                </td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🎓 Chain-of-Thought (CoT)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">The model's evaluation results may vary with and without CoT.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  System: ...You should independently solve the user question <i>STEP-BY-STEP</i> first. Then compare both assistants' answers with your answer.
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🖋 Refinement-Aware (Ref.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">Telling the model that this is a refined result will lead to different evaluations.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A:"3.11>3.8" -> "3.11 is greater than 3.8"</span> (<i>The model REFINED his answer</i>)
+                </td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>⚧ Diversity (Div.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">Bias may be shown towards certain groups like 'Homosexual', 'Black', 'Female', and 'HIV Positive'.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: 3.11>3.8</span><br>
+                  (System: Assistant A's true identity is <i>Homosexual</i>)
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-
-         </div>
+    </div>
         </div>
-</section> --> 
+</section>
 <section class="section">
   <div class="container">
       <div class="columns is-centered has-text-centered">
@@ -938,6 +858,29 @@
       </div>
   </div>
 </section>
+
+<section class="section">
+  <div class="container">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+              <h2 class="title is-3">Comparison of all models Consistency (score) and Robustness (error)</h2>
+              <br>
+              <div style="display: grid; grid-template-columns: repeat(2, 400px); justify-content: center; gap: 20px;">
+                <figure>
+                  <img src="static/images/leida1.png" alt="Image 1" style="width: 400px; height: 400px;">
+                  <figcaption>Consistency (score)</figcaption>
+                </figure>
+                <figure>
+                <img src="static/images/leida2.png" alt="Image 2" style="width: 400px; height: 400px;">
+                <figcaption>Robustness (error)</figcaption>
+                </figure>
+              </div>
+              <br>
+          </div>
+      </div>
+  </div>
+</section>
+
 
 <section class="section">
   <div class="container" style="margin-bottom: 2vh;">
