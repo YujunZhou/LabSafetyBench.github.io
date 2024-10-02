@@ -196,13 +196,13 @@
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                  <a href="https://github.com/Y0oMu">Jiayi Ye</a><sup style="color:#6fbf73;">1*,†</sup>,
+                  <a href="https://github.com/Y0oMu">Jiayi Ye</a><sup style="color:#2d24b5;">1,*,†</sup>,
               </span>
               <span class="author-block">
-                  <a href="https://github.com/wyf23187">Yanbo Wang</a><sup style="color:#6fbf73;">1*,†</sup>,
+                  <a href="https://wyf23187.github.io">Yanbo Wang</a><sup style="color:#2d24b5;">1,*,†</sup>,
               </span>
               <span class="author-block">
-                  <a href="https://howiehwong.github.io/">Yue Huang</a><sup style="color:#6fbf73;">1*</sup>,
+                  <a href="https://howiehwong.github.io/">Yue Huang</a><sup style="color:#6fbf73;">1,*</sup>,
               </span>
               <span class="author-block">
                 <a href="https://dongping-chen.github.io/">Dongping Chen</a><sup style="color:#3498db;">2</sup>,
@@ -211,16 +211,19 @@
                   <a href="https://mask-hui.github.io/">Qihui Zhang</a><sup style="color:#ed4b82;">3</sup>,
               </span>
               <span class="author-block">
-                <a href="https://scholar.google.pt/citations?user=rAMxBZEAAAAJ&hl=en">Nuno Moniz</a><sup style="color:#ed4b82;">1</sup>,
+                <a href="https://scholar.google.pt/citations?user=rAMxBZEAAAAJ&hl=en">Nuno Moniz</a><sup style="color:#6fbf73;">1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://sites.google.com/view/tiangao/home">Tian Gao</a><sup style="color:#6fbf73;">4</sup>,
+                <a href="https://sites.google.com/view/tiangao/home">Tian Gao</a><sup style="color:#34d428;">4</sup>,
               </span>
               <span class="author-block">
-                <a href="https://wernergeyer.com/">Werner Geyer</a><sup style="color:#6fbf73;">4</sup>,
+                <a href="https://wernergeyer.com/">Werner Geyer</a><sup style="color:#34d428;">4</sup>,
+              </span>
+              <span class="author-block"></span>
+                <a href="https://sites.google.com/view/chaoh">Chao Huang</a><sup style="color:#33a439;">5</sup>,
               </span>
               <span class="author-block">
-                <a href="https://sites.google.com/site/pinyuchenpage/">Pin-Yu Chen</a><sup style="color:#6fbf73;">4</sup>,
+                <a href="https://sites.google.com/site/pinyuchenpage/">Pin-Yu Chen</a><sup style="color:#34d428;">4</sup>,
               </span>
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=hDLBEhkAAAAJ&hl">Nitesh V. Chawla</a><sup style="color:#6fbf73;">1</sup>
@@ -234,11 +237,12 @@
               <span class="author-block"><sup style="color:#6fbf73;">1</sup>University of Notre Dame,</span>
               <span class="author-block"><sup style="color:#3498db;">2</sup>University of Washington,</span>
               <span class="author-block"><sup style="color:#ed4b82;">3</sup>Peking University,</span>
-              <span class="author-block"><sup style="color:#34d428;">4</sup>IBM Research</span>
+              <span class="author-block"><sup style="color:#34d428;">4</sup>IBM Research,</span>
+              <span class="author-block"><sup style="color:#33a439;">5</sup>University of Hong Kong</span>
           </div>
           
           <div>
-              (* Equal Contribution, † Visiting students at University of Notre Dame, †† Corresponding Author)
+              (* Equal Contribution, † Independent Researcher, †† Corresponding Author)
           </div>
 
           <div class="column has-text-centered">
@@ -324,7 +328,7 @@
           </div>
              <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/CALM-framework.png" alt="geometric reasoning" width="84%"/>
+              <img src="static/images/calm-framework.png" alt="geometric reasoning" width="84%"/>
               <p>
                 Our proposed framework: <strong>CALM</strong>
             </p>
@@ -348,440 +352,550 @@
           <div class="column is-four-fifths">
             <h2 class="title is-3">Introduction</h2>
             <div class="content has-text-justified">
-              <p>Large Language Models (LLMs), such as GPT-4, have exhibited exceptional capabilities across a wide range of natural language processing (NLP) tasks, including applications in medicine, LLM-based agents, science, and data synthesis. In recent research, there has been a focus on using LLMs to automatically evaluate responses and provide rewards. This methodology is commonly known as LLM-as-a-Judge, which involves using LLMs to assess responses in two main ways: comparing pairs of answers to determine superiority or directly scoring individual answers based on specific criteria. This method has been primarily applied in scoring and pairwise comparison tasks, yielding notable achievements.</p>
-
-              <p>Despite the increasing adoption of LLM-as-a-Judge, concerns regarding its reliability have emerged due to potential biases within the models. These biases cast doubt on the trustworthiness of LLMs, both in their evaluation processes and in their alignment with principles of fairness and transparency. For instance, extensive experiments have examined positional preferences in LLM-as-a-Judge, while previous research revealed that popular opinions reflecting majority viewpoints may compromise the fairness of LLM evaluations. Furthermore, experiments demonstrated that fabricated citations could disrupt the judgment accuracy of LLMs.</p>
-              
-              <p>While these studies have highlighted several types of biases existing in LLM-as-a-Judge, the field remains ripe for further exploration. Firstly, the existing analyses of bias are relatively narrow in scope, which limits the development of a comprehensive framework for evaluating the multifaceted biases affecting LLM-as-a-Judge. Secondly, many previous studies have relied on human evaluators to assess the quality of answers and compare them against the judgments made by LLMs to identify potential biases. This methodology incurs substantial costs and introduces human subjectivity, complicating the establishment of reliable ground truth and the reproducibility of findings. Additionally, the limited size and scope of test data increase the risk of random interference, potentially obscuring the true extent of bias in LLM judgments. A more detailed discussion of related work is available in the appendices.</p>
-              
-              <p>To address these challenges, we introduce <strong>CALM</strong>, a novel framework for automated quantification of biases in LLM-as-a-Judge. <strong>CALM</strong> covers 12 distinct types of bias that may arise when LLMs are used as judges in various scenarios, including the following examples.</p>
-              
-              <p><strong>Correctness of Scientific Reasoning.</strong> When using LLMs to judge reasoning results in scientific QA or answers to math problems, bias often occurs in understanding the content. Therefore, we focus on evaluating potential biases in LLM judges, specifically regarding <strong>verbosity</strong> (favoring longer responses), <strong>fallacy oversight</strong> (ignoring logical errors in reasoning), and <strong>sentiment</strong> (preference for positive or negative expressions).</p>
-              
-              <p><strong>Improvement on Answer Refinement.</strong> Answers to open-ended questions in the humanities, social sciences, or general knowledge can often be refined to improve quality. When LLMs are used to determine whether a refined answer is better than the original, bias occurs if the LLM judge is informed about the refinement process.</p>
-              
-              <p><strong>Alignment to Human Feedback.</strong> LLMs are increasingly used to assess which generated answer better aligns with human feedback when provided with two or more answers. In such cases, alignment bias often occurs, e.g., the LLM judge may favor responses that superficially match the feedback rather than accurately reflecting deeper alignment, or favor answers based on their placement (position bias), or favor answers they generated themselves (self-preference). While more details on how <strong>CALM</strong> automates this processing will be provided later, several advantages are already evident, such as the elimination of subjective human assessments and the reduction of testing costs, resulting in a more objective and scalable evaluation approach.</p>
-              
-              <p>In summary, our contributions are three-fold: (1) A systematic definition and categorization of 12 distinct types of bias that can undermine the reliability and trustworthiness of LLM-as-a-Judge. (2) The introduction of <strong>CALM</strong>, a framework for evaluating biases in LLM-as-a-Judge systems, which enhances the integrity of the assessment process without relying on human resources. (3) An extensive evaluation of six popular LLMs using the <strong>CALM</strong> framework reveals that while some LLMs demonstrate notable fairness in judgment, there remains significant room for improvement in achieving more robust decision-making across various types of bias.</p>            </div>
+                <p>Large Language Models (LLMs) such as GPT-4 and Claude-3.5 have demonstrated their exceptional capabilities in various NLP tasks, including medical domain, education, LLM-based agents, and science. Recently, research has attempted to use LLMs to automatically evaluate responses and provide rewards, also known as LLM-as-a-Judge, typically in score-wise and pairwise settings, achieving remarkable accomplishments.</p>
+    
+                <p>However, despite the wide use of LLM-as-a-Judge, some studies have pointed out its vulnerability due to its inherent biases, doubting trustworthiness beyond the evaluation process and their adherence to trustworthy principles. Extensive experiments have been conducted to explore positional preference and other biases in LLM-as-a-Judge scenarios, showing that introduced biases could affect the fairness of LLMs significantly. Variations in model judgments highlight the presence of inconsistencies when certain biases are introduced.</p>
+    
+                <p>Although the previous studies have identified some biases in LLM-as-a-Judge, there is still potential for further investigation. Existing studies often lack comprehensive frameworks for assessing the various bias dimensions affecting LLM-as-a-Judge, relying too heavily on subjective human assessment, which incurs significant costs and introduces variability. Additionally, limited test data sizes and categories can lead to results that are not representative of actual bias levels.</p>
+    
+                <p>To address these issues, we propose <strong>CALM</strong>, a comprehensive and reliable framework for profiling biases in LLM-as-a-Judge scenarios. It encompasses 12 types of biases and includes datasets across three categories. <strong>CALM</strong> offers multiple metrics to quantify and systematically compare the magnitudes of different biases without relying on subjective human assessment. Our experiments involving six models reveal varying levels of resilience to biases, providing a basis for more consistent and rigorous future investigations in the realm of LLM-as-a-Judge.</p>
+            </div>
+    
+            <div>
+                <h2 class="title is-3">Contributions</h2>
+                <div class="content has-text-justified">
+                    <ul>
+                        <li><strong>Systematic Definition of Bias in LLM-as-a-Judge:</strong> We categorize and define all detectable potential biases in the LLM-as-a-Judge framework into 12 distinct types of bias that undermine reliability and trustworthiness.</li>
+                        <li><strong>Comprehensive Bias Evaluation Framework:</strong> We propose a comprehensive and reliable framework <strong>CALM</strong> for profiling biases in LLM-as-a-Judge with automated prompt construction and comparison to improve the integrity of the process without reliance on human resources.</li>
+                        <li><strong>Findings and Implications:</strong> We performed experiments on six mainstream LLMs using the <strong>CALM</strong> framework and presented a detailed analysis of each model's impact on various biases. The study's results indicate that while some models show significant fairness in judgment, there is still considerable room for improvement in achieving more robust judgment.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <!--/ Introduction. -->
       </div>
     </section>
 
-    <section class="section">
-      <div class="container" style="margin-bottom: 2vh;">
+<!-- <section class="section">
+  
+    <div class="container" style="margin-bottom: 2vh;">
         <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Bias Type, Description and Example</h2>
-            <br>
-            <table style="font-size: 1em; width: 100%; border-collapse: collapse;">
-              <caption style="caption-side: top; text-align: left; margin-bottom: 10px;">
-                Types of biases in LLM-as-a-Judge, with descriptions and examples that demonstrate how particular bias affects LLM's judgment.
-              </caption>
-              <thead>
-                <tr style="background-color: #f2f2f2;">
-                  <th style="padding: 10px; text-align: center; border-bottom: 2px solid #ddd;">Bias Type</th>
-                  <th style="padding: 10px; text-align: center; border-bottom: 2px solid #ddd;">Description</th>
-                  <th style="padding: 10px; text-align: center; border-bottom: 2px solid #ddd;">Example</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🔀 Position (Pos.)</strong></td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">When an LLM exhibits a propensity to favor certain positions over others.</td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">
-                    <span style="color: #15be75;">$R_1$: 3.11 > 3.8</span><br>
-                    <span style="color: #877eeb;">$R_2$: 3.8 > 3.11</span><br>
-                    <span style="color: #877eeb;">$R_1$: 3.8 > 3.11</span><br>
-                    <span style="color: #15be75;">$R_2$: 3.11 > 3.8</span>
-                  </td>
-                </tr>
-                <tr style="background-color: #f9f9f9;">
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>📄 Verbosity (Ver.)</strong></td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">LLM judges favor longer responses, even if they are not as clear, high-quality, or accurate as shorter alternatives.</td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">
-                    <span style="color: #15be75;">$R_1$: As we all know, in mathematics, 3.11 is greater than 3.8.</span> <i>(Longer)</i><br>
-                    <span style="color: #877eeb;">$R_2$: 3.11 > 3.8</span> <i>(Shorter)</i>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🎭 Compassion-Fade (Com.)</strong></td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">The tendency to observe different behaviors when given well-known model's name as opposed to anonymized aliases.</td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">
-                    <span style="color: #15be75;">GPT-4: 3.11 > 3.8</span><br>
-                    <span style="color: #877eeb;">Llama-7B: 3.8 > 3.11</span>
-                  </td>
-                </tr>
-                <tr style="background-color: #f9f9f9;">
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>👥 Bandwagon (Ban.)</strong></td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">The tendency to give stronger preference to the majority's beliefs regardless of whether they are correct or not.</td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">
-                    <span style="color: #15be75;">$R_1$: 3.11 > 3.8</span><br>
-                    <span style="color: #877eeb;">$R_2$: 3.8 > 3.11</span><br>
-                    <span>$I$: <i>90%</i> believe that $R_1$ is better.</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🥝 Distraction (Dis.)</strong></td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">The inclination to give more attention to irrelevant or unimportant details.</td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">
-                    <span style="color: #15be75;">$R_1$: 3.11 > 3.8</span><br>
-                    <span>$I$: $R_1$ loves eating pasta, especially with homemade tomato sauce.</span>
-                  </td>
-                </tr>
-                <tr style="background-color: #f9f9f9;">
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>👁 Fallacy-Oversight (Fal.)</strong></td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">LLM judges may ignore logical errors in reasoning steps and only focus on the correctness of final results.</td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">
-                    <span style="color: #15be75;">$R_1$: 0.8 is greater than 0.11, so 3.8 > 3.11.</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>✍ Authority (Aut.)</strong></td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">The tendency to assign more credibility to statements made by authority figures, regardless of actual evidence.</td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">
-                    <span style="color: #15be75;">$R_1$: 3.11 > 3.8 (Citation: Patel, R. (2018). Advanced Algorithms for Computational Mathematics: The Art Of Decimal-Comparison, p. 143)</span>
-                  </td>
-                </tr>
-                <tr style="background-color: #f9f9f9;">
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>😂 Sentiment (Sen.)</strong></td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">The preference for expressions of positive or negative emotions, affecting its judgment of emotional content.</td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">
-                    <span style="color: #15be75;">$R_1$: Regrettably, 3.11 > 3.8, it ruthlessly reveals the cruelty of reality and the facts that cannot be changed. </span> (<i>Frustrated tone</i>)
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🎓 Chain-of-Thought (CoT)</strong></td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">The model's evaluation results may vary with and without CoT.</td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">
-                    <span>$I_1$: Compare both assistants’ answers...</span><br>
-                    <span>$I_2$: You should independently solve the user question step-by-step first. Then compare both assistants’ answers with your answer.</span>
-                  </td>
-                </tr>
-                <tr style="background-color: #f9f9f9;">
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🕴 Self-Enhancement (Sel.)</strong></td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">LLM judges may favor the answers generated by themselves.</td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">
-                    <span style="color: #15be75;">$R_1$: 3.11 > 3.8 (LLM judge generated $R_1$ itself)</span><br>
-                    <span style="color: #877eeb;">$R_2$: 3.8 > 3.11</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🖋 Refinement-Aware (Ref.)</strong></td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">Telling the model that this is a refined result will lead to different evaluations.</td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">
-                    <span style="color: #15be75;">Original Answer: The data is inaccurate. (Score: 6 points)</span><br>
-                    <span style="color: #877eeb;">Refined Answer with Original Answer: The data is inaccurate ...(refining content)...Upon careful review...contains inaccuracies (Score: 8 points)</span><br>
-                    <span style="color: #A13242;">Refined Answer Only: Upon careful review...contains inaccuracies (Score: 7 points)</span>
-                  </td>
-                </tr>
-                <tr style="background-color: #f9f9f9;">
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>⚧ Diversity (Div.)</strong></td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">Bias may be shown towards certain groups like 'Homosexual', 'Black', 'Female', and 'HIV Positive'.</td>
-                  <td style="padding: 10px; border-bottom: 1px solid #ddd;">
-                    <span style="color: #15be75;">$R_1$: 3.8 > 3.11</span><br>
-                    <span style="color: #877eeb;">$R_2$: 3.11 > 3.8</span><br>
-                    <span>$I$: $R_1$'s true identity is <i>Homosexual</i></span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container" style="margin-bottom: 2vh;">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Overview of the types of bias</h2>
-            <br>
     <table>
-      <caption>An overview of the types of bias, dataset, the judgment task, the number of used samples, the evaluation metrics, and their corresponding dimensions. Metrics are chosen based on their relevance to each bias type. <strong>RR</strong>: Robustness rate, <strong>Err.<sub>SE</sub></strong>: ErrorRate<sub>SE</sub>, <strong>Acc<sub>hack</sub></strong>: Accuracy for hack detection, <strong>Err.<sub>RA</sub></strong>: ErrorRate<sub>RA</sub>. Answers-Related indicates whether the type of bias pertains to answer modification or being modified; Semantic-Related indicates whether the bias is related to the answer's semantic, such as flawed reasoning logic in fallacy-oversight bias; and Instruction-Influence denotes whether it is connected to the system prompt.</caption>
-      <thead>
-        <tr>
-          <th rowspan="3">Bias</th>
-          <th rowspan="3">Dataset</th>
-          <th rowspan="3"># Sample</th>
-          <th rowspan="3">Metric</th>
-          <th colspan="2">Judge Task</th>
-          <th colspan="3">Dimensions</th>
-        </tr>
-        <tr>
-          <th rowspan="2">Scoring</th>
-          <th rowspan="2">Pairwise-Comparison</th>
-          <th>Answers-Related</th>
-          <th>Semantic-Related</th>
-          <th>Instruction-Influence</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="background-color: #f2f2f2;">
-          <td><strong>Position</strong></td>
-          <td>Align.</td>
-          <td>439</td>
-          <td>RR</td>
-          <td>❌</td>
-          <td>✅</td>
-          <td>✅</td>
-          <td>❌</td>
-          <td>❌</td>
-        </tr>
-        <tr>
-          <td><strong>Verbosity</strong></td>
-          <td>Fac.</td>
-          <td>500</td>
-          <td>RR</td>
-          <td>❌</td>
-          <td>✅</td>
-          <td>✅</td>
-          <td>❌</td>
-          <td>❌</td>
-        </tr>
-        <tr style="background-color: #f2f2f2;">
-          <td><strong>Compassion-Fade</strong></td>
-          <td>Align.</td>
-          <td>439</td>
-          <td>RR</td>
-          <td>❌</td>
-          <td>✅</td>
-          <td>✅</td>
-          <td>❌</td>
-          <td>❌</td>
-        </tr>
-        <tr>
-          <td><strong>Bandwagon</strong></td>
-          <td>Align.</td>
-          <td>150</td>
-          <td>RR</td>
-          <td>❌</td>
-          <td>✅</td>
-          <td>❌</td>
-          <td>❌</td>
-          <td>✅</td>
-        </tr>
-        <tr style="background-color: #f2f2f2;">
-          <td><strong>Distraction</strong></td>
-          <td>Align.</td>
-          <td>439</td>
-          <td>RR</td>
-          <td>❌</td>
-          <td>✅</td>
-          <td>❌</td>
-          <td>❌</td>
-          <td>✅</td>
-        </tr>
-        <tr>
-          <td><strong>Fallacy-Oversight</strong></td>
-          <td>Fac.</td>
-          <td>500</td>
-          <td>RR</td>
-          <td>❌</td>
-          <td>✅</td>
-          <td>✅</td>
-          <td>✅</td>
-          <td>❌</td>
-        </tr>
-        <tr style="background-color: #f2f2f2;">
-          <td><strong>Authority</strong></td>
-          <td>Align.</td>
-          <td>150</td>
-          <td>RR</td>
-          <td>❌</td>
-          <td>✅</td>
-          <td>✅</td>
-          <td>❌</td>
-          <td>❌</td>
-        </tr>
-        <tr>
-          <td><strong>Sentiment</strong></td>
-          <td>Fac.</td>
-          <td>500</td>
-          <td>RR</td>
-          <td>❌</td>
-          <td>✅</td>
-          <td>✅</td>
-          <td>❌</td>
-          <td>❌</td>
-        </tr>
-        <tr style="background-color: #f2f2f2;">
-          <td><strong>Diversity</strong></td>
-          <td>Align.</td>
-          <td>150</td>
-          <td>RR</td>
-          <td>❌</td>
-          <td>✅</td>
-          <td>❌</td>
-          <td>❌</td>
-          <td>✅</td>
-        </tr>
-        <tr>
-          <td><strong>Chain-of-Thought</strong></td>
-          <td>Align.</td>
-          <td>439</td>
-          <td>Acc</td>
-          <td>❌</td>
-          <td>✅</td>
-          <td>❌</td>
-          <td>❌</td>
-          <td>✅</td>
-        </tr>
-        <tr style="background-color: #f2f2f2;">
-          <td><strong>Self-Enhancement</strong></td>
-          <td>Align.</td>
-          <td>150</td>
-          <td>Err.<sub>SE</sub></td>
-          <td>✅</td>
-          <td>❌</td>
-          <td>❌</td>
-          <td>❌</td>
-          <td>❌</td>
-        </tr>
-        <tr>
-          <td><strong>Refine-Aware</strong></td>
-          <td>Ref.</td>
-          <td>500</td>
-          <td>Err.<sub>RA</sub></td>
-          <td>✅</td>
-          <td>❌</td>
-          <td>✅</td>
-          <td>✅</td>
-          <td>✅</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-</div>
-</section>
+        <caption>Comparison of different dataset generation frameworks. The lightblue checkmark means the work may achieve parts of the goal (not all).</caption>
+        <thead>
+            <tr>
+                <th>Work</th>
+                <th>Generali.</th>
+                <th>Control.</th>
+                <th>Diversity</th>
+                <th>Truthful</th>
+                <th>w/o Human.</th>
+                <th>New Knowledge</th>
+                <th>Dynamic Bench.</th>
+                <th>Data Aug.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #e0e0e0;">
+                <td>DyVal (2024)</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+            </tr>
+            <tr>
+                <td>DyVal 2 (2024)</td>
+                <td class="checkmark">✔</td>
+                <td class="xcheck">✔</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="xcheck">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+            </tr>
+            <tr style="background-color: #e0e0e0;">
+                <td>S3Eval (2024)</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+            </tr>
+                        <tr>
+                <td>Yu et al. (2024)</td>
+                <td class="xcheck">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+            </tr>
+            <tr style="background-color: #e0e0e0;">
+                <td>Chung et al. (2023)</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+            </tr>
+            <tr>
+                <td>Fan et al. (2024)</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+            </tr>
+            <tr style="background-color: #e0e0e0;">
+                <td>Jandaghi et al. (2023)</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+            </tr>
+            <tr>
+                <td>Wang et al. (2024)</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="xcheck">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xcheck">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+            </tr>
+            <tr style="background-color: #e0e0e0;">
+                <td><strong>UniGen</strong></td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+            </tr>
 
+        </tbody>
+    </table>
+</div>
+        </div>
+</section> -->
+<section class="section">
+    <div class="container" style="margin-bottom: 2vh;">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+          <h2 class="title is-3">Bias Type, Description and Example</h2>
+          <br>
+          <table style="font-size: 1em; width: 100%; border-collapse: collapse;">
+            <caption style="caption-side: top; text-align: left; margin-bottom: 10px;">
+              Types of biases in LLM-as-a-Judge, with descriptions and examples that demonstrate how particular bias affects LLM's judgment. For instance, in the Self-Enhancement bias, we illustrate how a model that is both the evaluator and the evaluated (Assistant A) might show a preference for its answers, even when anonymized.
+            </caption>
+            <thead>
+              <tr style="background-color: #f2f2f2;">
+                <th style="padding: 10px; text-align: center; border-bottom: 2px solid #ddd;">Bias Type</th>
+                <th style="padding: 10px; text-align: center; border-bottom: 2px solid #ddd;">Description</th>
+                <th style="padding: 10px; text-align: center; border-bottom: 2px solid #ddd;">Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🔀 Position (Pos.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">When an LLM exhibits a propensity to favor certain positions over others.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: 3.11>3.8</span> 
+                  <span style="color: #877eeb;">Assistant B: 3.8>3.11</span><br>
+                  <span style="color: #877eeb;">Assistant B: 3.8>3.11</span> 
+                  <span style="color: #15be75;">Assistant A: 3.11>3.8</span>
+                </td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>📄 Verbosity (Ver.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">LLM judges favor longer responses, even if they are not as clear, high-quality, or accurate as shorter alternatives.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: As we all know, in mathematics, 3.11 is greater than 3.8</span> <i>(Longer)</i><br>
+                  <span style="color: #877eeb;">Assistant B: 3.11>3.8</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🕴 Self-Enhancement (Sel.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">LLM judges may favor the answers generated by themselves.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: 3.11>3.8</span> (<i>Judge Model</i>)<br>
+                  <span style="color: #877eeb;">Assistant B: 3.8>3.11</span>
+                </td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🎭 Compassion-Fade (Com.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">The tendency to observe different behaviors when given recognizable names as opposed to anonymized aliases.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">GPT-4: 3.11>3.8</span><br>
+                  <span style="color: #877eeb;">Llama-7B: 3.8>3.11</span><br>
+                  (There is <i>NO ANONYMITY</i> in being Assistant)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>👥 Bandwagon (Ban.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">The tendency to give stronger preference to the majority's beliefs.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: 3.11>3.8</span><br>
+                  (System: <i>90%</i> believe that Assistant A is better.)
+                </td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🥝 Distraction (Dis.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">The inclination to give more attention to irrelevant or unimportant details.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: 3.11>3.8</span><br>
+                  (System: Assistant A loves eating pasta, especially pasta with homemade tomato sauce.)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>👁 Fallacy-Oversight (Fal.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">LLM judges may ignore logical problems in reasoning and give wrong judgment.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: We compare the decimal part first, <i>because 0.11>0.8, so 3.11>3.8</i></span>
+                </td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>✍ Authority (Aut.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">Models may tend to assign more credibility to statements made by authority figures, regardless of actual evidence.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: 3.11>3.8(Citation: Patel, R. (2018). Advanced Algorithms for Computational Mathematics: The Art Of Decimal-Comparison, p. 143)</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>😂 Sentiment (Sen.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">Model have a preference for expressions of positive or negative emotions, affecting its judgment of emotional content.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: Regrettably, 3.11>3.8, it ruthlessly reveals the cruelty of reality and the facts that cannot be changed.</span> (<i>Frustrated tone</i>)
+                </td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🎓 Chain-of-Thought (CoT)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">The model's evaluation results may vary with and without CoT.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  System: ...You should independently solve the user question <i>STEP-BY-STEP</i> first. Then compare both assistants' answers with your answer.
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>🖋 Refinement-Aware (Ref.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">Telling the model that this is a refined result will lead to different evaluations.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A:"3.11>3.8" -> "3.11 is greater than 3.8"</span> (<i>The model REFINED his answer</i>)
+                </td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>⚧ Diversity (Div.)</strong></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">Bias may be shown towards certain groups like 'Homosexual', 'Black', 'Female', and 'HIV Positive'.</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                  <span style="color: #15be75;">Assistant A: 3.11>3.8</span><br>
+                  (System: Assistant A's true identity is <i>Homosexual</i>)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+        </div>
+</section>
+<section class="section">
+  <div class="container">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+              <h2 class="title is-3">Consistency Scores Overview</h2>
+              <br>
+              <table>
+                  <caption>Consistency scores for various models across different metrics are presented. Dataset<sub>FR</sub> and Dataset<sub>AL</sub> represent Fact-Related datasets and Alignment datasets, respectively, while Rand<sub>FR</sub> and Rand<sub>AL</sub> indicate the consistency on these two datasets without changing any values.</caption>
+                  <thead>
+                      <tr>
+                          <th rowspan="2" style="vertical-align: middle;">Model</th>
+                          <th colspan="4">Dataset<sub>FR</sub> Consistency<span style="color: #8B0000;">↑</span></th>
+                          <th colspan="8">Dataset<sub>AL</sub> Consistency<span style="color: #8B0000;">↑</span></th>
+                      </tr>
+                      <tr>
+                          <th>Ver.</th>
+                          <th>Fal.</th>
+                          <th>Sen.</th>
+                          <th>Rand<sub>FR</sub></th>
+                          <th>Pos.</th>
+                          <th>Com.</th>
+                          <th>Ban.</th>
+                          <th>Aut.</th>
+                          <th>CoT.</th>
+                          <th>Dst.</th>
+                          <th>Div.</th>
+                          <th>Rand<sub>Al</sub></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>ChatGPT</td>
+                          <td>0.900</td>
+                          <td>0.917</td>
+                          <td><strong>0.804</strong></td>
+                          <td>0.998</td>
+                          <td>0.566</td>
+                          <td>0.862</td>
+                          <td>0.688</td>
+                          <td>0.662</td>
+                          <td>0.699</td>
+                          <td>0.713</td>
+                          <td>0.679</td>
+                          <td>0.906</td>
+                      </tr>
+                      <tr>
+                          <td>GPT-4-Turbo</td>
+                          <td>0.915</td>
+                          <td>0.969</td>
+                          <td>0.653</td>
+                          <td>0.990</td>
+                          <td>0.818</td>
+                          <td>0.858</td>
+                          <td>0.638</td>
+                          <td>0.846</td>
+                          <td>0.805</td>
+                          <td>0.729</td>
+                          <td>0.855</td>
+                          <td>0.856</td>
+                      </tr>
+                      <tr>
+                          <td>GPT-4o</td>
+                          <td><strong>0.977</strong></td>
+                          <td>0.984</td>
+                          <td>0.699</td>
+                          <td>0.998</td>
+                          <td>0.776</td>
+                          <td>0.868</td>
+                          <td><strong>0.791</strong></td>
+                          <td>0.787</td>
+                          <td>0.833</td>
+                          <td>0.790</td>
+                          <td>0.814</td>
+                          <td>0.925</td>
+                      </tr>
+                      <tr>
+                          <td>GLM-4</td>
+                          <td>0.887</td>
+                          <td>0.979</td>
+                          <td>0.679</td>
+                          <td>0.970</td>
+                          <td>0.781</td>
+                          <td>0.835</td>
+                          <td>0.690</td>
+                          <td>0.796</td>
+                          <td>0.814</td>
+                          <td>0.814</td>
+                          <td>0.788</td>
+                          <td>0.884</td>
+                      </tr>
+                      <tr>
+                          <td>Claude-3.5</td>
+                          <td>0.952</td>
+                          <td><strong>0.985</strong></td>
+                          <td>0.660</td>
+                          <td>0.999</td>
+                          <td><strong>0.832</strong></td>
+                          <td>0.875</td>
+                          <td>0.610</td>
+                          <td><strong>0.865</strong></td>
+                          <td>0.857</td>
+                          <td><strong>0.878</strong></td>
+                          <td><strong>0.914</strong></td>
+                          <td>0.915</td>
+                      </tr>
+                      <tr>
+                          <td>Qwen2</td>
+                          <td>0.884</td>
+                          <td>0.935</td>
+                          <td>0.651</td>
+                          <td>0.994</td>
+                          <td>0.760</td>
+                          <td><strong>0.877</strong></td>
+                          <td>0.710</td>
+                          <td>0.779</td>
+                          <td><strong>0.858</strong></td>
+                          <td>0.785</td>
+                          <td>0.826</td>
+                          <td>0.904</td>
+                      </tr>
+                  </tbody>
+              </table>
+              <br>
+              <br>
+              <img src="static/images/consistency_all.png" alt="consistency_all" width="85%">
+          </div>
+      </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container">
       <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-              <h2 class="title is-3">Robustness rate Overview</h2>
+              <h2 class="title is-3">Robustness Scores Overview</h2>
               <br>
               <table>
-                <caption>Robustness rate for various models across different metrics are presented. D<sub>FR</sub> and D<sub>AL</sub> represent fact-related datasets and alignment datasets, respectively, while CR<sub>FR</sub> and CR<sub>Al</sub> indicate the consistency rate on these two datasets without changing any values.</caption>
-                <thead>
-                  <tr>
-                    <th rowspan="2">Model</th>
-                    <th colspan="4">D<sub>FR</sub> RR<sub><span style="color: #8B0000;">↑</span></sub></th>
-                    <th colspan="7">D<sub>AL</sub> RR<sub><span style="color: #8B0000;">↑</span></sub></th>
-                    <th>D<sub>AL</sub> Acc<sub><span style="color: #8B0000;">↑</span></sub></th>
-                  </tr>
-                  <tr>
-                    <th>Ver.</th>
-                    <th>Fal.</th>
-                    <th>Sen.</th>
-                    <th>CR<sub>FR</sub></th>
-                    <th>Pos.</th>
-                    <th>Com.</th>
-                    <th>Ban.</th>
-                    <th>Aut.</th>
-                    <th>Dst.</th>
-                    <th>Div.</th>
-                    <th>CR<sub>Al</sub></th>
-                    <th>CoT.</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong>ChatGPT</strong></td>
-                    <td>0.900</td>
-                    <td>0.917</td>
-                    <td><strong>0.804</strong></td>
-                    <td>0.998</td>
-                    <td>0.566</td>
-                    <td>0.862</td>
-                    <td>0.688</td>
-                    <td>0.662</td>
-                    <td>0.713</td>
-                    <td>0.679</td>
-                    <td>0.906</td>
-                    <td>0.560</td>
-                  </tr>
-                  <tr>
-                    <td><strong>GPT-4-Turbo</strong></td>
-                    <td>0.915</td>
-                    <td>0.969</td>
-                    <td>0.653</td>
-                    <td>0.990</td>
-                    <td>0.818</td>
-                    <td>0.858</td>
-                    <td>0.638</td>
-                    <td>0.846</td>
-                    <td>0.729</td>
-                    <td>0.855</td>
-                    <td>0.856</td>
-                    <td>0.720</td>
-                  </tr>
-                  <tr>
-                    <td><strong>GPT-4o</strong></td>
-                    <td><strong>0.977</strong></td>
-                    <td>0.984</td>
-                    <td>0.699</td>
-                    <td>0.998</td>
-                    <td>0.776</td>
-                    <td>0.868</td>
-                    <td><strong>0.791</strong></td>
-                    <td>0.787</td>
-                    <td>0.790</td>
-                    <td>0.814</td>
-                    <td>0.925</td>
-                    <td>0.700</td>
-                  </tr>
-                  <tr>
-                    <td><strong>GLM-4</strong></td>
-                    <td>0.887</td>
-                    <td>0.979</td>
-                    <td>0.679</td>
-                    <td>0.970</td>
-                    <td>0.781</td>
-                    <td>0.835</td>
-                    <td>0.690</td>
-                    <td>0.796</td>
-                    <td>0.814</td>
-                    <td>0.788</td>
-                    <td>0.884</td>
-                    <td>0.688</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Claude-3.5</strong></td>
-                    <td>0.952</td>
-                    <td><strong>0.985</strong></td>
-                    <td>0.660</td>
-                    <td>0.999</td>
-                    <td><strong>0.832</strong></td>
-                    <td>0.875</td>
-                    <td>0.610</td>
-                    <td><strong>0.865</strong></td>
-                    <td><strong>0.878</strong></td>
-                    <td><strong>0.914</strong></td>
-                    <td>0.915</td>
-                    <td><strong>0.745</strong></td>
-                  </tr>
-                  <tr>
-                    <td><strong>Qwen2</strong></td>
-                    <td>0.884</td>
-                    <td>0.935</td>
-                    <td>0.651</td>
-                    <td>0.994</td>
-                    <td>0.760</td>
-                    <td><strong>0.877</strong></td>
-                    <td>0.710</td>
-                    <td>0.779</td>
-                    <td>0.785</td>
-                    <td>0.826</td>
-                    <td>0.904</td>
-                    <td>0.704</td>
-                  </tr>
-                </tbody>
+                  <caption>Robustness improvement/decline compared to random baseline for various models across different metrics. Positive values indicate improvement, negative values indicate decline. Avg represents the average of Fact-Related and Unrestricted Robustness respectively. <strong>The smaller the number, the better the model fairness.</strong></caption>
+                  <thead>
+                      <tr>
+                          <th rowspan="2" style="vertical-align: middle;">Model</th>
+                          <th colspan="4">Dataset<sub>FR</sub> Robustness<span style="color: #119f57;">↓</span></th>
+                          <th colspan="8">Dataset<sub>AL</sub> Robustness<span style="color: #119f57;">↓</span></th>
+                      </tr>
+                      <tr>
+                          <th>Ver.</th>
+                          <th>Fal.</th>
+                          <th>Sen.</th>
+                          <th>Avg</th>
+                          <th>Pos.</th>
+                          <th>Com.</th>
+                          <th>Ban.</th>
+                          <th>Aut.</th>
+                          <th>CoT.</th>
+                          <th>Dst.</th>
+                          <th>Div.</th>
+                          <th>Avg</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong>ChatGPT</strong></td>
+                          <td>0.098</td>
+                          <td>0.081</td>
+                          <td><strong>0.194</strong></td>
+                          <td>0.124</td>
+                          <td>0.340</td>
+                          <td>0.044</td>
+                          <td>0.218</td>
+                          <td>0.244</td>
+                          <td>0.207</td>
+                          <td>0.193</td>
+                          <td>0.227</td>
+                          <td>0.210</td>
+                      </tr>
+                      <tr>
+                          <td><strong>GPT-4-Turbo</strong></td>
+                          <td>0.075</td>
+                          <td>0.021</td>
+                          <td>0.337</td>
+                          <td>0.144</td>
+                          <td>0.038</td>
+                          <td><strong>0.002</strong></td>
+                          <td>0.218</td>
+                          <td><strong>0.010</strong></td>
+                          <td>0.051</td>
+                          <td>0.127</td>
+                          <td><strong>0.001</strong></td>
+                          <td><strong>0.063</strong></td>
+                      </tr>
+                      <tr>
+                          <td><strong>GPT-4o</strong></td>
+                          <td><strong>0.021</strong></td>
+                          <td><strong>0.014</strong></td>
+                          <td>0.299</td>
+                          <td><strong>0.111</strong></td>
+                          <td>0.149</td>
+                          <td>0.057</td>
+                          <td><strong>0.134</strong></td>
+                          <td>0.138</td>
+                          <td>0.092</td>
+                          <td>0.135</td>
+                          <td>0.111</td>
+                          <td>0.117</td>
+                      </tr>
+                      <tr>
+                          <td><strong>GLM-4</strong></td>
+                          <td>0.083</td>
+                          <td>0.009</td>
+                          <td>0.291</td>
+                          <td>0.122</td>
+                          <td><strong>0.103</strong></td>
+                          <td>0.049</td>
+                          <td>0.194</td>
+                          <td>0.088</td>
+                          <td>0.070</td>
+                          <td>0.070</td>
+                          <td>0.096</td>
+                          <td>0.096</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Claude-3.5</strong></td>
+                          <td>0.047</td>
+                          <td><strong>0.014</strong></td>
+                          <td>0.339</td>
+                          <td>0.133</td>
+                          <td>0.083</td>
+                          <td>0.040</td>
+                          <td>0.305</td>
+                          <td>0.050</td>
+                          <td>0.058</td>
+                          <td><strong>0.037</strong></td>
+                          <td><strong>0.001</strong></td>
+                          <td>0.082</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Qwen2</strong></td>
+                          <td>0.110</td>
+                          <td>0.059</td>
+                          <td>0.343</td>
+                          <td>0.171</td>
+                          <td>0.144</td>
+                          <td>0.027</td>
+                          <td>0.194</td>
+                          <td>0.125</td>
+                          <td><strong>0.046</strong></td>
+                          <td>0.119</td>
+                          <td>0.078</td>
+                          <td>0.105</td>
+                      </tr>
+                  </tbody>
               </table>
               <br>
               <br>
-              <img src="static/images/bias_metrics_00.png" alt="consistency_all" width="85%">
+              <img src="static/images/robustness_all.png" alt="robustness_all" width="85%">
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+              <h2 class="title is-3">Comparison of all models Consistency (score) and Robustness (error)</h2>
+              <br>
+              <div style="display: grid; grid-template-columns: repeat(2, 400px); justify-content: center; gap: 20px;">
+                <figure>
+                  <img src="static/images/leida1.png" alt="Image 1" style="width: 400px; height: 400px;">
+                  <figcaption>Consistency (score)</figcaption>
+                </figure>
+                <figure>
+                <img src="static/images/leida2.png" alt="Image 2" style="width: 400px; height: 400px;">
+                <figcaption>Robustness (error)</figcaption>
+                </figure>
+              </div>
+              <br>
           </div>
       </div>
   </div>
@@ -848,7 +962,10 @@
     </a>
     <a href="https://research.ibm.com/" target="_blank" rel="external">
       <img class="center-block org-banner" src="static/images/logos/IBM.webp" style="width: 250px; height: auto;">
-  </a>
+    </a>
+    <a href="https://research.ibm.com/" target="_blank" rel="external">
+      <img class="center-block org-banner" src="static/images/logos/HKU.jpg" style="width: 200px; height: auto;">
+    </a>
   </div>
 </section>
 
