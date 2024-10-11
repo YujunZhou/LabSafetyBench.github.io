@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Benchmarking Large Language Models on Safety Issues in Scientific Laboratories">
+  <meta name="keywords" content="Scientific Lab Safety, LLM Benchmarking, Safety AI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> SafetyLLM: Benchmarking LLMs on Safety Issues in Scientific Labs</title>
+
+  <link rel="icon" href="./static/images/safetyllm.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/safety-index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://scientific-safety-llm.github.io/">
+            <b>Scientific Safety AI</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
+          </a>
+          <a class="navbar-item" href="https://lab-safety-qa.github.io/">
+            <b>Lab SafetyQA</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
+          </a>
+          <a class="navbar-item" href="https://github.com/OpenSafetyLab/LLM-Safety-Adapter">
+            <b>LLM-Safety-Adapter</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <img src="static/images/safetyllm.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="safetyllm" style="vertical-align: middle">SafetyLLM</span>
+          </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            Benchmarking Large Language Models on Safety Issues in Scientific Laboratories
+          </h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scientific-research-group.github.io/">Author Name</a><sup style="color:#6fbf73;">1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scientific-research-group.github.io/">Another Author</a><sup style="color:#ed4b82">2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scientific-research-group.github.io/">Third Author</a><sup style="color:#ffac33">3</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup style="color:#6fbf73;">1</sup>Institute of AI Safety,</span><br>
+            <span class="author-block"><sup style="color:#ed4b82">2</sup>University of Safety,</span>
+            <span class="author-block"><sup style="color:#ffac33">3</sup>Safety Research Labs</span><br>
+            <span class="paper-block"><b style="color:#f41c1c">ICLR 2024 Oral</b> (85 in 7304, 1.2%)</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2310.02255.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2310.02255"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/scientific-safety-group/SafetyLLM"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/ScientificSafety/SafetyLLM"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🤗</p>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+          <p>
+          <b>Large Language Models (LLMs)</b> have demonstrated remarkable capabilities in multiple domains, but their role in ensuring safety within scientific laboratory environments remains underexplored.
+          </p>
+          <p>
+            To address this, we introduce <img src="static/images/safetyllm.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="safetyllm">SafetyLLM</span>, a benchmark specifically designed to evaluate the abilities of LLMs in identifying and reasoning about safety issues in scientific laboratories. The benchmark consists of <b>5,000 examples</b> gathered from real-world safety logs, incident reports, and expert-curated safety scenarios. 
+          </p>
+          <p>
+            Our evaluation reveals substantial differences between LLMs in their ability to recognize critical safety risks, with some models failing to identify fundamental safety violations. The best-performing model achieved an overall accuracy of <b>68.4%</b>, while human experts achieve over <b>90%</b>. This significant gap highlights the necessity for continued improvement of LLMs for safe deployment in high-stakes environments such as laboratories.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="leaderboard">Leaderboard on SafetyLLM Benchmark</h2>
+        <div class="content">
+          <p class="mt-3">Accuracy scores on the <b>SafetyLLM</b> benchmark.</p>
+          <div id="safety_leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 safetyllm">
+      <img src="static/images/safetyllm.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+      <span class="safetyllm" style="vertical-align: middle">SafetyLLM Dataset</span>
+    </h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            The <span class="safetyllm">SafetyLLM</span> dataset is a consolidated safety benchmark featuring diverse scenarios that encompass chemical handling, biological safety, emergency protocols, and equipment misuse. These scenarios are designed to test LLMs on their understanding of safety procedures, hazard identification, and response to potential risks.
+          </p>
+          <p>
+            The dataset is split into two subsets: <b>public</b> and <b>private</b>. The <b>public</b> subset is available for model training and benchmarking, while the <b>private</b> subset is reserved for formal evaluations.
+            You can access the public dataset on <a href="https://huggingface.co/datasets/ScientificSafety/SafetyLLM" target="_blank">Hugging Face Dataset</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BibTeX Section -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>@inproceedings{author2024safetyllm,
+  author    = {First Author and Second Author and Third Author},
+  title     = {SafetyLLM: Benchmarking Large Language Models on Safety Issues in Scientific Labs},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year      = {2024}
+}</code></pre>
+  </div>
+</section>
+
+<section>
+  <div class="section" id="org-banners" style="display:flex">
+    <a href="https://www.safetyinstitute.edu/" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images/safetyinstitute.png">
+    </a>
+    <a href="https://www.universityofsafety.edu/" target="blank" class="ext-link">
+        <img class="center-block org-banner" src="static/images/universityofsafety.png">
+    </a>
+    <a href="https://www.safetyresearchlabs.com/" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images/safetyresearchlabs.png">
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      This website is adapted from the original work of <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
