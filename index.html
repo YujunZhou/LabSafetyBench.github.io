@@ -225,7 +225,7 @@
 </section> -->
 
 
-<section class="section">
+<!-- <section class="section">
   <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
@@ -253,7 +253,7 @@
         </div>
       </div>
     </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -264,16 +264,17 @@
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-          <b>Large Language Models (LLMs)</b> and <b>Large Multimodal Models (LMMs)</b> exhibit impressive problem-solving skills in many tasks and domains, but their ability in mathematical reasoning in visual contexts has not been systematically studied.
+         Laboratory accidents, including explosions, radiation leaks, and chemical spills, have caused severe harm to both life and property. While <b>Large Language Models (LLMs)</b> are increasingly used in lab research, particularly in automated labs, they often lack safety awareness, raising concerns about their reliability in safety-critical tasks. Inaccurate or incomplete guidance from LLMs could lead to disastrous consequences, posing the crucial question: <b>Can LLMs be trusted to make safer decisions than humans in lab environments?</b>
           </p>
           <p>
             To bridge this gap, we present <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
             <span class="mathvista">MathVista</span>, a benchmark designed to combine challenges from diverse mathematical and visual tasks. It consists of <b>6,141 examples</b>, derived from <b>28 existing multimodal datasets</b> involving mathematics and <b>3 newly created datasets</b> (i.e., <b>IQTest, FunctionQA, and PaperQA</b>). Completing these tasks requires fine-grained, deep visual understanding and compositional reasoning, which all state-of-the-art foundation models find challenging. 
           </p>
           <p>
-            With <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">MathVista</span>, we have conducted <b>a comprehensive, quantitative evaluation of 12 prominent foundation models</b>. The best-performing <b>GPT-4V</b> model achieves an overall accuracy of <b>49.9%</b>, substantially outperforming Bard, the second-best performer, by <b>15.1%</b>. Our in-depth analysis reveals that the superiority of <b>GPT-4V</b> is mainly attributed to its enhanced visual perception and mathematical reasoning. However, <b>GPT-4V</b> still falls short of human performance by <b>10.4%</b>, as it often struggles to understand complex figures and perform rigorous reasoning. This significant gap underscores the critical role that <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">MathVista</span> will play in the development of general-purpose AI agents capable of tackling mathematically intensive and visually rich real-world tasks. We further explore the new ability of <b>self-verification</b>, the use of <b>self-consistency</b>, and the  <b>goal-directed multi-turn human-AI dialogues</b>, highlighting the promising potential of GPT-4V for future research. 
+            To answer this question, we propose 
+<span class="labsafety">LabSafety</span>,  a specialized evaluation framework designed to assess the reliability and safety awareness of LLMs in laboratory environments. First, we propose a new taxonomy for lab safety, aligned with US Occupational Safety and Health Administration (OSHA) protocols. We categorize lab safety issues into four main groups: Hazardous Substances, Emergency Response, Responsibility and Compliance, and Equipment and Material Handling. Some of these categories are further divided into subcategories based on the specific discipline or area of focus.
+Second, we curate a set of 765 multiple-choice questions guided by this taxonomy to ensure comprehensive coverage of safety concerns across various domains. Of these, 632 are text-only questions, while 133 are text-with-image questions.
+Each question is classified as either ``easy'' or ``hard,'' depending on whether it can be answered correctly using only pre-university knowledge. Additionally, for each question, we provide a step-by-step explanation that has been verified by human experts to ensure accuracy and clarity.
           </p>
         </div>
       </div>
