@@ -53,112 +53,50 @@
 </head>
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <!-- <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a> -->
-      <!-- @PAN TODO: consider adding links? -->
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://chameleon-llm.github.io/">
-            <b>Chameleon</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
-          </a>
-          <a class="navbar-item" href="https://scienceqa.github.io/">
-            <b>ScienceQA</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
-          </a>
-          <a class="navbar-item" href="https://github.com/OpenGVLab/LLaMA-Adapter">
-            <b>LLaMA-Adapter (V2)</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
-          </a>
-          <a class="navbar-item" href="https://promptpg.github.io/">
-            PromptPG
-          </a>
-          <a class="navbar-item" href="https://arxiv.org/abs/2307.10635">
-            SciBench
-          </a>
-          <a class="navbar-item" href="https://arxiv.org/abs/2305.12524">
-            TheoremQA
-          </a>
-          <a class="navbar-item" href="https://lila.apps.allenai.org/">
-            Lila
-          </a>
-          <a class="navbar-item" href="https://iconqa.github.io/">
-            IconQA
-          </a>
-          <a class="navbar-item" href="https://lupantech.github.io/inter-gps/">
-            Inter-GPS
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
- -->
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title is-bold">
-            <img src="static/images/mathvista.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista" style="vertical-align: middle">MathVista</span>
+            <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="labsafety" style="vertical-align: middle">LabSafety Bench</span>
             </h1>
           <h2 class="subtitle is-3 publication-subtitle">
-            Evaluating Math Reasoning in Visual Contexts
-            <!-- <br> -->
-            <!-- with GPT-4V, Bard, and Other Large Multimodal Models -->
+            Benchmarking LLMs on Safety Issues in Scientific Labs
           </h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://lupantech.github.io/">Pan Lu</a><sup style="color:#6fbf73;">1</sup>,</span>
+              <a href="https://yujunzhou.github.io/">Yujun Zhou</a><sup style="color:#6fbf73;">1</sup>,</span>
             <span class="author-block">
-              <a href="https://sites.google.com/view/hbansal">Hritik Bansal</a><sup style="color:#6fbf73;">1</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=ROy8IIoAAAAJ&hl=en">Jingdong Yang</a><sup style="color:#6fbf73;">1</sup>,</span>
             <span class="author-block">
-              <a href="https://tonyxia2001.github.io/">Tony Xia</a><sup style="color:#6fbf73;">1</sup>,
+              <a href="https://kehanguo2.github.io/">Kehan Guo</a><sup style="color:#6fbf73;">1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://liujch1998.github.io/">Jiacheng Liu</a><sup style="color:#ed4b82">2</sup>,
+              <a href="https://sites.google.com/site/pinyuchenpage/home">Pin-Yu Chen</a><sup style="color:#ed4b82">2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://chunyuan.li/">Chunyuan Li</a><sup style="color:#ffac33">3</sup>,
+              <a href="https://sites.google.com/view/tiangao/home">Tian Gao</a><sup style="color:#ed4b82">2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~hannaneh/">Hannaneh Hajishirzi</a><sup style="color:#ed4b82">2</sup>,
+              <a href="https://wernergeyer.com/">Werner Geyer</a><sup style="color:#ed4b82">2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://sites.google.com/site/hcheng2site/Home">Hao Cheng</a><sup style="color:#ffac33">3</sup>,
+              <a href="https://nunomoniz.co/">Nuno Moniz</a><sup style="color:#6fbf73">1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://web.cs.ucla.edu/~kwchang/">Kai-Wei Chang</a><sup style="color:#6fbf73;">1</sup>,
+              <a href="http://niteshchawla.nd.edu/">Nitesh V Chawla</a><sup style="color:#6fbf73;">1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.microsoft.com/en-us/research/people/mgalley/?from=https://research.microsoft.com/~mgalley&type=exact">Michel Galley</a><sup style="color:#ffac33">3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.microsoft.com/en-us/research/people/jfgao/">Jianfeng Gao</a><sup style="color:#ffac33">3</sup>
+              <a href="https://sites.nd.edu/xiangliang-zhang/">Xiangliang Zhang</a><sup style="color:#6fbf73">1</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup style="color:#6fbf73;">1</sup>University of California, Los Angeles,</span><br>
-            <span class="author-block"><sup style="color:#ed4b82">2</sup>University of Washington,</span>
-            <span class="author-block"><sup style="color:#ffac33">3</sup>Microsoft Research</span><br>
-            <span class="paper-block"><b style="color:#f41c1c">ICLR 2024 Oral</b> (85 in 7304, 1.2%)</span>
+            <span class="author-block"><sup style="color:#6fbf73;">1</sup>University of Notre Dame,</span><br>
+            <span class="author-block"><sup style="color:#ed4b82">2</sup>IBM Research</span><br>
+<!--             <span class="paper-block"><b style="color:#f41c1c">ICLR 2024 Oral</b> (85 in 7304, 1.2%)</span> -->
           </div>
         
           <!-- <section> -->
