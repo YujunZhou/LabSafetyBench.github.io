@@ -9,12 +9,6 @@
 
   <style>
     /* 自定义样式用于交替行的颜色 */
-    table tr:nth-child(even) {
-      background-color: #f2f4f8; /* 淡雅的蓝灰色 */
-    }
-    table tr:nth-child(odd) {
-      background-color: #ffffff; /* 白色 */
-    }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -23,9 +17,14 @@
       padding: 10px;
       text-align: left;
     }
-    .merged-cell {
-      text-align: center;
-      vertical-align: middle;
+    thead tr {
+      background-color: #8FABB7; /* 第一行颜色 */
+    }
+    tbody tr:nth-child(odd) {
+      background-color: #ffffff; /* 白色 */
+    }
+    tbody tr:nth-child(even) {
+      background-color: #D8DFE5; /* 淡雅的蓝灰色 */
     }
     .link-icon {
       text-align: center;
@@ -330,8 +329,7 @@ Each question is classified as either ``easy'' or ``hard,'' depending on whether
 
 <section class="section">
     <div class="container">
-      <div class="columns is-centered">
-      <h2 class="title is-3">Model List</h2>
+      <h2 class="title is-3 has-text-centered">Model List</h2>
       <div class="table-container">
         <table class="table is-fullwidth">
           <thead>
@@ -485,7 +483,6 @@ Each question is classified as either ``easy'' or ``hard,'' depending on whether
         </table>
       </div>
     </div>
-  </div>
   </section>
 
 <section class="section">
