@@ -267,10 +267,17 @@
          Laboratory accidents, including explosions, radiation leaks, and chemical spills, have caused severe harm to both life and property. While <b>Large Language Models (LLMs)</b> are increasingly used in lab research, particularly in automated labs, they often lack safety awareness, raising concerns about their reliability in safety-critical tasks. Inaccurate or incomplete guidance from LLMs could lead to disastrous consequences, posing the crucial question: <b>Can LLMs be trusted to make safer decisions than humans in lab environments?</b>
           </p>
           <p>
-            To answer this question, we propose <img src="static/images/LabSafety.png" style="width:1.5em;vertical-align: middle" alt="Logo"/>
-<span class="labsafety">LabSafety</span>,  a specialized evaluation framework designed to assess the reliability and safety awareness of LLMs in laboratory environments. First, we propose a new taxonomy for lab safety, aligned with US Occupational Safety and Health Administration (OSHA) protocols. We categorize lab safety issues into four main groups: Hazardous Substances, Emergency Response, Responsibility and Compliance, and Equipment and Material Handling. Some of these categories are further divided into subcategories based on the specific discipline or area of focus.
+            To address this question, we propose <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+<span class="labsafety">LabSafety Bench</span>,  a specialized evaluation framework designed to assess the reliability and safety awareness of LLMs in laboratory environments. First, we propose a new taxonomy for lab safety, aligned with US Occupational Safety and Health Administration (OSHA) protocols. 
 Second, we curate a set of 765 multiple-choice questions guided by this taxonomy to ensure comprehensive coverage of safety concerns across various domains. Of these, 632 are text-only questions, while 133 are text-with-image questions.
 Each question is classified as either ``easy'' or ``hard,'' depending on whether it can be answered correctly using only pre-university knowledge. Additionally, for each question, we provide a step-by-step explanation that has been verified by human experts to ensure accuracy and clarity.
+          </p>
+          <p>
+            We evaluate the performance of 17 foundation models on <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="labsafety">LabSafety Bench</span>, 7 open-weight LLMs, 4 open-weight LVMs, and 6 proprietary models. 
+            Additionally, we test the performance of undergraduate and graduate students who have received lab safety training in their respective disciplines on a sampled dataset from LabSafety Bench. 
+            The results show that GPT-4o achieves the highest accuracy on <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="labsafety">LabSafety Bench</span>, reaching 86.27%. However, most open-source 7B LLMs or LVMs only achieve around 60% accuracy,  which is comparable to the student evaluators' performance at 65.52%. 
           </p>
         </div>
       </div>
