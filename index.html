@@ -6,6 +6,32 @@
         content="Benchmarking LLMs on Safety Issues in Scientific Labs">
   <meta name="keywords" content="Benchmarking LabSafety", "Lab Safety Benchmark", "LLM Lab Safety">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    /* 自定义样式用于交替行的颜色 */
+    table tr:nth-child(even) {
+      background-color: #f2f4f8; /* 淡雅的蓝灰色 */
+    }
+    table tr:nth-child(odd) {
+      background-color: #ffffff; /* 白色 */
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    .merged-cell {
+      text-align: center;
+      vertical-align: middle;
+    }
+    .link-icon {
+      text-align: center;
+    }
+  </style>
+  
   <title> Benchmarking LLMs on Safety Issues in Scientific Labs</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -271,83 +297,177 @@
 
 <section class="section">
     <div class="container">
-      <h2 class="title is-3">Models</h2>
+      <h2 class="title is-3">Model List</h2>
       <div class="table-container">
         <table class="table is-fullwidth">
           <thead>
             <tr>
               <th>Category</th>
               <th>Model</th>
+              <th>Model Size</th>
+              <th>Open-Weight</th>
+              <th>Version</th>
+              <th>Creator</th>
+              <th>Source</th>
+              <th>Link</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Open-weight LLMs</td>
+              <td class="merged-cell" rowspan="7">Open-weight LLMs</td>
               <td>Llama3-8B</td>
+              <td>8B</td>
+              <td>Yes</td>
+              <td>-</td>
+              <td>Meta</td>
+              <td>HuggingFace</td>
+              <td class="link-icon"><a href="https://huggingface.co/meta/Llama3-8B" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Open-weight LLMs</td>
               <td>Llama3-70B</td>
+              <td>70B</td>
+              <td>Yes</td>
+              <td>-</td>
+              <td>Meta</td>
+              <td>HuggingFace</td>
+              <td class="link-icon"><a href="https://huggingface.co/meta/Llama3-70B" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Open-weight LLMs</td>
               <td>Vicuna-7B</td>
+              <td>7B</td>
+              <td>Yes</td>
+              <td>v1.3</td>
+              <td>LMSYS</td>
+              <td>HuggingFace</td>
+              <td class="link-icon"><a href="https://huggingface.co/lmsys/Vicuna-7B" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Open-weight LLMs</td>
               <td>Vicuna-13B</td>
+              <td>13B</td>
+              <td>Yes</td>
+              <td>v1.3</td>
+              <td>LMSYS</td>
+              <td>HuggingFace</td>
+              <td class="link-icon"><a href="https://huggingface.co/lmsys/Vicuna-13B" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Open-weight LLMs</td>
               <td>Mistral-7B</td>
+              <td>7B</td>
+              <td>Yes</td>
+              <td>v0.1</td>
+              <td>Mistral AI</td>
+              <td>HuggingFace</td>
+              <td class="link-icon"><a href="https://huggingface.co/mistralai/Mistral-7B" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Open-weight LLMs</td>
               <td>Mistral-8x7B</td>
+              <td>8x7B</td>
+              <td>Yes</td>
+              <td>-</td>
+              <td>Mistral AI</td>
+              <td>HuggingFace</td>
+              <td class="link-icon"><a href="https://huggingface.co/mistralai/Mistral-8x7B" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Open-weight LLMs</td>
               <td>Galactica-6.7B</td>
+              <td>6.7B</td>
+              <td>Yes</td>
+              <td>-</td>
+              <td>Meta</td>
+              <td>HuggingFace</td>
+              <td class="link-icon"><a href="https://huggingface.co/meta/Galactica-6.7B" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Open-weight LVMs</td>
+              <td class="merged-cell" rowspan="5">Open-weight LVMs</td>
               <td>InstructBlip-7B</td>
+              <td>7B</td>
+              <td>Yes</td>
+              <td>-</td>
+              <td>OpenAI</td>
+              <td>HuggingFace</td>
+              <td class="link-icon"><a href="https://huggingface.co/openai/InstructBlip-7B" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Open-weight LVMs</td>
               <td>Qwen-VL-Chat</td>
+              <td>unknown</td>
+              <td>Yes</td>
+              <td>-</td>
+              <td>Alibaba</td>
+              <td>HuggingFace</td>
+              <td class="link-icon"><a href="https://huggingface.co/alibaba/Qwen-VL-Chat" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Open-weight LVMs</td>
               <td>InternVL2-8B</td>
+              <td>8B</td>
+              <td>Yes</td>
+              <td>-</td>
+              <td>OpenGVLab</td>
+              <td>GitHub</td>
+              <td class="link-icon"><a href="https://github.com/OpenGVLab/InternVL" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Open-weight LVMs</td>
               <td>llama3.2-11B</td>
+              <td>11B</td>
+              <td>Yes</td>
+              <td>-</td>
+              <td>Meta</td>
+              <td>HuggingFace</td>
+              <td class="link-icon"><a href="https://huggingface.co/meta/llama3.2-11B" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Proprietary models</td>
               <td>Gemini-1.5-Flash</td>
+              <td>unknown</td>
+              <td>No</td>
+              <td>v1.5</td>
+              <td>Google DeepMind</td>
+              <td>Google API</td>
+              <td class="link-icon"><a href="#" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Proprietary models</td>
+              <td class="merged-cell" rowspan="6">Proprietary models</td>
               <td>Gemini-1.5-Pro</td>
+              <td>unknown</td>
+              <td>No</td>
+              <td>v1.5</td>
+              <td>Google DeepMind</td>
+              <td>Google API</td>
+              <td class="link-icon"><a href="#" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Proprietary models</td>
               <td>Claude-3-Haiku</td>
+              <td>unknown</td>
+              <td>No</td>
+              <td>v3</td>
+              <td>Anthropic</td>
+              <td>Anthropic API</td>
+              <td class="link-icon"><a href="https://www.anthropic.com/claude-3" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Proprietary models</td>
               <td>Claude-3.5-Sonnet</td>
+              <td>unknown</td>
+              <td>No</td>
+              <td>v3.5</td>
+              <td>Anthropic</td>
+              <td>Anthropic API</td>
+              <td class="link-icon"><a href="#" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Proprietary models</td>
               <td>GPT-40-mini</td>
+              <td>unknown</td>
+              <td>No</td>
+              <td>v4.0</td>
+              <td>OpenAI</td>
+              <td>OpenAI API</td>
+              <td class="link-icon"><a href="https://openai.com/gpt-4" target="_blank">🔗</a></td>
             </tr>
             <tr>
-              <td>Proprietary models</td>
               <td>GPT-4o</td>
+              <td>unknown</td>
+              <td>No</td>
+              <td>v4.0</td>
+              <td>OpenAI</td>
+              <td>OpenAI API</td>
+              <td class="link-icon"><a href="#" target="_blank">🔗</a></td>
             </tr>
           </tbody>
         </table>
