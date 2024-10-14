@@ -494,6 +494,9 @@ Each question is classified as either ``easy'' or ``hard,'' depending on whether
         <!-- 第一部分：LLM on Text-only Questions -->
         <h2 class="title is-4" id="llm_text_only">Leaderboard: LLMs on Text-only Questions</h2>
         <div class="content">
+          <p class="mt-3">Accuracy scores on the <b>Text-only</b> subset (632 samples) of <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="labsafety">LabSafety Bench</span>.
+          </p>
           <table class="js-sort-table" id="llm_text_only_results">
             <tr>
               <td class="js-sort-number"><strong>#</strong></td>
@@ -620,6 +623,8 @@ Each question is classified as either ``easy'' or ``hard,'' depending on whether
 
         <h2 class="title is-4" id="lvm_text_image">Leaderboard: LVMs on Text-with-image Questions</h2>
         <div class="content">
+          <p class="mt-3">Accuracy scores on the <b>Text-with-image</b> subset (133 samples) of <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="labsafety">LabSafety Bench</span>.
           <table class="js-sort-table" id="lvm_text_image_results">
             <tr>
               <td class="js-sort-number"><strong>#</strong></td>
@@ -700,7 +705,11 @@ Each question is classified as either ``easy'' or ``hard,'' depending on whether
         </div>
 
         <h2 class="title is-4" id="proprietary_models">Leaderboard: Proprietary Models on Both Types of Questions</h2>
+        
         <div class="content">
+          <p class="mt-3">Accuracy scores on the whole dataset of <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="labsafety">LabSafety Bench</span>. *" indicates results on the <b>sampled</b>
+            <span class="labsafety">LabSafety Bench</span>.
           <table class="js-sort-table" id="proprietary_results">
             <tr>
               <td class="js-sort-number"><strong>#</strong></td>
@@ -810,7 +819,7 @@ Each question is classified as either ``easy'' or ``hard,'' depending on whether
             <tr>
               <td>7</td>
               <td><b>Top3-Human*</b></td>
-              <td>83.00</td>
+              <td>75.67</td>
               <td>78.26</td>
               <td>86.67</td>
               <td>74.07</td>
@@ -823,6 +832,18 @@ Each question is classified as either ``easy'' or ``hard,'' depending on whether
               <td>88.00</td>
             </tr>
           </table>
+
+          <b>Top-3 Human*:</b> Since some participants are junior researchers who may not fully represent the true capabilities of experienced experts, we selected the top-3 scorers
+          and calculated their accuracy across each subcategory, shown in the "Top3-Human*" row.
+          <br>
+          <b>Hazardous Substances:</b> <b>BH:</b> Biological Hazards, <b>CH:</b> Chemical Hazards, <b>RH:</b> Radiation Hazards, <b>PH:</b> Physical Hazards.
+        <br>
+          <b>Responsibility and Compliance:</b> <b>RS:</b> Responsibility for Safety, <b>EWM:</b> Environmental and Waste Management.
+        <br>
+          <b>Equipment and Material Handling:</b> <b>EU:</b> Equipment Usage, <b>ES:</b> Electricity Safety, <b>PPE:</b> Personal Protective Equipment
+        <br>
+          <b>Emergency Response:</b> <b>ER:</b> Emergency Response.
+
         </div>
       </div>
     </div>
