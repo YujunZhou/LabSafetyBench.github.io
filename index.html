@@ -487,6 +487,321 @@ Each question is classified as either ``easy'' or ``hard,'' depending on whether
 
 <section class="section">
   <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="leaderboard">Leaderboard on <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+<span class="labsafety">LabSafety Bench</span></h2>
+        <!-- 第一部分：LLM on Text-only Questions -->
+        <h2 class="title is-2">LLM on Text-only Questions</h2>
+        <div class="content">
+          <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>All</th>
+                <th>BH</th>
+                <th>CH</th>
+                <th>RH</th>
+                <th>PH</th>
+                <th>RS</th>
+                <th>EMH</th>
+                <th>EWM</th>
+                <th>EU</th>
+                <th>ES</th>
+                <th>PPE</th>
+                <th>ER</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Llama3-8B</td>
+                <td>65.19</td>
+                <td>69.23</td>
+                <td>65.93</td>
+                <td>68.18</td>
+                <td>63.49</td>
+                <td>68.35</td>
+                <td>69.33</td>
+                <td>60.11</td>
+                <td>75.00</td>
+                <td>60.24</td>
+                <td>69.90</td>
+              </tr>
+              <tr>
+                <td>Llama3-70B</td>
+                <td>78.32</td>
+                <td>76.92</td>
+                <td>72.78</td>
+                <td>87.3</td>
+                <td>79.75</td>
+                <td>73.33</td>
+                <td>76.50</td>
+                <td>70.00</td>
+                <td>87.95</td>
+                <td>78.64</td>
+              </tr>
+              <tr>
+                <td>Vicuna-7B</td>
+                <td>36.08</td>
+                <td>41.35</td>
+                <td>36.63</td>
+                <td>32.95</td>
+                <td>26.98</td>
+                <td>34.18</td>
+                <td>34.97</td>
+                <td>39.76</td>
+                <td>32.04</td>
+              </tr>
+              <tr>
+                <td>Vicuna-13B</td>
+                <td>46.52</td>
+                <td>50.96</td>
+                <td>45.42</td>
+                <td>43.18</td>
+                <td>34.92</td>
+                <td>46.84</td>
+                <td>45.36</td>
+                <td>60.04</td>
+                <td>46.60</td>
+              </tr>
+              <tr>
+                <td>Mistral-7B</td>
+                <td>58.39</td>
+                <td>59.62</td>
+                <td>61.17</td>
+                <td>56.82</td>
+                <td>47.62</td>
+                <td>63.29</td>
+                <td>55.19</td>
+                <td>66.24</td>
+                <td>59.22</td>
+              </tr>
+              <tr>
+                <td>Mistral-8x7B</td>
+                <td>62.82</td>
+                <td>65.38</td>
+                <td>65.93</td>
+                <td>53.41</td>
+                <td>60.32</td>
+                <td>60.76</td>
+                <td>58.47</td>
+                <td>61.45</td>
+                <td>67.96</td>
+              </tr>
+              <tr>
+                <td>Galactica-6.7B</td>
+                <td>33.54</td>
+                <td>42.31</td>
+                <td>30.77</td>
+                <td>34.09</td>
+                <td>25.40</td>
+                <td>32.91</td>
+                <td>31.15</td>
+                <td>35.00</td>
+                <td>33.01</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 第二部分：LVM on Text-with-image Questions -->
+        <h2 class="title is-2">LVM on Text-with-image Questions</h2>
+        <div class="content">
+          <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>All</th>
+                <th>BH</th>
+                <th>CH</th>
+                <th>RH</th>
+                <th>PH</th>
+                <th>RS</th>
+                <th>EMH</th>
+                <th>EWM</th>
+                <th>EU</th>
+                <th>ES</th>
+                <th>PPE</th>
+                <th>ER</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>InstructBlip-7B</td>
+                <td>26.32</td>
+                <td>37.50</td>
+                <td>20.55</td>
+                <td>31.25</td>
+                <td>26.67</td>
+                <td>27.91</td>
+                <td>31.58</td>
+                <td>0.00</td>
+                <td>40.00</td>
+                <td>17.65</td>
+              </tr>
+              <tr>
+                <td>Qwen-VL-Chat</td>
+                <td>64.66</td>
+                <td>62.50</td>
+                <td>65.75</td>
+                <td>75.00</td>
+                <td>60.00</td>
+                <td>65.12</td>
+                <td>55.26</td>
+                <td>0.00</td>
+                <td>60.00</td>
+                <td>76.47</td>
+              </tr>
+              <tr>
+                <td>InternVL2-8B</td>
+                <td>72.93</td>
+                <td>62.50</td>
+                <td>79.45</td>
+                <td>75.00</td>
+                <td>46.67</td>
+                <td>74.42</td>
+                <td>63.16</td>
+                <td>100.0</td>
+                <td>88.00</td>
+                <td>76.47</td>
+              </tr>
+              <tr>
+                <td>Llama3.2-11B</td>
+                <td>72.18</td>
+                <td>75.00</td>
+                <td>71.23</td>
+                <td>75.00</td>
+                <td>53.33</td>
+                <td>76.74</td>
+                <td>62.50</td>
+                <td>63.16</td>
+                <td>100.0</td>
+                <td>82.35</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 第三部分：Proprietary Models on Both Types of Questions -->
+        <h2 class="title is-2">Proprietary Models on Both Types of Questions</h2>
+        <div class="content">
+          <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>All</th>
+                <th>BH</th>
+                <th>CH</th>
+                <th>RH</th>
+                <th>PH</th>
+                <th>RS</th>
+                <th>EMH</th>
+                <th>EWM</th>
+                <th>EU</th>
+                <th>ES</th>
+                <th>PPE</th>
+                <th>ER</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Gemini-1.5-Flash</td>
+                <td>74.32</td>
+                <td>75.89</td>
+                <td>76.01</td>
+                <td>71.15</td>
+                <td>70.51</td>
+                <td>77.87</td>
+                <td>79.52</td>
+                <td>72.85</td>
+                <td>80.95</td>
+                <td>75.00</td>
+                <td>73.33</td>
+              </tr>
+              <tr>
+                <td>Gemini-1.5-Pro</td>
+                <td>79.91</td>
+                <td>79.46</td>
+                <td>81.93</td>
+                <td>75.00</td>
+                <td>75.64</td>
+                <td>83.61</td>
+                <td>81.99</td>
+                <td>80.09</td>
+                <td>76.19</td>
+                <td>82.41</td>
+                <td>84.17</td>
+              </tr>
+              <tr>
+                <td>Claude-3-Haiku</td>
+                <td>77.65</td>
+                <td>81.86</td>
+                <td>86.13</td>
+                <td>72.85</td>
+                <td>69.23</td>
+                <td>77.87</td>
+                <td>78.95</td>
+                <td>72.65</td>
+                <td>80.56</td>
+                <td>78.84</td>
+                <td>82.50</td>
+              </tr>
+              <tr>
+                <td>Claude-3.5-Sonnet</td>
+                <td>83.03</td>
+                <td>86.61</td>
+                <td>89.83</td>
+                <td>83.33</td>
+                <td>83.61</td>
+                <td>84.78</td>
+                <td>80.95</td>
+                <td>87.04</td>
+                <td>82.54</td>
+              </tr>
+              <tr>
+                <td>GPT-4o-mini</td>
+                <td>79.74</td>
+                <td>79.51</td>
+                <td>81.93</td>
+                <td>78.67</td>
+                <td>71.79</td>
+                <td>79.51</td>
+                <td>81.11</td>
+                <td>79.74</td>
+                <td>85.19</td>
+              </tr>
+              <tr>
+                <td>GPT-4o</td>
+                <td>84.96</td>
+                <td>84.82</td>
+                <td>83.33</td>
+                <td>83.33</td>
+                <td>85.36</td>
+                <td>83.33</td>
+                <td>80.23</td>
+                <td>86.49</td>
+                <td>88.02</td>
+              </tr>
+              <tr>
+                <td>Top3-Human*</td>
+                <td>83.00</td>
+                <td>78.26</td>
+                <td>85.18</td>
+                <td>82.67</td>
+                <td>41.67</td>
+                <td>75.00</td>
+                <td>66.67</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
     
     <div class="columns is-centered">
       <div class="column is-full has-text-centered content">
@@ -495,518 +810,6 @@ Each question is classified as either ``easy'' or ``hard,'' depending on whether
           <p class="mt-3">Accuracy scores on the <b>testmini</b> subset (1,000 examples) of <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
             <span class="mathvista">MathVista</span>.
           </p>
-
-          <div id="testmini_leaderboard"></div>
-
-          <!-- <table class="js-sort-table" id="results">
-              <tr>
-                  <td class="js-sort-number"><strong>#</strong></td>
-                  <td class="js-sort-number"><strong>Model</strong></td>
-                  <td class="js-sort-number"><strong>Method</strong></td>
-                  <td class="js-sort-number"><strong>Source</strong></td>
-                  <td class="js-sort-number"><strong>Date</strong></td>
-                  <td class="js-sort-number"><strong><u>ALL</u></strong></td>
-                  <td class="js-sort-number"><strong>FQA</strong></td>
-                  <td class="js-sort-number"><strong>GPS</strong></td>
-                  <td class="js-sort-number"><strong>MWP</strong></td>
-                  <td class="js-sort-number"><strong>TQA</strong></td>
-                  <td class="js-sort-number"><strong>VQA</strong></td>
-                  <td class="js-sort-number"><strong>ALG</strong></td>
-                  <td class="js-sort-number"><strong>ARI</strong></td>
-                  <td class="js-sort-number"><strong>GEO</strong></td>
-                  <td class="js-sort-number"><strong>LOG</strong></td>
-                  <td class="js-sort-number"><strong>NUM</strong></td>
-                  <td class="js-sort-number"><strong>SCI</strong></td>
-                  <td class="js-sort-number"><strong>STA</strong></td>
-              </tr>
-              <tr>
-                <td>-</td>
-                <td><b>Human Performance*</b></td>
-                <td>-</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>60.3</b></td>
-                <td>59.7</td>
-                <td>48.4</td>
-                <td>73.0</td>
-                <td>63.2</td>
-                <td>55.9</td>
-                <td>50.9</td>
-                <td>59.2</td>
-                <td>51.4</td>
-                <td>40.7</td>
-                <td>53.8</td>
-                <td>64.9</td>
-                <td>63.9</td>                
-              </tr>
-              <tr>
-                <td>1</td>
-                <td><b class="best-score-text" style="color: #C6011F">Gemini Ultra🥇</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-12-06</td>
-                <td><b class="best-score-text" style="color: #C6011F">53.0</b></td>
-                <td>49.1</td>
-                <td>56.3</td>
-                <td>53.8</td>
-                <td>69.0</td>
-                <td>40.2</td>
-                <td>58.4</td>
-                <td>45.9</td>
-                <td>55.7</td>
-                <td>21.6</td>
-                <td>38.9</td>
-                <td>62.3</td>
-                <td>59.5</td>                      
-              </tr>
-              <tr>
-                <td>2</td>
-                <td><b class="best-score-text" style="color: #C6011F">GPT-4V (Playground)🥈</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-15</td>
-                <td><b class="best-score-text" style="color: #C6011F">49.9</b></td>
-                <td>43.1</td>
-                <td>50.5</td>
-                <td>57.5</td>
-                <td>65.2</td>
-                <td>38.0</td>
-                <td>53.0</td>
-                <td>49.0</td>
-                <td>51.0</td>
-                <td>21.6</td>
-                <td>20.1</td>
-                <td>63.1</td>
-                <td>55.8</td>                      
-              </tr>
-              <tr>
-                <td>3</td>
-                <td><b class="best-score-text" style="color: #C6011F">Gemini Pro 🥉</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-12-06</td>
-                <td><b class="best-score-text" style="color: #C6011F">45.2</b></td>
-                <td>47.6</td>
-                <td>40.4</td>
-                <td>39.3</td>
-                <td>61.4</td>
-                <td>39.1</td>
-                <td>45.2</td>
-                <td>38.8</td>
-                <td>41.0</td>
-                <td>10.8</td>
-                <td>32.6</td>
-                <td>54.9</td>
-                <td>56.8</td>                      
-              </tr>
-              <tr>
-                <td>4</td>
-                <td><b>Qwen-VL-Plus</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://github.com/QwenLM/Qwen-VL" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-12-21</td>
-                <td><b>43.3</b></td>
-                <td>54.7</td>
-                <td>38.5</td>
-                <td>31.2</td>
-                <td>55.1</td>
-                <td>34.1</td>
-                <td>39.2</td>
-                <td>32.0</td>
-                <td>39.3</td>
-                <td>18.9</td>
-                <td>26.4</td>
-                <td>59.0</td>
-                <td>56.2</td>                             
-              </tr>
-              <tr>
-                <td>5</td>
-                <td><b>SPHINX (V2)</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://github.com/Alpha-VLLM/LLaMA2-Accessory/tree/main/SPHINX" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-11-17</td>
-                <td><b>36.7</b></td>
-                <td>54.7</td>
-                <td>16.4</td>
-                <td>23.1</td>
-                <td>41.8</td>
-                <td>43.0</td>
-                <td>20.6</td>
-                <td>33.4</td>
-                <td>17.6</td>
-                <td>24.3</td>
-                <td>21.5</td>
-                <td>43.4</td>
-                <td>51.5</td>                             
-              </tr>
-              <tr>
-                <td>6</td>
-                <td><b>Multimodal Bard</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>34.8</b></td>
-                <td>26.0</td>
-                <td>47.1</td>
-                <td>29.6</td>
-                <td>48.7</td>
-                <td>26.8</td>
-                <td>46.5</td>
-                <td>28.6</td>
-                <td>47.8</td>
-                <td>13.5</td>
-                <td>14.9</td>
-                <td>47.5</td>
-                <td>33.0</td>                
-              </tr>
-              <tr>
-                <td>7</td>
-                <td><b>PoT GPT-4 (Caption+OCR) </b></td>
-                <td>Tool 🛠️</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>33.9</b></td>
-                <td>30.1</td>
-                <td>39.4</td>
-                <td>30.6</td>
-                <td>39.9</td>
-                <td>31.3</td>
-                <td>37.4</td>
-                <td>31.7</td>
-                <td>41.0</td>
-                <td>18.9</td>
-                <td>20.1</td>
-                <td>44.3</td>
-                <td>37.9</td>                               
-              </tr>
-              <tr>
-                <td>8</td>
-                <td><b>CoT GPT-4 (Caption+OCR) </b></td>
-                <td>Tool 🛠️</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>33.2</b></td>
-                <td>27.9</td>
-                <td>31.7</td>
-                <td>31.2</td>
-                <td>51.9</td>
-                <td>28.5</td>
-                <td>33.5</td>
-                <td>30.9</td>
-                <td>32.2</td>
-                <td>13.5</td>
-                <td>12.5</td>
-                <td>58.2</td>
-                <td>37.9</td>                               
-              </tr>
-              <tr>
-                <td>9</td>
-                <td><b>CoT ChatGPT (Caption+OCR)</b></td>
-                <td>Tool 🛠️</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>33.2</b></td>
-                <td>27.5</td>
-                <td>29.3</td>
-                <td>36.0</td>
-                <td>49.4</td>
-                <td>29.1</td>
-                <td>31.0</td>
-                <td>32.9</td>
-                <td>31.0</td>
-                <td>16.2</td>
-                <td>17.4</td>
-                <td>50.8</td>
-                <td>37.2</td>                               
-              </tr>
-              <tr>
-                <td>10</td>
-                <td><b>CoT Claude-2 (Caption+OCR)</b></td>
-                <td>Tool 🛠️</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>33.2</b></td>
-                <td>26.0</td>
-                <td>31.7</td>
-                <td>35.5</td>
-                <td>48.1</td>
-                <td>30.2</td>
-                <td>32.4</td>
-                <td>32.3</td>
-                <td>33.0</td>
-                <td>16.2</td>
-                <td>17.4</td>
-                <td>54.9</td>
-                <td>36.2</td>                             
-              </tr>
-              <tr>
-                <td>11</td>
-                <td><b>Gemini Nano 2</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-12-06</td>
-                <td><b>30.6</b></td>
-                <td>28.6</td>
-                <td>23.6</td>
-                <td>30.7</td>
-                <td>41.8</td>
-                <td>31.8</td>
-                <td>27.1</td>
-                <td>29.8</td>
-                <td>26.8</td>
-                <td>10.8</td>
-                <td>20.8</td>
-                <td>40.2</td>
-                <td>33.6</td>                      
-              </tr>
-              <tr>
-                <td>12</td>
-                <td><b>SPHINX (V1)</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://github.com/Alpha-VLLM/LLaMA2-Accessory/blob/main/SPHINX/SPHINX_paper.pdf" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-11-09</td>
-                <td><b>27.5</b></td>
-                <td>23.4</td>
-                <td>23.1</td>
-                <td>21.5</td>
-                <td>39.9</td>
-                <td>34.1</td>
-                <td>25.6</td>
-                <td>28.1</td>
-                <td>23.4</td>
-                <td>16.2</td>
-                <td>17.4</td>
-                <td>40.2</td>
-                <td>23.6</td>                             
-              </tr>
-              <tr>
-                <td>13</td>
-                <td><b>Gemini Nano 1</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-12-06</td>
-                <td><b>27.3</b></td>
-                <td>30.9</td>
-                <td>21.6</td>
-                <td>23.7</td>
-                <td>29.1</td>
-                <td>30.7</td>
-                <td>23.8</td>
-                <td>25.5</td>
-                <td>21.3</td>
-                <td>13.5</td>
-                <td>20.8</td>
-                <td>27.9</td>
-                <td>30.9</td>                      
-              </tr>
-              <tr>
-                <td>14</td>
-                <td><b>PoT ChatGPT (Caption+OCR)</b></td>
-                <td>Tool 🛠️</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>26.8</b></td>
-                <td>24.5</td>
-                <td>26.4</td>
-                <td>23.7</td>
-                <td>33.5</td>
-                <td>27.9</td>
-                <td>27.8</td>
-                <td>26.1</td>
-                <td>28.0</td>
-                <td>18.9</td>
-                <td>13.2</td>
-                <td>33.6</td>
-                <td>29.9</td>                              
-              </tr>
-              <tr>
-                <td>15</td>
-                <td><b>LLaVA (LLaMA-2-13B)</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>26.1</b></td>
-                <td>26.8</td>
-                <td>29.3</td>
-                <td>16.1</td>
-                <td>32.3</td>
-                <td>26.3</td>
-                <td>27.3</td>
-                <td>20.1</td>
-                <td>28.8</td>
-                <td>24.3</td>
-                <td>18.3</td>
-                <td>37.3</td>
-                <td>25.1</td>                               
-              </tr>
-              <tr>
-                <td>16</td>
-                <td><b>InstructBLIP (Vicuna-7B)</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>25.3</b></td>
-                <td>23.1</td>
-                <td>20.7</td>
-                <td>18.3</td>
-                <td>32.3</td>
-                <td>35.2</td>
-                <td>21.8</td>
-                <td>27.1</td>
-                <td>20.7</td>
-                <td>18.9</td>
-                <td>20.4</td>
-                <td>33.0</td>
-                <td>23.1</td>                              
-              </tr>
-              <tr>
-                <td>17</td>
-                <td><b>LLaVAR</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>25.2</b></td>
-                <td>21.9</td>
-                <td>25.0</td>
-                <td>16.7</td>
-                <td>34.8</td>
-                <td>30.7</td>
-                <td>24.2</td>
-                <td>22.1</td>
-                <td>23.0</td>
-                <td>13.5</td>
-                <td>15.3</td>
-                <td>42.6</td>
-                <td>21.9</td>                               
-              </tr>
-              <tr>
-                <td>18</td>
-                <td><b>LLaMA-Adapter-V2 (7B)</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>23.9</b></td>
-                <td>21.2</td>
-                <td>25.5</td>
-                <td>11.3</td>
-                <td>32.3</td>
-                <td>31.8</td>
-                <td>26.3</td>
-                <td>20.4</td>
-                <td>24.3</td>
-                <td>24.3</td>
-                <td>13.9</td>
-                <td>29.5</td>
-                <td>18.3</td>                              
-              </tr>
-              <tr>
-                <td>19</td>
-                <td><b>miniGPT4 (LLaMA-2-7B)</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>23.1</b></td>
-                <td>18.6</td>
-                <td>26.0</td>
-                <td>13.4</td>
-                <td>30.4</td>
-                <td>30.2</td>
-                <td>28.1</td>
-                <td>21.0</td>
-                <td>24.7</td>
-                <td>16.2</td>
-                <td>16.7</td>
-                <td>25.4</td>
-                <td>17.9</td>                              
-              </tr>
-              <tr>
-                <td>20</td>
-                <td><b>mPLUG-Owl (LLaMA-7B)</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>22.2</b></td>
-                <td>22.7</td>
-                <td>23.6</td>
-                <td>10.2</td>
-                <td>27.2</td>
-                <td>27.9</td>
-                <td>23.6</td>
-                <td>19.2</td>
-                <td>23.9</td>
-                <td>13.5</td>
-                <td>12.7</td>
-                <td>26.3</td>
-                <td>21.4</td>                            
-              </tr>
-              <tr>
-                <td>21</td>
-                <td><b>IDEFICS (9B-Instruct)</b></td>
-                <td>LMM 🖼️</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>19.8</b></td>
-                <td>21.6</td>
-                <td>21.1</td>
-                <td>6.5</td>
-                <td>25.9</td>
-                <td>24.0</td>
-                <td>22.1</td>
-                <td>15.0</td>
-                <td>19.8</td>
-                <td>18.9</td>
-                <td>9.9</td>
-                <td>24.6</td>
-                <td>18.1</td>                               
-              </tr>
-              <tr>
-                <td>22</td>
-                <td><b>Random Chance</b></td>
-                <td>-</td>
-                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-                <td>2023-10-03</td>
-                <td><b>17.9</b></td>
-                <td>18.2</td>
-                <td>21.6</td>
-                <td>3.8</td>
-                <td>19.6</td>
-                <td>26.3</td>
-                <td>21.7</td>
-                <td>14.7</td>
-                <td>20.1</td>
-                <td>13.5</td>
-                <td>8.3</td>
-                <td>17.2</td>
-                <td>16.3</td>                               
-              </tr>                                                              
-          </table> -->
-
-          <!-- <b>Human Performance*:</b> Average human performance from AMT annotators who have high school diplomas or above.
-          <br>
-          <b>Method types:</b> <b>LMM 🖼️:</b> Large Multimodal Model, <b>Tool 🛠️:</b> Tool-augmented Large Language Model.
-          <br>
-          <b>Task types:</b> <b>FQA:</b> figure QA,
-          <b>GPS:</b> geometry problem solving,
-          <b>MWP:</b> math word problem,
-          <b>TQA:</b> textbook QA,
-          <b>VQA:</b> visual QA.
-          <br>
-          <b>Math reasoning types:</b> 
-          <b>ALG:</b> algebraic,
-          <b>ARI:</b> arithmetic,
-          <b>GEO:</b> geometry,
-          <b>LOG:</b> logical ,
-          <b>NUM:</b> numeric,
-          <b>SCI:</b> scientific,
-          <b>STA:</b> statistical.
-          <br>
-          <br>
-          <div>
-          <p>🚨 To submit your results to the leaderboard, please send to <a href="mailto:lupantech@gmail.com">this email</a> with your result json files.
-            </p>
-          </div> -->
-
-        </div>
 
         <h2 class="title is-3" id="leaderboard_test">Leaderboard on MathVista (test)</h2>
         <div class="content">
