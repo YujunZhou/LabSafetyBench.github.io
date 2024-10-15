@@ -29,29 +29,32 @@
     .link-icon {
       text-align: center;
     }
-    .floating-nav {
-      position: fixed;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      background-color: #f8f8f8;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
     .floating-nav ul {
       list-style: none;
       padding: 0;
     }
     .floating-nav ul li {
-      margin: 10px 0;
+      margin: 15px 0;
     }
     .main-content {
       padding: 20px;
+      margin-left: 260px; /* Ensure content doesn't overlap sidebar */
     }
     .floating-nav h2 {
       text-align: left;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #333;
+      margin-bottom: 15px;
+    }
+    .floating-nav a {
+      color: #3273dc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .floating-nav a:hover {
+      color: #0056b3;
+      text-decoration: underline;
     }
   </style>
   
