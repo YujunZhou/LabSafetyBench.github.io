@@ -29,6 +29,16 @@
     .link-icon {
       text-align: center;
     }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100%;
+      background-color: #f8f8f8;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
   </style>
   
   <title> Benchmarking LLMs on Safety Issues in Scientific Labs</title>
@@ -78,6 +88,17 @@
 </head>
 <body>
 
+<!-- Sidebar Navigation -->
+<nav class="sidebar">
+  <h2 class="title is-4">Navigation</h2>
+  <ul>
+    <li><a href="#introduction" class="is-link">Introduction</a></li>
+    <li><a href="#labsafety-dataset" class="is-link">LabSafety Bench Dataset</a></li>
+    <li><a href="#experimental-results" class="is-link">Experimental Results</a></li>
+  </ul>
+</nav>
+
+  
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -279,7 +300,7 @@
 </section> -->
 
 
-<section class="section">
+<section id="introduction" class="section">
   <div class="container" style="margin-bottom: 2vh;">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -322,7 +343,7 @@ device operations, or industrial machinery control.
 
 
 <!-- DATASET SECTION -->
-<section class="hero is-light is-small">
+<section id="labsafety-dataset" class="hero is-light is-small">
   <div class="hero-body has-text-centered">
   <h1 class="title is-1 labsafety">
     <img src="static/images/LabSafety.png" style="width:1.5em;vertical-align: middle" alt="Logo"/>
@@ -524,7 +545,7 @@ of each category appearing alongside others within the same question. It reveals
 </section>
 
 <!-- RESULTS SECTION -->
-<section class="hero is-light is-small">
+<section id="experimental-results" class="hero is-light is-small">
   <div class="hero-body has-text-centered">
     <h1 class="title is-1 labsafety">Experiment Results</h1>
   </div>
