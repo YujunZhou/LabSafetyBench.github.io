@@ -287,24 +287,24 @@
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-         Laboratory accidents, including explosions, radiation leaks, and chemical spills, have caused severe harm to both life and property. While <b>Large Language Models (LLMs)</b> and <b>Large Vision Models (LVMs)</b> are increasingly used in lab research, particularly in automated labs, they often lack safety awareness, raising concerns about their reliability in safety-critical tasks. Inaccurate or incomplete guidance from LLMs could lead to disastrous consequences, posing the crucial question: <b>Can LLMs be trusted to make safer decisions than humans in lab environments?</b>
+         <b>Motivation:<\b> Laboratory accidents, including explosions, radiation leaks, and chemical spills, have caused severe harm to both life and property. While <b>Large Language Models (LLMs)</b> and <b>Vision Language Models (VLMs)</b> are increasingly used in lab research, particularly in automated labs, they often lack safety awareness, raising concerns about their reliability in safety-critical tasks. Inaccurate or incomplete guidance from LLMs could lead to disastrous consequences, posing the crucial question: <b>Can LLMs be trusted to make safer decisions than humans in lab environments?</b>
           </p>
           <p>
-            To address this question, we propose <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+           <b>Dataset Summary:<\b>  To address this question, we propose <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
 <span class="labsafety">LabSafety Bench</span>,  a specialized evaluation framework designed to assess the reliability and safety awareness of LLMs in laboratory environments. First, we propose a new taxonomy for lab safety, aligned with US Occupational Safety and Health Administration (OSHA) protocols. 
 Second, we curate a set of 765 multiple-choice questions guided by this taxonomy to ensure comprehensive coverage of safety concerns across various domains. Of these, 632 are text-only questions, while 133 are text-with-image questions.
 Each question is classified as either "easy" or "hard", depending on whether it can be answered correctly using only pre-university knowledge. Additionally, for each question, we provide a step-by-step explanation that has been verified by human experts to ensure accuracy and clarity.
           </p>
           <p>
-            We evaluate the performance of 17 foundation models on <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-            <span class="labsafety">LabSafety Bench</span>, 7 open-weight LLMs, 4 open-weight LVMs, and 6 proprietary models. 
+           <b>Experimental Results Summary:<\b>  We evaluate the performance of 17 foundation models on <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="labsafety">LabSafety Bench</span>, 7 open-weight LLMs, 4 open-weight VLMs, and 6 proprietary models. 
             Additionally, we test the performance of undergraduate and graduate students who have received lab safety training in their respective disciplines on a sampled dataset from LabSafety Bench. 
             The results show that GPT-4o achieves the highest accuracy on <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-            <span class="labsafety">LabSafety Bench</span>, reaching 86.27%. However, most open-source 7B LLMs or LVMs only achieve around 60% accuracy,  which is comparable to the student evaluators' performance at 65.52%, while the best student evaluator achieves 83% accuracy.
+            <span class="labsafety">LabSafety Bench</span>, reaching 86.27%. However, most open-source 7B LLMs or VLMs only achieve around 60% accuracy,  which is comparable to the student evaluators' performance at 65.52%, while the best student evaluator achieves 83% accuracy.
           </p>
 
           <p>
-            To the best of our knowledge, this is the first study about the trustworthiness of LLMs in lab safety
+            <b>Contribution:<\b> To the best of our knowledge, this is the first study about the trustworthiness of LLMs in lab safety
 contexts, expanding beyond the current focus on whether a model’s output is harmful, factual,
 biased, or privacy-infringing. While our work highlights the unreliability of current models in lab safety, similar challenges
 exist in other high-stakes LLM application scenarios that require precise decision-making and adherence to safety standards. For example, when LLMs are involved in household robotics, medical
@@ -318,6 +318,217 @@ device operations, or industrial machinery control.
 </section>
 
 
+
+
+
+<!-- DATASET SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 labsafety">
+    <img src="static/images/LabSafety.png" style="width:1.5em;vertical-align: middle" alt="Logo"/>
+    <span class="labsafety" style="vertical-align: middle">LabSafety Bench Dataset</span>
+  </h1>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container" style="margin-bottom: 2vh;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+          <p> -->
+            
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="labsafety">LabSafety Bench</span> is a specialized evaluation framework designed to assess the reliability and safety awareness of LLMs/VLMs in laboratory environments. First, we propose a new taxonomy for lab safety, aligned with US Occupational Safety and Health Administration (OSHA) protocols. We categorize lab safety issues into four main groups: Hazardous Substances, Emergency Response, Responsibility and Compliance, and Equipment and Material Handling. Some of these categories are further divided into subcategories based on the specific discipline or area of focus.
+Next, we gather an extensive corpus focused on lab safety based on the taxonomy. Human experts then identify key knowledge points within these materials, which are used to generate questions and options with the assistance of GPT-4o. Since the initial set of questions may include overly simplistic incorrect options, we prompt GPT-4o to refine these options, making them more challenging and less obvious. Finally, human experts review the questions to ensure each one has precisely one correct answer, resulting in the final version of the questions. Through this process, we curate a set of 765 multiple-choice questions to ensure comprehensive coverage of safety concerns across various domains. Of these, 632 are text-only questions, while 133 are text-with-image questions.
+Each question is classified as either ``easy'' or ``hard,'' depending on whether it can be answered correctly using only pre-university knowledge. 
+Additionally, for each question, we provide a step-by-step reasoning that has been verified by human experts to ensure accuracy and clarity. 
+            You can download the dataset on <a href="https://huggingface.co/datasets/" target="_blank">Hugging Face Dataset</a>.
+          </p>
+
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/data_curation.png" alt="Data Curation Framework" width="99%"/>
+      <p> The overall workflow of  
+      <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+      <span class="labsafety">LabSafety Bench</span>
+      question curation.
+      </p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/corpora_list.png" alt="Corpora List" width="80%"/>
+                <p> The Corpora List of  
+      <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+      <span class="labsafety">LabSafety Bench</span>
+      .
+              </div>
+            </div>
+          </div>
+
+          <p>
+            To conduct human evaluation, we construct 4 questionnaires for launching human evaluation in four subjects, Chemistry, Biology, Physics, and General Lab Safety. Each of them contains the related categories of this subject. 
+            To achieve this, we sample 25 instances from each subject, resulting in a total of 100 samples for human evaluation, which is also called <b>sampled LabSafety Bench</b>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Examples</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure3.png" alt="example" width="90%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ex1.png" alt="example" width="50%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ex2.png" alt="example" width="60%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ex3.png" alt="example" width="60%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ex4.png" alt="example" width="60%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ex5.png" alt="example" width="60%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ex6.png" alt="example" width="60%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ex7.png" alt="example" width="60%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ex8.png" alt="example" width="60%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ex9.png" alt="example" width="60%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ex10.png" alt="example" width="60%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ex11.png" alt="example" width="60%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ex12.png" alt="example" width="60%"/>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </div>
+      
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Statistics</h2>
+        <p>Notable statistics of <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <span class="labsafety">LabSafety</span></p>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure4a.png" alt="statistics" width="50%">
+              <p>The distribution of easy and hard questions for both text-only and text-with-image questions in 
+                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <span class="labsafety">LabSafety</span></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure4b.png" alt="statistics" width="70%">
+              <p>The distribution of questions in different categories in
+                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <span class="labsafety">LabSafety</span></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure_A1.png" alt="statistics" width="80%">
+              <p>Distribution of Question Lengths in
+                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <span class="labsafety">LabSafety</span></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure_A2.png" alt="statistics" width="80%">
+              <p>Distribution of Option Lengths in
+                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <span class="labsafety">LabSafety</span></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure_A3.png" alt="statistics" width="40%">
+              <p>Distribution of Number of Categories per Question in 
+                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <span class="labsafety">LabSafety</span></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure_A4.png" alt="statistics" width="80%">
+              <p>Category Overlap in
+                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <span class="labsafety">LabSafety</span>.
+              This represents the probability
+of each category appearing alongside others within the same question. It reveals which categories most commonly appear together in lab safety issues.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 labsafety">Experiment Results</h1>
+  </div>
+</section>
 
 
 <section class="section">
@@ -394,7 +605,7 @@ device operations, or industrial machinery control.
             </tr>
             <tr>
               <td>InstructBlip-7B</td>
-              <td>Open-weight LVM</td>
+              <td>Open-weight VLM</td>
               <td>-</td>
               <td>Salesforce</td>
               <td>HuggingFace</td>
@@ -402,7 +613,7 @@ device operations, or industrial machinery control.
             </tr>
             <tr>
               <td>Qwen-VL-Chat</td>
-              <td>Open-weight LVM</td>
+              <td>Open-weight VLM</td>
               <td>-</td>
               <td>Alibaba</td>
               <td>HuggingFace</td>
@@ -410,7 +621,7 @@ device operations, or industrial machinery control.
             </tr>
             <tr>
               <td>InternVL2-8B</td>
-              <td>Open-weight LVM</td>
+              <td>Open-weight VLM</td>
               <td>-</td>
               <td>OpenGVLab</td>
               <td>HuggingFace</td>
@@ -418,7 +629,7 @@ device operations, or industrial machinery control.
             </tr>
             <tr>
               <td>Llama3.2-11B</td>
-              <td>Open-weight LVM</td>
+              <td>Open-weight VLM</td>
               <td>-</td>
               <td>Meta</td>
               <td>HuggingFace</td>
@@ -614,11 +825,11 @@ device operations, or industrial machinery control.
           </table>
         </div>
 
-        <h2 class="title is-4" id="lvm_text_image">Leaderboard: LVMs on Text-with-image Questions</h2>
+        <h2 class="title is-4" id="VLM_text_image">Leaderboard: VLMs on Text-with-image Questions</h2>
         <div class="content">
           <p class="mt-3">Accuracy scores on the <b>Text-with-image</b> subset (133 samples) of <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
             <span class="labsafety">LabSafety Bench</span> across different categories.
-          <table class="js-sort-table" id="lvm_text_image_results">
+          <table class="js-sort-table" id="VLM_text_image_results">
             <tr>
               <td class="js-sort-number"><strong>#</strong></td>
               <td class="js-sort-number"><strong>Model</strong></td>
@@ -842,217 +1053,7 @@ device operations, or industrial machinery control.
     </div>
   </div>
 </section>
-
-
-<!-- DATASET SECTION -->
-<section class="hero is-light is-small">
-  <div class="hero-body has-text-centered">
-  <h1 class="title is-1 labsafety">
-    <img src="static/images/LabSafety.png" style="width:1.5em;vertical-align: middle" alt="Logo"/>
-    <span class="labsafety" style="vertical-align: middle">LabSafety Bench Dataset</span>
-  </h1>
-  </div>
-</section>
-
-<!-- <section class="section">
-  <div class="container" style="margin-bottom: 2vh;">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Introduction</h2>
-        <div class="content has-text-justified">
-          <p> -->
-            
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered has-text-centered">
-      <!-- <div class="column is-full-width has-text-centered"> -->
-        <div class="column is-four-fifths">
-        <h2 class="title is-3">Overview</h2>
-        <div class="content has-text-justified">
-          <p>
-            <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="labsafety">LabSafety Bench</span> is a specialized evaluation framework designed to assess the reliability and safety awareness of LLMs/LVMs in laboratory environments. First, we propose a new taxonomy for lab safety, aligned with US Occupational Safety and Health Administration (OSHA) protocols. We categorize lab safety issues into four main groups: Hazardous Substances, Emergency Response, Responsibility and Compliance, and Equipment and Material Handling. Some of these categories are further divided into subcategories based on the specific discipline or area of focus.
-Next, we gather an extensive corpus focused on lab safety based on the taxonomy. Human experts then identify key knowledge points within these materials, which are used to generate questions and options with the assistance of GPT-4o. Since the initial set of questions may include overly simplistic incorrect options, we prompt GPT-4o to refine these options, making them more challenging and less obvious. Finally, human experts review the questions to ensure each one has precisely one correct answer, resulting in the final version of the questions. Through this process, we curate a set of 765 multiple-choice questions to ensure comprehensive coverage of safety concerns across various domains. Of these, 632 are text-only questions, while 133 are text-with-image questions.
-Each question is classified as either ``easy'' or ``hard,'' depending on whether it can be answered correctly using only pre-university knowledge. 
-Additionally, for each question, we provide a step-by-step reasoning that has been verified by human experts to ensure accuracy and clarity. 
-            You can download the dataset on <a href="https://huggingface.co/datasets/" target="_blank">Hugging Face Dataset</a>.
-          </p>
-
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/data_curation.png" alt="Data Curation Framework" width="99%"/>
-      <p> The overall workflow of  
-      <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-      <span class="labsafety">LabSafety Bench</span>
-      question curation.
-      </p>
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/corpora_list.png" alt="Corpora List" width="80%"/>
-                <p> The Corpora List of  
-      <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-      <span class="labsafety">LabSafety Bench</span>
-      .
-              </div>
-            </div>
-          </div>
-
-          <p>
-            To conduct human evaluation, we construct 4 questionnaires for launching human evaluation in four subjects, Chemistry, Biology, Physics, and General Lab Safety. Each of them contains the related categories of this subject. 
-            To achieve this, we sample 25 instances from each subject, resulting in a total of 100 samples for human evaluation, which is also called <b>sampled LabSafety Bench</b>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-    
-    <div class="columns is-centered m-6">
-      <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Examples</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure3.png" alt="example" width="90%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex1.png" alt="example" width="50%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex2.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex3.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex4.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex5.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex6.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex7.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex8.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex9.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex10.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex11.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex12.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          
-        </div>
-
-      </div>
-    </div>
-      
-    <div class="columns is-centered m-6">
-      <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Statistics</h2>
-        <p>Notable statistics of <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span></p>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure4a.png" alt="statistics" width="50%">
-              <p>The distribution of easy and hard questions for both text-only and text-with-image questions in 
-                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span></p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure4b.png" alt="statistics" width="70%">
-              <p>The distribution of questions in different categories in
-                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span></p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure_A1.png" alt="statistics" width="80%">
-              <p>Distribution of Question Lengths in
-                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span></p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure_A2.png" alt="statistics" width="80%">
-              <p>Distribution of Option Lengths in
-                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span></p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure_A3.png" alt="statistics" width="40%">
-              <p>Distribution of Number of Categories per Question in 
-                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span></p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure_A4.png" alt="statistics" width="80%">
-              <p>Category Overlap in
-                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span>.
-              This represents the probability
-of each category appearing alongside others within the same question. It reveals which categories most commonly appear together in lab safety issues.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RESULTS SECTION -->
-<section class="hero is-light is-small">
-  <div class="hero-body has-text-centered">
-    <h1 class="title is-1 labsafety">Experiment Results</h1>
-  </div>
-</section>
-
+              
 <section class="section">
   <div class="container">
 
@@ -1068,9 +1069,9 @@ of each category appearing alongside others within the same question. It reveals
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/Figure5a.png" alt="Accuracy on LVMs under different settings" width="50%"/>
+              <img src="static/images/Figure5a.png" alt="Accuracy on VLMs under different settings" width="50%"/>
               <p>
-                Accuracy (%) of different LVMs on text-with-image problems in  <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                Accuracy (%) of different VLMs on text-with-image problems in  <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
           <span class="labsafety">LabSafety</span>.</p>
             </div>
           </div>
