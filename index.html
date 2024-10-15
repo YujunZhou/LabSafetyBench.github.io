@@ -29,15 +29,23 @@
     .link-icon {
       text-align: center;
     }
-    .sidebar {
+    .floating-nav {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 220px;
-      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       background-color: #f8f8f8;
       padding: 20px;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+    .floating-nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    .floating-nav ul li {
+      margin: 10px 0;
     }
   </style>
   
@@ -88,15 +96,15 @@
 </head>
 <body>
 
-<!-- Sidebar Navigation -->
-<nav class="sidebar">
-  <h2 class="title is-4">Navigation</h2>
-  <ul>
-    <li><a href="#introduction" class="is-link">Introduction</a></li>
-    <li><a href="#labsafety-dataset" class="is-link">LabSafety Bench Dataset</a></li>
-    <li><a href="#experimental-results" class="is-link">Experimental Results</a></li>
-  </ul>
-</nav>
+  <!-- Floating Navigation -->
+  <nav class="floating-nav">
+    <h2 class="title is-4 has-text-centered">Navigation</h2>
+    <ul>
+      <li><a href="#introduction" class="button is-link is-light is-rounded">Introduction</a></li>
+      <li><a href="#labsafety-dataset" class="button is-link is-light is-rounded">LabSafety Bench Dataset</a></li>
+      <li><a href="#experimental-results" class="button is-link is-light is-rounded">Experimental Results</a></li>
+    </ul>
+  </nav>
 
   
 <section class="hero">
