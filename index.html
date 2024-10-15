@@ -293,7 +293,7 @@
             To address this question, we propose <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
 <span class="labsafety">LabSafety Bench</span>,  a specialized evaluation framework designed to assess the reliability and safety awareness of LLMs in laboratory environments. First, we propose a new taxonomy for lab safety, aligned with US Occupational Safety and Health Administration (OSHA) protocols. 
 Second, we curate a set of 765 multiple-choice questions guided by this taxonomy to ensure comprehensive coverage of safety concerns across various domains. Of these, 632 are text-only questions, while 133 are text-with-image questions.
-Each question is classified as either ``easy'' or ``hard,'' depending on whether it can be answered correctly using only pre-university knowledge. Additionally, for each question, we provide a step-by-step explanation that has been verified by human experts to ensure accuracy and clarity.
+Each question is classified as either "easy" or "hard", depending on whether it can be answered correctly using only pre-university knowledge. Additionally, for each question, we provide a step-by-step explanation that has been verified by human experts to ensure accuracy and clarity.
           </p>
           <p>
             We evaluate the performance of 17 foundation models on <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
@@ -301,6 +301,14 @@ Each question is classified as either ``easy'' or ``hard,'' depending on whether
             Additionally, we test the performance of undergraduate and graduate students who have received lab safety training in their respective disciplines on a sampled dataset from LabSafety Bench. 
             The results show that GPT-4o achieves the highest accuracy on <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
             <span class="labsafety">LabSafety Bench</span>, reaching 86.27%. However, most open-source 7B LLMs or LVMs only achieve around 60% accuracy,  which is comparable to the student evaluators' performance at 65.52%, while the best student evaluator achieves 83% accuracy.
+          </p>
+
+          <p>
+            To the best of our knowledge, this is the first study about the trustworthiness of LLMs in lab safety
+contexts, expanding beyond the current focus on whether a model’s output is harmful, factual,
+biased, or privacy-infringing. While our work highlights the unreliability of current models in lab safety, similar challenges
+exist in other high-stakes LLM application scenarios that require precise decision-making and adherence to safety standards. For example, when LLMs are involved in household robotics, medical
+device operations, or industrial machinery control.
           </p>
         </div>
       </div>
