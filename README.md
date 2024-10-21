@@ -1,4 +1,4 @@
-# llm-judge-bias
+# labsafety-bench
 
 This website is adapted from [Nerfies website](https://nerfies.github.io).
 
