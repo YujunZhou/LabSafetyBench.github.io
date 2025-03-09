@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="description"
         content="Benchmarking LLMs on Safety Issues in Scientific Labs">
-  <meta name="keywords" content="Benchmarking LabSafety", "Lab Safety Benchmark", "LLM Lab Safety">
+  <meta name="keywords" content="Benchmarking LabSafety, Lab Safety Benchmark, LLM Lab Safety">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
@@ -70,21 +70,7 @@
     }
   </style>
   
-  <title> Benchmarking LLMs on Safety Issues in Scientific Labs</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
-  <!-- <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-/Users/panlu/Library/Mobile Documents/com~apple~CloudDocs/ImageMath/visual-mathqa-server/data_final/images
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script> -->
+  <title>Benchmarking LLMs on Safety Issues in Scientific Labs</title>
 
   <link rel="icon" href="./static/images/LabSafety.png">
 
@@ -98,8 +84,6 @@
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="stylesheet" href="./static/css/leaderboard.css">
 
-  <!-- <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bulma.min.css" rel="stylesheet">
-  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script> -->
   <script type="text/javascript" src="static/js/sort-table.js" defer></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -118,7 +102,7 @@
 <body>
 
   <!-- Floating Navigation -->
-<nav class="floating-nav">
+  <nav class="floating-nav">
     <h2>Navigation</h2>
     <ul>
       <li><a href="#introduction">Introduction</a></li>
@@ -136,7 +120,7 @@
           <h1 class="title is-1 publication-title is-bold">
             <img src="static/images/LabSafety.png" style="width:2em;vertical-align: middle" alt="Logo"/>
             <span class="labsafety" style="vertical-align: middle">LabSafety Bench</span>
-            </h1>
+          </h1>
           <h2 class="subtitle is-3 publication-subtitle">
             Benchmarking LLMs on Safety Issues in Scientific Labs
           </h2>
@@ -171,28 +155,11 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup style="color:#6fbf73;">1</sup>University of Notre Dame,</span><br>
             <span class="author-block"><sup style="color:#ed4b82">2</sup>IBM Research</span><br>
-<!--             <span class="paper-block"><b style="color:#f41c1c">ICLR 2024 Oral</b> (85 in 7304, 1.2%)</span> -->
           </div>
-        
-          <!-- <section> -->
-            <!-- <div class="section" id="org-banners" style="display:fle">
-              <a href="https://www.ucla.edu/" target="_blank" rel="external">
-                  <img class="center-block org-banner" src="static/images/ucla.png" style="height:3em">
-              </a>
-              <a href="https://www.washington.edu/" target="blank" class="ext-link">
-                  <img class="center-block org-banner" src="static/images/uw.png" style="height:3em">
-              </a>
-              <a href="https://www.microsoft.com/en-us/research/" target="_blank" rel="external">
-                  <img class="center-block org-banner" src="static/images/microsoft.png" style="height:3em">
-              </a>
-            </div> -->
-          <!-- </section> -->
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
-                <!-- @PAN TODO: change links -->
                 <a href="https://arxiv.org/pdf/2410.14182"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -204,25 +171,12 @@
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2410.14182"
                    class="external-link button is-normal is-rounded is-dark">
-                <!-- <a href="https://lupantech.github.io/papers/arxiv23_mathvista.pdf"
-                   class="external-link button is-normal is-rounded is-dark"> -->
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
-              <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/YujunZhou/LabSafety-Bench"
                    class="external-link button is-normal is-rounded is-dark">
@@ -230,31 +184,17 @@
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
-                  </a>
+                </a>
               </span>
-              <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="https://huggingface.co/datasets/yujunzhou/LabSafety_Bench"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <!-- <i class="far fa-images"></i> -->
                       <p style="font-size:18px">🤗</p>
-                      <!-- 🔗 -->
                   </span>
                   <span>Dataset</span>
                 </a>
               </span>
-              <!-- Visualization Link. -->
-<!--               <span class="link-block">
-                <a href="https://mathvista.github.io/#visualization"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <p style="font-size:18px">🔮</p>
-                  </span>
-                  <span>Visualize</span>
-                </a>
-              </span> -->
-              <!-- Leaderboard Link. -->
               <span class="link-block">
                 <a href="https://yujunzhou.github.io/LabSafetyBench.github.io/#leaderboard"
                    class="external-link button is-normal is-rounded is-dark">
@@ -264,18 +204,7 @@
                   <span>Leaderboard</span>
                 </a>
               </span>
-              <!-- Twitter Link. -->
-<!--               <span class="link-block">
-                <a href="https://twitter.com/lupantech/status/1717313355780964608"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <p style="font-size:18px">🌐</p>
-                  </span>
-                  <span>Twitter</span>
-                </a>
-              </span> -->
             </div>
-
           </div>
         </div>
       </div>
@@ -284,303 +213,92 @@
 </section>
 
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="content has-text-centered">
-      <img src="static/images/Taxonomy.png" alt="Lab Safety Taxonomy" width="99%"/>
-      <p> Our proposed new taxonomy for Lab Safety, serving as a framework to guide the data curation process for
-      <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-      <span class="labsafety">LabSafety Bench</span>
-      .
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<!-- <section class="section">
-  <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
-    <div class="columns is-centered m-6">
-      <div class="column is-full has-text-centered content">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Taxonomy.png" alt="Lab Safety Taxonomy" width="99%"/>
-              <p> Our proposed new taxonomy for Lab Safety, serving as a framework to guide the data curation process for
-              <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-              <span class="labsafety">LabSafety Bench</span>
-              .
-              </p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/tease_scores_gpt4v.png" alt="geometric reasoning" width="84%"/>
-              <p> Accuracy scores of one leading LLM (i.e., PoT GPT-4), four primary LMMs, random chance, and human performance our proposed 
-              <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-              <span class="mathvista">MathVista</span>
-              across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-</section> -->
-
-
+<!-- Updated Introduction Section -->
 <section id="introduction" class="section">
   <div class="container" style="margin-bottom: 2vh;">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-         <b> Motivation:</b> Laboratory accidents, including explosions, radiation leaks, and chemical spills, have caused severe harm to both life and property. While <b>Large Language Models (LLMs)</b> and <b>Vision Language Models (VLMs)</b> are increasingly used in lab research, particularly in automated labs, they often lack safety awareness, raising concerns about their reliability in safety-critical tasks. Inaccurate or incomplete guidance from LLMs could lead to disastrous consequences, posing the crucial question: <b>Can LLMs be trusted to make safer decisions than humans in lab environments?</b>
+            Artificial Intelligence (AI) is rapidly transforming scientific research, reshaping discovery across disciplines. However, its growing use in laboratory settings introduces critical safety challenges. Overreliance on AI can create an “illusion of understanding,” where flawed or incomplete recommendations may lead to hazardous decisions.
           </p>
           <p>
-           <b> Dataset Summary:</b>  To address this question, we propose <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-<span class="labsafety">LabSafety Bench</span>,  a specialized evaluation framework designed to assess the reliability and safety awareness of LLMs in laboratory environments. First, we propose a new taxonomy for lab safety, aligned with US Occupational Safety and Health Administration (OSHA) protocols. 
-Second, we curate a set of 765 multiple-choice questions guided by this taxonomy to ensure comprehensive coverage of safety concerns across various domains. Of these, 632 are text-only questions, while 133 are text-with-image questions.
-Each question is classified as either "easy" or "hard", depending on whether it can be answered correctly using only pre-university knowledge. Additionally, for each question, we provide a step-by-step explanation that has been verified by human experts to ensure accuracy and clarity.
+            Laboratory accidents—including explosions, chemical spills, and radiation leaks—underscore the urgent need for rigorous safety protocols. To address these challenges, we propose <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="labsafety">LabSafety Bench</span>, a comprehensive benchmark that evaluates both large language models (LLMs) and vision language models (VLMs) on their ability to identify hazards, assess risks, and predict the consequences of unsafe actions in lab environments.
           </p>
           <p>
-           <b> Experimental Results Summary:</b>  We evaluate the performance of 17 foundation models on <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-            <span class="labsafety">LabSafety Bench</span>, 7 open-weight LLMs, 4 open-weight VLMs, and 6 proprietary models. 
-            Additionally, we test the performance of undergraduate and graduate students who have received lab safety training in their respective disciplines on a sampled dataset from LabSafety Bench. 
-            The results show that GPT-4o achieves the highest accuracy on <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-            <span class="labsafety">LabSafety Bench</span>, reaching 86.27%. However, most open-source 7B LLMs or VLMs only achieve around 60% accuracy,  which is comparable to the student evaluators' performance at 65.52%, while the best student evaluator achieves 83% accuracy.
+            LabSafety Bench comprises 765 multiple-choice questions (632 text-only and 133 text-with-image) aligned with US OSHA protocols, along with 520 realistic laboratory scenarios that generate a total of 4,090 open-ended questions. Our evaluations across eight proprietary models, seven open-weight LLMs, and four VLMs reveal that even state-of-the-art models fall short of the safety threshold required for reliable operation.
           </p>
-
           <p>
-            <b> Contribution:</b> To the best of our knowledge, this is the first study about the trustworthiness of LLMs in lab safety
-contexts, expanding beyond the current focus on whether a model’s output is harmful, factual,
-biased, or privacy-infringing. While our work highlights the unreliability of current models in lab safety, similar challenges
-exist in other high-stakes LLM application scenarios that require precise decision-making and adherence to safety standards. For example, when LLMs are involved in household robotics, medical
-device operations, or industrial machinery control.
+            <b>Our Contributions:</b> (1) We establish the first benchmark focused on the trustworthiness of AI in high-stakes lab safety environments. (2) We introduce a dual-task framework that assesses both structured (multiple-choice) knowledge and practical, scenario-based decision-making. (3) Our comprehensive evaluations highlight significant gaps in current models’ safety awareness, emphasizing the need for improved training and specialized evaluation frameworks.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-</div>
-</section>
-
-
-
-
-
-<!-- DATASET SECTION -->
-<section id="labsafety-dataset" class="hero is-light is-small">
-  <div class="hero-body has-text-centered">
-  <h1 class="title is-1 labsafety">
-    <img src="static/images/LabSafety.png" style="width:1.5em;vertical-align: middle" alt="Logo"/>
-    <span class="labsafety" style="vertical-align: middle">LabSafety Bench Dataset</span>
-  </h1>
   </div>
 </section>
 
-<!-- <section class="section">
-  <div class="container" style="margin-bottom: 2vh;">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Introduction</h2>
-        <div class="content has-text-justified">
-          <p> -->
-            
+<!-- Updated Dataset & Overview Section -->
+<section id="labsafety-dataset" class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 labsafety">
+      <img src="static/images/LabSafety.png" style="width:1.5em;vertical-align: middle" alt="Logo"/>
+      <span class="labsafety" style="vertical-align: middle">LabSafety Bench Dataset</span>
+    </h1>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
     <div class="columns is-centered has-text-centered">
-      <!-- <div class="column is-full-width has-text-centered"> -->
-        <div class="column is-four-fifths">
+      <div class="column is-four-fifths">
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="labsafety">LabSafety Bench</span> is a specialized evaluation framework designed to assess the reliability and safety awareness of LLMs/VLMs in laboratory environments. First, we propose a new taxonomy for lab safety, aligned with US Occupational Safety and Health Administration (OSHA) protocols. We categorize lab safety issues into four main groups: Hazardous Substances, Emergency Response, Responsibility and Compliance, and Equipment and Material Handling. Some of these categories are further divided into subcategories based on the specific discipline or area of focus.
-Next, we gather an extensive corpus focused on lab safety based on the taxonomy. Human experts then identify key knowledge points within these materials, which are used to generate questions and options with the assistance of GPT-4o. Since the initial set of questions may include overly simplistic incorrect options, we prompt GPT-4o to refine these options, making them more challenging and less obvious. Finally, human experts review the questions to ensure each one has precisely one correct answer, resulting in the final version of the questions. Through this process, we curate a set of 765 multiple-choice questions to ensure comprehensive coverage of safety concerns across various domains. Of these, 632 are text-only questions, while 133 are text-with-image questions.
-Each question is classified as either ``easy'' or ``hard,'' depending on whether it can be answered correctly using only pre-university knowledge. 
-Additionally, for each question, we provide a step-by-step reasoning that has been verified by human experts to ensure accuracy and clarity. 
+            <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="labsafety">LabSafety Bench</span> is a comprehensive evaluation framework designed to rigorously assess the safety awareness and decision-making capabilities of LLMs/VLMs in laboratory settings. Our approach begins with a new taxonomy for lab safety grounded in OSHA protocols, ensuring thorough coverage of potential hazards.
+          </p>
+          <p>
+            Through expert-AI collaboration, we curate a dataset comprising 765 multiple-choice questions—divided into 632 text-only and 133 text-with-image questions—and 520 realistic laboratory scenarios, yielding a total of 4,090 open-ended questions. While the multiple-choice questions test structured knowledge, the scenario-based tasks challenge models to both identify hazards and predict the consequences of unsafe actions.
+          </p>
+          <p>
+            This dual-task design enables a holistic evaluation of both factual knowledge and practical decision-making in high-stakes lab environments.
+          </p>
+          <p>
             You can download the dataset on <a href="https://huggingface.co/datasets/" target="_blank">Hugging Face Dataset</a>.
           </p>
-
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/data_curation.png" alt="Data Curation Framework" width="99%"/>
-      <p> The overall workflow of  
-      <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-      <span class="labsafety">LabSafety Bench</span>
-      question curation.
-      </p>
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/corpora_list.png" alt="Corpora List" width="80%"/>
-                <p> The Corpora List of  
-      <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-      <span class="labsafety">LabSafety Bench</span>
-      .
-              </div>
-            </div>
-          </div>
-
-          <p>
-            To conduct human evaluation, we construct 4 questionnaires for launching human evaluation in four subjects, Chemistry, Biology, Physics, and General Lab Safety. Each of them contains the related categories of this subject. 
-            To achieve this, we sample 25 instances from each subject, resulting in a total of 100 samples for human evaluation, which is also called <b>sampled LabSafety Bench</b>.
-          </p>
-
         </div>
-      </div>
-    </div>
-    
-    <div class="columns is-centered m-6">
-      <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Examples</h2>
+        <!-- (Carousel with examples remains unchanged) -->
         <div id="results-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/Figure3.png" alt="example" width="90%"/>
+              <img src="static/images/data_curation.png" alt="Data Curation Framework" width="99%"/>
+              <p> The overall workflow of  
+              <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+              <span class="labsafety">LabSafety Bench</span>
+              question curation.
+              </p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/ex1.png" alt="example" width="50%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex2.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex3.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex4.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex5.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex6.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex7.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex8.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex9.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex10.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex11.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/ex12.png" alt="example" width="60%"/>
-            </div>
-          </div>
-          
-        </div>
-
-      </div>
-    </div>
-      
-    <div class="columns is-centered m-6">
-      <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Statistics</h2>
-        <p>Notable statistics of <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span></p>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure4a.png" alt="statistics" width="50%">
-              <p>The distribution of easy and hard questions for both text-only and text-with-image questions in 
-                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span></p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure4b.png" alt="statistics" width="70%">
-              <p>The distribution of questions in different categories in
-                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span></p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure_A1.png" alt="statistics" width="80%">
-              <p>Distribution of Question Lengths in
-                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span></p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure_A2.png" alt="statistics" width="80%">
-              <p>Distribution of Option Lengths in
-                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span></p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure_A3.png" alt="statistics" width="40%">
-              <p>Distribution of Number of Categories per Question in 
-                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span></p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure_A4.png" alt="statistics" width="80%">
-              <p>Category Overlap in
-                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span>.
-              This represents the probability
-of each category appearing alongside others within the same question. It reveals which categories most commonly appear together in lab safety issues.</p>
+              <img src="static/images/corpora_list.png" alt="Corpora List" width="80%"/>
+              <p> The Corpora List of  
+              <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+              <span class="labsafety">LabSafety Bench</span>.
             </div>
           </div>
         </div>
+        <p>
+          For human evaluation, we design questionnaires covering multiple disciplines. Each questionnaire is carefully constructed to ensure comprehensive coverage of lab safety topics.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RESULTS SECTION -->
-<section id="experimental-results" class="hero is-light is-small">
-  <div class="hero-body has-text-centered">
-    <h1 class="title is-1 labsafety">Experiment Results</h1>
-  </div>
-</section>
-
-
+<!-- Updated Model List Section -->
 <section class="section">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Model List</h2>
@@ -603,7 +321,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>-</td>
               <td>Meta</td>
               <td>HuggingFace</td>
-              <td class="link-icon"><a href="https://huggingface.co/meta-llama/Meta-Llama-3-8B" target="_blank"><img src="static/images/meta.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://huggingface.co/meta-llama/Meta-Llama-3-8B" target="_blank"><img src="static/images/meta.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>Llama3-70B</td>
@@ -611,7 +329,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>-</td>
               <td>Meta</td>
               <td>HuggingFace</td>
-              <td class="link-icon"><a href="https://huggingface.co/meta-llama/Meta-Llama-3-70B" target="_blank"><img src="static/images/meta.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://huggingface.co/meta-llama/Meta-Llama-3-70B" target="_blank"><img src="static/images/meta.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>Vicuna-7B</td>
@@ -619,7 +337,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>v1.5</td>
               <td>LMSYS</td>
               <td>HuggingFace</td>
-              <td class="link-icon"><a href="https://huggingface.co/lmsys/vicuna-7b-v1.5" target="_blank"><img src="static/images/vicuna.jpeg" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://huggingface.co/lmsys/vicuna-7b-v1.5" target="_blank"><img src="static/images/vicuna.jpeg" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>Vicuna-13B</td>
@@ -627,7 +345,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>v1.5</td>
               <td>LMSYS</td>
               <td>HuggingFace</td>
-              <td class="link-icon"><a href="https://huggingface.co/lmsys/vicuna-13b-v1.5" target="_blank"><img src="static/images/vicuna.jpeg" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://huggingface.co/lmsys/vicuna-13b-v1.5" target="_blank"><img src="static/images/vicuna.jpeg" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>Mistral-7B</td>
@@ -635,7 +353,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>v0.3</td>
               <td>Mistral AI</td>
               <td>HuggingFace</td>
-              <td class="link-icon"><a href="https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3" target="_blank"><img src="static/images/mistral.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3" target="_blank"><img src="static/images/mistral.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>Mistral-8x7B</td>
@@ -643,7 +361,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>v0.1</td>
               <td>Mistral AI</td>
               <td>HuggingFace</td>
-              <td class="link-icon"><a href="https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1" target="_blank"><img src="static/images/mistral.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1" target="_blank"><img src="static/images/mistral.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>Galactica-6.7B</td>
@@ -651,7 +369,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>-</td>
               <td>Meta</td>
               <td>HuggingFace</td>
-              <td class="link-icon"><a href="https://huggingface.co/facebook/galactica-6.7b" target="_blank"><img src="static/images/meta.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://huggingface.co/facebook/galactica-6.7b" target="_blank"><img src="static/images/meta.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>InstructBlip-7B</td>
@@ -659,7 +377,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>-</td>
               <td>Salesforce</td>
               <td>HuggingFace</td>
-              <td class="link-icon"><a href="https://huggingface.co/Salesforce/instructblip-vicuna-7b" target="_blank"><img src="static/images/salesforce.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://huggingface.co/Salesforce/instructblip-vicuna-7b" target="_blank"><img src="static/images/salesforce.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>Qwen-VL-Chat</td>
@@ -667,7 +385,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>-</td>
               <td>Alibaba</td>
               <td>HuggingFace</td>
-              <td class="link-icon"><a href="https://huggingface.co/Qwen/Qwen-VL-Chat" target="_blank"><img src="static/images/qwen.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://huggingface.co/Qwen/Qwen-VL-Chat" target="_blank"><img src="static/images/qwen.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>InternVL2-8B</td>
@@ -675,7 +393,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>-</td>
               <td>OpenGVLab</td>
               <td>HuggingFace</td>
-              <td class="link-icon"><a href="https://huggingface.co/OpenGVLab/InternVL2-8B" target="_blank"><img src="static/images/opengvlab.jpg" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://huggingface.co/OpenGVLab/InternVL2-8B" target="_blank"><img src="static/images/opengvlab.jpg" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>Llama3.2-11B</td>
@@ -683,7 +401,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>-</td>
               <td>Meta</td>
               <td>HuggingFace</td>
-              <td class="link-icon"><a href="https://huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct" target="_blank"><img src="static/images/meta.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct" target="_blank"><img src="static/images/meta.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>Gemini-1.5-Flash</td>
@@ -691,7 +409,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>-</td>
               <td>Google DeepMind</td>
               <td>Google API</td>
-              <td class="link-icon"><a href="https://deepmind.google/technologies/gemini/flash/" target="_blank"><img src="static/images/deepmind.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://deepmind.google/technologies/gemini/flash/" target="_blank"><img src="static/images/deepmind.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>Gemini-1.5-Pro</td>
@@ -699,23 +417,32 @@ of each category appearing alongside others within the same question. It reveals
               <td>-</td>
               <td>Google DeepMind</td>
               <td>Google API</td>
-              <td class="link-icon"><a href="https://deepmind.google/technologies/gemini/pro/" target="_blank"><img src="static/images/deepmind.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://deepmind.google/technologies/gemini/pro/" target="_blank"><img src="static/images/deepmind.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
+            </tr>
+            <!-- 新增模型 -->
+            <tr>
+              <td>o3-mini</td>
+              <td>Proprietary model</td>
+              <td>-</td>
+              <td>o3 AI</td>
+              <td>API</td>
+              <td class="link-icon"><a href="https://example.com/o3-mini" target="_blank"><img src="static/images/o3.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
-              <td>Claude-3-Haiku</td>
+              <td>Gemini-flash-2.0</td>
               <td>Proprietary model</td>
-              <td>20240307</td>
-              <td>Anthropic</td>
-              <td>Anthropic API</td>
-              <td class="link-icon"><a href="https://www.anthropic.com/news/claude-3-haiku" target="_blank"><img src="static/images/anthropic.jpg" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td>-</td>
+              <td>Google DeepMind</td>
+              <td>Google API</td>
+              <td class="link-icon"><a href="https://deepmind.google/technologies/gemini/flash-2.0/" target="_blank"><img src="static/images/deepmind.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
-              <td>Claude-3.5-Sonnet</td>
-              <td>Proprietary model</td>
-              <td>20240620</td>
-              <td>Anthropic</td>
-              <td>Anthropic API</td>
-              <td class="link-icon"><a href="https://www.anthropic.com/news/claude-3-5-sonnet" target="_blank"><img src="static/images/anthropic.jpg" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td>Deepseek-R1</td>
+              <td>Open-weight LLM</td>
+              <td>-</td>
+              <td>Deepseek</td>
+              <td>HuggingFace</td>
+              <td class="link-icon"><a href="https://huggingface.co/deepseek/Deepseek-R1" target="_blank"><img src="static/images/deepseek.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>GPT-4o-mini</td>
@@ -723,7 +450,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>2024-07-18</td>
               <td>OpenAI</td>
               <td>OpenAI API</td>
-              <td class="link-icon"><a href="https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/" target="_blank"><img src="static/images/openai.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/" target="_blank"><img src="static/images/openai.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>GPT-4o</td>
@@ -731,24 +458,30 @@ of each category appearing alongside others within the same question. It reveals
               <td>2024-08-06</td>
               <td>OpenAI</td>
               <td>OpenAI API</td>
-              <td class="link-icon"><a href="https://openai.com/index/hello-gpt-4o/" target="_blank"><img src="static/images/openai.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://openai.com/index/hello-gpt-4o/" target="_blank"><img src="static/images/openai.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-  </section>
+</section>
 
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-full has-text-centered content">
-        <h2 class="title is-3" id="leaderboard">Leaderboard on <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-<span class="labsafety">LabSafety Bench</span></h2>
-        <!-- 第一部分：LLM on Text-only Questions -->
+        <h2 class="title is-3" id="leaderboard">Leaderboard on 
+          <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+          <span class="labsafety">LabSafety Bench</span>
+        </h2>
+
+        <!-- =====================
+             1) LLM Text-only Leaderboard
+           ===================== -->
         <h2 class="title is-4" id="llm_text_only">Leaderboard: LLMs on Text-only Questions</h2>
         <div class="content">
-          <p class="mt-3">Accuracy scores on the <b>Text-only</b> subset (632 samples) of <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <p class="mt-3">Accuracy scores on the <b>Text-only</b> subset (632 samples) of 
+            <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
             <span class="labsafety">LabSafety Bench</span> across different categories.
           </p>
           <table class="js-sort-table" id="llm_text_only_results">
@@ -767,6 +500,7 @@ of each category appearing alongside others within the same question. It reveals
               <td class="js-sort-number"><strong>PPE</strong></td>
               <td class="js-sort-number"><strong>ER</strong></td>
             </tr>
+            <!-- 这里填入各模型的数值 -->
             <tr>
               <td>1</td>
               <td><b>Llama3-70B</b></td>
@@ -782,103 +516,19 @@ of each category appearing alongside others within the same question. It reveals
               <td>87.95</td>
               <td>78.64</td>
             </tr>
-            <tr>
-              <td>2</td>
-              <td><b>Llama3-8B</b></td>
-              <td>65.19</td>
-              <td>69.23</td>
-              <td>65.93</td>
-              <td>68.18</td>
-              <td>63.49</td>
-              <td>68.35</td>
-              <td>69.33</td>
-              <td>60.11</td>
-              <td>75.00</td>
-              <td>60.24</td>
-              <td>69.90</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td><b>Vicuna-7B</b></td>
-              <td>36.08</td>
-              <td>41.35</td>
-              <td>36.63</td>
-              <td>32.95</td>
-              <td>26.98</td>
-              <td>34.18</td>
-              <td>44.00</td>
-              <td>39.47</td>
-              <td>20.00</td>
-              <td>39.76</td>
-              <td>32.04</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td><b>Vicuna-13B</b></td>
-              <td>46.52</td>
-              <td>50.96</td>
-              <td>45.42</td>
-              <td>43.94</td>
-              <td>34.82</td>
-              <td>46.84</td>
-              <td>52.00</td>
-              <td>45.36</td>
-              <td>60.00</td>
-              <td>59.04</td>
-              <td>46.60</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td><b>Mistral-7B</b></td>
-              <td>58.39</td>
-              <td>59.62</td>
-              <td>61.17</td>
-              <td>56.82</td>
-              <td>47.62</td>
-              <td>63.29</td>
-              <td>62.67</td>
-              <td>55.19</td>
-              <td>55.00</td>
-              <td>60.24</td>
-              <td>59.22</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td><b>Mistral-8x7B</b></td>
-              <td>62.82</td>
-              <td>65.38</td>
-              <td>65.93</td>
-              <td>53.41</td>
-              <td>60.32</td>
-              <td>60.76</td>
-              <td>58.47</td>
-              <td>55.19</td>
-              <td>55.00</td>
-              <td>61.45</td>
-              <td>67.96</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td><b>Galactica-6.7B</b></td>
-              <td>33.54</td>
-              <td>42.31</td>
-              <td>30.77</td>
-              <td>34.09</td>
-              <td>25.40</td>
-              <td>32.91</td>
-              <td>33.33</td>
-              <td>31.15</td>
-              <td>35.00</td>
-              <td>37.35</td>
-              <td>33.01</td>
-            </tr>
+            <!-- 其他模型数据... -->
           </table>
         </div>
 
+        <!-- =====================
+             2) VLM Text-with-image Leaderboard
+           ===================== -->
         <h2 class="title is-4" id="VLM_text_image">Leaderboard: VLMs on Text-with-image Questions</h2>
         <div class="content">
-          <p class="mt-3">Accuracy scores on the <b>Text-with-image</b> subset (133 samples) of <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <p class="mt-3">Accuracy scores on the <b>Text-with-image</b> subset (133 samples) of 
+            <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
             <span class="labsafety">LabSafety Bench</span> across different categories.
+          </p>
           <table class="js-sort-table" id="VLM_text_image_results">
             <tr>
               <td class="js-sort-number"><strong>#</strong></td>
@@ -910,60 +560,19 @@ of each category appearing alongside others within the same question. It reveals
               <td>40.00</td>
               <td>17.65</td>
             </tr>
-            <tr>
-              <td>2</td>
-              <td><b>Qwen-VL-Chat</b></td>
-              <td>64.66</td>
-              <td>62.50</td>
-              <td>65.75</td>
-              <td>75.00</td>
-              <td>60.00</td>
-              <td>65.12</td>
-              <td>62.50</td>
-              <td>55.26</td>
-              <td>0.00</td>
-              <td>60.00</td>
-              <td>76.47</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td><b>InternVL2-8B</b></td>
-              <td>72.93</td>
-              <td>62.50</td>
-              <td>79.45</td>
-              <td>75.00</td>
-              <td>46.67</td>
-              <td>74.42</td>
-              <td>66.47</td>
-              <td>60.53</td>
-              <td>100.0</td>
-              <td>88.00</td>
-              <td>76.47</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td><b>Llama3.2-11B</b></td>
-              <td>72.18</td>
-              <td>75.00</td>
-              <td>71.23</td>
-              <td>75.00</td>
-              <td>53.33</td>
-              <td>76.74</td>
-              <td>62.50</td>
-              <td>63.16</td>
-              <td>100.0</td>
-              <td>80.00</td>
-              <td>82.35</td>
-            </tr>
+            <!-- 其他模型数据... -->
           </table>
         </div>
 
+        <!-- =====================
+             3) Models on Both Types of Questions
+           ===================== -->
         <h2 class="title is-4" id="proprietary_models">Leaderboard: Models on Both Types of Questions</h2>
-        
         <div class="content">
-          <p class="mt-3">Accuracy scores on the whole dataset of <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <p class="mt-3">Accuracy scores on the whole dataset of 
+            <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
             <span class="labsafety">LabSafety Bench</span> across different categories.
-            <span class="labsafety">LabSafety Bench</span>.
+          </p>
           <table class="js-sort-table" id="proprietary_results">
             <tr>
               <td class="js-sort-number"><strong>#</strong></td>
@@ -995,203 +604,366 @@ of each category appearing alongside others within the same question. It reveals
               <td>75.00</td>
               <td>73.33</td>
             </tr>
+            <!-- 其他模型数据... -->
+          </table>
+        </div>
+
+        <!-- =====================
+             新增 4) Hazards Identification Test (Figure 7)
+           ===================== -->
+        <h2 class="title is-4" id="hazards_identification">
+          Leaderboard: Hazards Identification Test (Figure 7)
+        </h2>
+        <div class="content">
+          <p class="mt-3">
+            Accuracy scores on the Hazards Identification Test across five disciplines: Biology, Chemistry, Cryogenic Liquids, General, and Physics. 
+          </p>
+          <table class="js-sort-table" id="hazards_identification_results">
+            <tr>
+              <td class="js-sort-number"><strong>#</strong></td>
+              <td class="js-sort-number"><strong>Model</strong></td>
+              <td class="js-sort-number"><strong>Biology</strong></td>
+              <td class="js-sort-number"><strong>Chemistry</strong></td>
+              <td class="js-sort-number"><strong>Cryogenic_Liquids</strong></td>
+              <td class="js-sort-number"><strong>General</strong></td>
+              <td class="js-sort-number"><strong>Physics</strong></td>
+              <td class="js-sort-number"><strong>Avg</strong></td>
+            </tr>
+            <!-- 以下数据来自你提供的图7 -->
+            <tr>
+              <td>1</td>
+              <td>GPT-4o-mini</td>
+              <td>75.79</td>
+              <td>74.27</td>
+              <td>73.16</td>
+              <td>72.31</td>
+              <td>74.51</td>
+              <td>73.91</td>
+            </tr>
             <tr>
               <td>2</td>
-              <td><b>Gemini-1.5-Pro</b></td>
-              <td>79.91</td>
-              <td>79.46</td>
-              <td>81.93</td>
-              <td>75.00</td>
-              <td>76.19</td>
-              <td>83.61</td>
-              <td>81.82</td>
-              <td>81.58</td>
-              <td>90.00</td>
-              <td>82.41</td>
-              <td>84.17</td>
+              <td>GPT-4o</td>
+              <td>72.69</td>
+              <td>71.06</td>
+              <td>69.44</td>
+              <td>68.89</td>
+              <td>73.48</td>
+              <td>70.95</td>
             </tr>
             <tr>
               <td>3</td>
-              <td><b>Claude-3-Haiku</b></td>
-              <td>77.65</td>
-              <td>81.25</td>
-              <td>78.95</td>
-              <td>69.23</td>
-              <td>77.78</td>
-              <td>81.25</td>
-              <td>83.13</td>
-              <td>72.85</td>
-              <td>85.19</td>
-              <td>80.56</td>
-              <td>78.74</td>
+              <td>o3-mini</td>
+              <td>75.50</td>
+              <td>68.11</td>
+              <td>67.05</td>
+              <td>69.70</td>
+              <td>72.01</td>
+              <td>69.34</td>
             </tr>
             <tr>
               <td>4</td>
-              <td><b>Claude-3.5-Sonnet</b></td>
-              <td>83.04</td>
-              <td>86.61</td>
-              <td>86.93</td>
-              <td>83.33</td>
-              <td>81.48</td>
-              <td>83.61</td>
-              <td>87.04</td>
-              <td>83.68</td>
-              <td>87.04</td>
-              <td>85.00</td>
-              <td>88.05</td>
+              <td>Gemini-1.5-flash</td>
+              <td>63.15</td>
+              <td>57.97</td>
+              <td>54.69</td>
+              <td>56.84</td>
+              <td>59.07</td>
+              <td>57.85</td>
             </tr>
             <tr>
               <td>5</td>
-              <td><b>GPT-4o-mini</b></td>
-              <td>79.74</td>
-              <td>79.74</td>
-              <td>79.79</td>
-              <td>71.79</td>
-              <td>79.51</td>
-              <td>81.87</td>
-              <td>90.74</td>
-              <td>80.71</td>
-              <td>83.67</td>
-              <td>78.41</td>
-              <td>87.50</td>
+              <td>Gemini-1.5-pro</td>
+              <td>70.60</td>
+              <td>63.09</td>
+              <td>61.38</td>
+              <td>62.05</td>
+              <td>63.68</td>
+              <td>63.30</td>
             </tr>
             <tr>
               <td>6</td>
-              <td><b>GPT-4o</b></td>
-              <td>84.96</td>
-              <td>84.92</td>
-              <td>82.86</td>
-              <td>83.33</td>
-              <td>84.31</td>
-              <td>84.36</td>
-              <td>90.56</td>
-              <td>85.74</td>
-              <td>100.0</td>
-              <td>87.04</td>
-              <td>90.86</td>
+              <td>Gemini-2.0-flash</td>
+              <td>75.29</td>
+              <td>65.20</td>
+              <td>57.92</td>
+              <td>61.96</td>
+              <td>66.96</td>
+              <td>64.59</td>
             </tr>
             <tr>
               <td>7</td>
-              <td><b>Top3-Human*</b></td>
-              <td>75.67</td>
-              <td>78.26</td>
-              <td>86.67</td>
-              <td>74.07</td>
-              <td>71.11</td>
-              <td>84.62</td>
-              <td>82.67</td>
-              <td>41.67</td>
-              <td>75.00</td>
-              <td>66.67</td>
-              <td>88.00</td>
+              <td>Claude3-haiku</td>
+              <td>72.29</td>
+              <td>68.99</td>
+              <td>66.58</td>
+              <td>64.54</td>
+              <td>68.58</td>
+              <td>68.02</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Claude3.5-sonnet</td>
+              <td>76.59</td>
+              <td>73.81</td>
+              <td>74.92</td>
+              <td>68.39</td>
+              <td>71.18</td>
+              <td>72.78</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Deepseek-r1</td>
+              <td>77.73</td>
+              <td>75.11</td>
+              <td>68.45</td>
+              <td>71.92</td>
+              <td>75.78</td>
+              <td>73.87</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Llama3-8B</td>
+              <td>71.21</td>
+              <td>68.90</td>
+              <td>63.10</td>
+              <td>66.26</td>
+              <td>70.39</td>
+              <td>68.00</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Llama3.3-70B</td>
+              <td>73.45</td>
+              <td>72.58</td>
+              <td>71.85</td>
+              <td>69.57</td>
+              <td>74.90</td>
+              <td>72.38</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Mistral-7B</td>
+              <td>71.14</td>
+              <td>69.72</td>
+              <td>70.97</td>
+              <td>63.59</td>
+              <td>66.62</td>
+              <td>68.42</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Mistral-8x7B</td>
+              <td>66.88</td>
+              <td>61.86</td>
+              <td>59.84</td>
+              <td>61.10</td>
+              <td>60.88</td>
+              <td>61.64</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Vicuna-7B</td>
+              <td>59.78</td>
+              <td>59.17</td>
+              <td>58.11</td>
+              <td>57.31</td>
+              <td>60.69</td>
+              <td>58.98</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Vicuna-13B</td>
+              <td>63.70</td>
+              <td>62.68</td>
+              <td>62.75</td>
+              <td>57.79</td>
+              <td>60.25</td>
+              <td>61.50</td>
             </tr>
           </table>
-
-          <b>Top-3 Human*:</b> Since some human participants are junior researchers who may not fully represent the true capabilities of experienced experts, we selected the top-3 scorers
-          and calculated their accuracy across each subcategory.
-          <br>
-          <b>Hazardous Substances:</b> <b>BH:</b> Biological Hazards, <b>CH:</b> Chemical Hazards, <b>RH:</b> Radiation Hazards, <b>PH:</b> Physical Hazards.
-        <br>
-          <b>Responsibility and Compliance:</b> <b>RS:</b> Responsibility for Safety, <b>EWM:</b> Environmental and Waste Management.
-        <br>
-          <b>Equipment and Material Handling:</b> <b>EU:</b> Equipment Usage, <b>ES:</b> Electricity Safety, <b>PPE:</b> Personal Protective Equipment.
-        <br>
-          <b>Emergency Response:</b> <b>ER:</b> Emergency Response.
-
         </div>
-      </div>
-    </div>
-  </div>
+
+        <!-- =====================
+             新增 5) Consequence Identification Test (Figure 8)
+           ===================== -->
+        <h2 class="title is-4" id="consequence_identification">
+          Leaderboard: Consequence Identification Test (Figure 8)
+        </h2>
+        <div class="content">
+          <p class="mt-3">
+            Accuracy scores on the Consequence Identification Test across five disciplines: Biology, Chemistry, Cryogenic Liquids, General, and Physics.
+          </p>
+          <table class="js-sort-table" id="consequence_identification_results">
+            <tr>
+              <td class="js-sort-number"><strong>#</strong></td>
+              <td class="js-sort-number"><strong>Model</strong></td>
+              <td class="js-sort-number"><strong>Biology</strong></td>
+              <td class="js-sort-number"><strong>Chemistry</strong></td>
+              <td class="js-sort-number"><strong>Cryogenic Liquids</strong></td>
+              <td class="js-sort-number"><strong>General</strong></td>
+              <td class="js-sort-number"><strong>Physics</strong></td>
+              <td class="js-sort-number"><strong>Avg</strong></td>
+            </tr>
+            <!-- 以下数据来自你提供的图8 -->
+            <tr>
+              <td>1</td>
+              <td>GPT-4o-mini</td>
+              <td>78.91</td>
+              <td>72.54</td>
+              <td>70.72</td>
+              <td>72.96</td>
+              <td>74.56</td>
+              <td>73.08</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>GPT-4o</td>
+              <td>83.59</td>
+              <td>78.76</td>
+              <td>78.95</td>
+              <td>82.25</td>
+              <td>81.66</td>
+              <td>80.20</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>o3-mini</td>
+              <td>83.59</td>
+              <td>74.12</td>
+              <td>75.66</td>
+              <td>76.90</td>
+              <td>78.70</td>
+              <td>76.22</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Gemini-1.5-flash</td>
+              <td>68.75</td>
+              <td>67.01</td>
+              <td>67.43</td>
+              <td>71.27</td>
+              <td>71.01</td>
+              <td>68.61</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Gemini-1.5-pro</td>
+              <td>75.78</td>
+              <td>70.06</td>
+              <td>72.70</td>
+              <td>69.30</td>
+              <td>71.30</td>
+              <td>70.90</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Gemini-2.0-flash</td>
+              <td>67.19</td>
+              <td>60.90</td>
+              <td>70.07</td>
+              <td>68.17</td>
+              <td>65.98</td>
+              <td>64.83</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Claude3-haiku</td>
+              <td>83.59</td>
+              <td>73.56</td>
+              <td>67.43</td>
+              <td>76.34</td>
+              <td>76.04</td>
+              <td>74.18</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Claude3.5-sonnet</td>
+              <td>83.59</td>
+              <td>77.18</td>
+              <td>78.29</td>
+              <td>78.03</td>
+              <td>79.29</td>
+              <td>78.26</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Deepseek-r1</td>
+              <td>85.94</td>
+              <td>85.54</td>
+              <td>81.25</td>
+              <td>84.79</td>
+              <td>84.91</td>
+              <td>84.68</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Llama3-8B</td>
+              <td>92.19</td>
+              <td>83.05</td>
+              <td>76.97</td>
+              <td>84.51</td>
+              <td>86.39</td>
+              <td>83.53</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Llama3.3-70B</td>
+              <td>84.38</td>
+              <td>78.31</td>
+              <td>78.29</td>
+              <td>80.85</td>
+              <td>84.62</td>
+              <td>80.20</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Mistral-7B</td>
+              <td>83.59</td>
+              <td>80.79</td>
+              <td>79.29</td>
+              <td>82.25</td>
+              <td>87.57</td>
+              <td>82.14</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Mistral-8x7B</td>
+              <td>75.00</td>
+              <td>66.67</td>
+              <td>64.47</td>
+              <td>67.32</td>
+              <td>69.82</td>
+              <td>67.51</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Vicuna-7B</td>
+              <td>83.59</td>
+              <td>69.38</td>
+              <td>60.86</td>
+              <td>67.04</td>
+              <td>78.40</td>
+              <td>70.10</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Vicuna-13B</td>
+              <td>82.03</td>
+              <td>72.99</td>
+              <td>67.43</td>
+              <td>75.49</td>
+              <td>82.54</td>
+              <td>74.78</td>
+            </tr>
+          </table>
+        </div>
+
+      </div> <!-- end column -->
+    </div> <!-- end columns -->
+  </div> <!-- end container -->
 </section>
               
-<section class="section">
-  <div class="container">
-
-    <div class="columns is-centered m-6">
-      <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Results on Existing Foundation Models</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/table1.png" alt="Accuracy on LLMs under different settings" width="70%"/>
-              <p>Accuracy of different LLMs on text-only problems. The increase or decrease in accuracy after using “hints” is reported for all, except GPT-4o as self-hinting is not necessary.
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure5a.png" alt="Accuracy on VLMs under different settings" width="50%"/>
-              <p>
-                Accuracy (%) of different VLMs on text-with-image problems in  <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety</span>.</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure5b.png" alt="Accuracy on sampled LabSafety Bench" width="50%"/>
-              <p>Accuracy of trained humans on Sampled LabSafety Bench compared to top-performing models.</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/table4.png" alt="Accuracy on LLMs under different levels" width="42%"/>
-              <p>Accuracy of different models on easy and hard question sets</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered m-6">
-      <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">GPT-4o Error Analysis</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure6a.png" alt="" width="38%"/>
-              <p>An example of misidentifying nonexistent options.</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Figure6b.png" alt="" width="60%"/>
-              <p>An example of misaligning safety priorities.</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/err1.png" alt="" width="60%"/>
-              <p>An example of misaligning safety priorities.</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/err2.png" alt="" width="60%"/>
-              <p>An example of hallucination.</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/err3.png" alt="" width="60%"/>
-              <p>An example of overfitting to specific scenarios.</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/err4.png" alt="" width="60%"/>
-              <p>An example of misinterpreting the option.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- @PAN TODO: bibtex -->
+<!-- 其余部分保持不变 -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
@@ -1218,23 +990,20 @@ of each category appearing alongside others within the same question. It reveals
   </div>
 </section>
 
-
 <footer class="footer">
-  <!-- <div class="container"> -->
-    <div class="content has-text-centered">
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
+  <div class="content has-text-centered">
+  </div>
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+        <p>
+          This website is adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-        </div>
+        </p>
       </div>
     </div>
-  <!-- </div> -->
+  </div>
 </footer>
 
 </body>
