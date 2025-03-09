@@ -235,43 +235,11 @@
       <img src="static/images/Taxonomy.png" alt="Lab Safety Taxonomy" width="99%"/>
       <p> Our proposed new taxonomy for Lab Safety, serving as a framework to guide the data curation process for
       <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-      <span class="labsafety">LabSafety Bench</span>
-      .
+      <span class="labsafety">LabSafety Bench</span>.
       </p>
     </div>
   </div>
 </section>
-
-
-<!-- <section class="section">
-  <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
-    <div class="columns is-centered m-6">
-      <div class="column is-full has-text-centered content">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/Taxonomy.png" alt="Lab Safety Taxonomy" width="99%"/>
-              <p> Our proposed new taxonomy for Lab Safety, serving as a framework to guide the data curation process for
-              <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-              <span class="labsafety">LabSafety Bench</span>
-              .
-              </p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/tease_scores_gpt4v.png" alt="geometric reasoning" width="84%"/>
-              <p> Accuracy scores of one leading LLM (i.e., PoT GPT-4), four primary LMMs, random chance, and human performance our proposed 
-              <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-              <span class="mathvista">MathVista</span>
-              across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-</section> -->
 
 
 <!-- =========================
@@ -317,7 +285,7 @@
 </section>
 
 <!-- =========================
-     Overview (Updated)
+     Overview (Updated & Expanded)
    ========================= -->
 <section class="section">
   <div class="container">
@@ -334,6 +302,9 @@
           </p>
           <p>
             This dual-task design enables a holistic evaluation of both factual knowledge and practical decision-making in high-stakes lab environments.
+          </p>
+          <p>
+            In addition, our benchmark leverages both structured and open-ended evaluation tasks to capture the nuances of lab safety. The Hazards Identification Test requires models to comprehensively list potential safety issues in realistic scenarios, while the Consequence Identification Test challenges models to predict the outcomes of hazardous actions. These tasks, combined with our robust multiple-choice assessments, provide a detailed picture of each model’s strengths and weaknesses in real-world lab safety applications.
           </p>
           <p>
             You can download the dataset on <a href="https://huggingface.co/datasets/" target="_blank">Hugging Face Dataset</a>.
@@ -591,25 +562,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>HuggingFace</td>
               <td class="link-icon"><a href="https://huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct" target="_blank"><img src="static/images/meta.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
-
-            <!-- 新增模型 1 -->
-            <tr>
-              <td>o3-mini</td>
-              <td>Proprietary model</td>
-              <td>-</td>
-              <td>o3 AI</td>
-              <td>API</td>
-              <td class="link-icon"><a href="https://example.com/o3-mini" target="_blank"><img src="static/images/o3.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
-            </tr>
-            <!-- 新增模型 2 -->
-            <tr>
-              <td>Gemini-flash-2.0</td>
-              <td>Proprietary model</td>
-              <td>-</td>
-              <td>Google DeepMind</td>
-              <td>Google API</td>
-              <td class="link-icon"><a href="https://deepmind.google/technologies/gemini/flash-2.0/" target="_blank"><img src="static/images/deepmind.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
-            </tr>
+            
             <!-- 新增模型 3 -->
             <tr>
               <td>Deepseek-r1</td>
@@ -617,7 +570,7 @@ of each category appearing alongside others within the same question. It reveals
               <td>-</td>
               <td>Deepseek</td>
               <td>HuggingFace</td>
-              <td class="link-icon"><a href="https://huggingface.co/deepseek/Deepseek-R1" target="_blank"><img src="static/images/deepseek.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
+              <td class="link-icon"><a href="https://huggingface.co/deepseek/Deepseek-R1" target="_blank"><img src="static/images/deepseek.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
 
             <tr>
@@ -635,6 +588,15 @@ of each category appearing alongside others within the same question. It reveals
               <td>Google DeepMind</td>
               <td>Google API</td>
               <td class="link-icon"><a href="https://deepmind.google/technologies/gemini/pro/" target="_blank"><img src="static/images/deepmind.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
+            </tr>
+            <!-- 新增模型 2 -->
+            <tr>
+              <td>Gemini-flash-2.0</td>
+              <td>Proprietary model</td>
+              <td>-</td>
+              <td>Google DeepMind</td>
+              <td>Google API</td>
+              <td class="link-icon"><a href="https://deepmind.google/technologies/gemini/flash/" target="_blank"><img src="static/images/deepmind.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
             <tr>
               <td>Claude-3-Haiku</td>
@@ -668,6 +630,15 @@ of each category appearing alongside others within the same question. It reveals
               <td>OpenAI API</td>
               <td class="link-icon"><a href="https://openai.com/index/hello-gpt-4o/" target="_blank"><img src="static/images/openai.png" style="width:1.0em;vertical-align: middle" alt="Logo"/></a></td>
             </tr>
+            <!-- 新增模型 1 -->
+            <tr>
+              <td>o3-mini</td>
+              <td>Proprietary model</td>
+              <td>-</td>
+              <td>o3 AI</td>
+              <td>API</td>
+              <td class="link-icon"><a href="https://openai.com/index/openai-o3-mini/" target="_blank"><img src="static/images/openai.png" style="width:1em;vertical-align: middle" alt="Logo"/></a></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -678,12 +649,15 @@ of each category appearing alongside others within the same question. It reveals
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-full has-text-centered content">
-        <h2 class="title is-3" id="leaderboard">Leaderboard on <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-<span class="labsafety">LabSafety Bench</span></h2>
+        <h2 class="title is-3" id="leaderboard">Leaderboard on 
+          <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+          <span class="labsafety">LabSafety Bench</span>
+        </h2>
         <!-- 第一部分：LLM on Text-only Questions -->
         <h2 class="title is-4" id="llm_text_only">Leaderboard: LLMs on Text-only Questions</h2>
         <div class="content">
-          <p class="mt-3">Accuracy scores on the <b>Text-only</b> subset (632 samples) of <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+          <p class="mt-3">Accuracy scores on the <b>Text-only</b> subset (632 samples) of 
+            <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
             <span class="labsafety">LabSafety Bench</span> across different categories.
           </p>
           <table class="js-sort-table" id="llm_text_only_results">
@@ -724,7 +698,8 @@ of each category appearing alongside others within the same question. It reveals
         <!-- 第二部分：VLM on Text-with-image Questions -->
         <h2 class="title is-4" id="VLM_text_image">Leaderboard: VLMs on Text-with-image Questions</h2>
         <div class="content">
-          <p class="mt-3">Accuracy scores on the <b>Text-with-image</b> subset (133 samples) of <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+          <p class="mt-3">Accuracy scores on the <b>Text-with-image</b> subset (133 samples) of 
+            <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
             <span class="labsafety">LabSafety Bench</span> across different categories.
           <table class="js-sort-table" id="VLM_text_image_results">
             <tr>
@@ -765,7 +740,8 @@ of each category appearing alongside others within the same question. It reveals
         <h2 class="title is-4" id="proprietary_models">Leaderboard: Models on Both Types of Questions</h2>
         
         <div class="content">
-          <p class="mt-3">Accuracy scores on the whole dataset of <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+          <p class="mt-3">Accuracy scores on the whole dataset of 
+            <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
             <span class="labsafety">LabSafety Bench</span> across different categories.
           <table class="js-sort-table" id="proprietary_results">
             <tr>
@@ -811,8 +787,352 @@ of each category appearing alongside others within the same question. It reveals
           <b>Equipment and Material Handling:</b> <b>EU:</b> Equipment Usage, <b>ES:</b> Electricity Safety, <b>PPE:</b> Personal Protective Equipment.
           <br>
           <b>Emergency Response:</b> <b>ER:</b> Emergency Response.
-
         </div>
+        
+        <!-- Hazards Identification Test (Figure 7) -->
+        <h2 class="title is-4" id="hazards_identification">
+          Leaderboard: Hazards Identification Test (Figure 7)
+        </h2>
+        <div class="content">
+          <p class="mt-3">
+            Accuracy scores on the Hazards Identification Test across five disciplines: Biology, Chemistry, Cryogenic_Liquids, General, and Physics.
+          </p>
+          <table class="js-sort-table" id="hazards_identification_results">
+            <tr>
+              <td class="js-sort-number"><strong>#</strong></td>
+              <td class="js-sort-number"><strong>Model</strong></td>
+              <td class="js-sort-number"><strong>Biology</strong></td>
+              <td class="js-sort-number"><strong>Chemistry</strong></td>
+              <td class="js-sort-number"><strong>Cryogenic_Liquids</strong></td>
+              <td class="js-sort-number"><strong>General</strong></td>
+              <td class="js-sort-number"><strong>Physics</strong></td>
+              <td class="js-sort-number"><strong>Avg</strong></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>GPT-4o-mini</td>
+              <td>75.79</td>
+              <td>74.27</td>
+              <td>73.16</td>
+              <td>72.31</td>
+              <td>74.51</td>
+              <td>73.91</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>GPT-4o</td>
+              <td>72.69</td>
+              <td>71.06</td>
+              <td>69.44</td>
+              <td>68.89</td>
+              <td>73.48</td>
+              <td>70.95</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>o3-mini</td>
+              <td>75.50</td>
+              <td>68.11</td>
+              <td>67.05</td>
+              <td>69.70</td>
+              <td>72.01</td>
+              <td>69.34</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Gemini-1.5-flash</td>
+              <td>63.15</td>
+              <td>57.97</td>
+              <td>54.69</td>
+              <td>56.84</td>
+              <td>59.07</td>
+              <td>57.85</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Gemini-1.5-pro</td>
+              <td>70.60</td>
+              <td>63.09</td>
+              <td>61.38</td>
+              <td>62.05</td>
+              <td>63.68</td>
+              <td>63.30</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Gemini-2.0-flash</td>
+              <td>75.29</td>
+              <td>65.20</td>
+              <td>57.92</td>
+              <td>61.96</td>
+              <td>66.96</td>
+              <td>64.59</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Claude3-haiku</td>
+              <td>72.29</td>
+              <td>68.99</td>
+              <td>66.58</td>
+              <td>64.54</td>
+              <td>68.58</td>
+              <td>68.02</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Claude3.5-sonnet</td>
+              <td>76.59</td>
+              <td>73.81</td>
+              <td>74.92</td>
+              <td>68.39</td>
+              <td>71.18</td>
+              <td>72.78</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Deepseek-r1</td>
+              <td>77.73</td>
+              <td>75.11</td>
+              <td>68.45</td>
+              <td>71.92</td>
+              <td>75.78</td>
+              <td>73.87</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Llama3-8B</td>
+              <td>71.21</td>
+              <td>68.90</td>
+              <td>63.10</td>
+              <td>66.26</td>
+              <td>70.39</td>
+              <td>68.00</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Llama3.3-70B</td>
+              <td>73.45</td>
+              <td>72.58</td>
+              <td>71.85</td>
+              <td>69.57</td>
+              <td>74.90</td>
+              <td>72.38</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Mistral-7B</td>
+              <td>71.14</td>
+              <td>69.72</td>
+              <td>70.97</td>
+              <td>63.59</td>
+              <td>66.62</td>
+              <td>68.42</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Mistral-8x7B</td>
+              <td>66.88</td>
+              <td>61.86</td>
+              <td>59.84</td>
+              <td>61.10</td>
+              <td>60.88</td>
+              <td>61.64</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Vicuna-7B</td>
+              <td>59.78</td>
+              <td>59.17</td>
+              <td>58.11</td>
+              <td>57.31</td>
+              <td>60.69</td>
+              <td>58.98</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Vicuna-13B</td>
+              <td>63.70</td>
+              <td>62.68</td>
+              <td>62.75</td>
+              <td>57.79</td>
+              <td>60.25</td>
+              <td>61.50</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Consequence Identification Test (Figure 8) -->
+        <h2 class="title is-4" id="consequence_identification">
+          Leaderboard: Consequence Identification Test (Figure 8)
+        </h2>
+        <div class="content">
+          <p class="mt-3">
+            Accuracy scores on the Consequence Identification Test across five disciplines: Biology, Chemistry, Cryogenic Liquids, General, and Physics.
+          </p>
+          <table class="js-sort-table" id="consequence_identification_results">
+            <tr>
+              <td class="js-sort-number"><strong>#</strong></td>
+              <td class="js-sort-number"><strong>Model</strong></td>
+              <td class="js-sort-number"><strong>Biology</strong></td>
+              <td class="js-sort-number"><strong>Chemistry</strong></td>
+              <td class="js-sort-number"><strong>Cryogenic Liquids</strong></td>
+              <td class="js-sort-number"><strong>General</strong></td>
+              <td class="js-sort-number"><strong>Physics</strong></td>
+              <td class="js-sort-number"><strong>Avg</strong></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>GPT-4o-mini</td>
+              <td>78.91</td>
+              <td>72.54</td>
+              <td>70.72</td>
+              <td>72.96</td>
+              <td>74.56</td>
+              <td>73.08</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>GPT-4o</td>
+              <td>83.59</td>
+              <td>78.76</td>
+              <td>78.95</td>
+              <td>82.25</td>
+              <td>81.66</td>
+              <td>80.20</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>o3-mini</td>
+              <td>83.59</td>
+              <td>74.12</td>
+              <td>75.66</td>
+              <td>76.90</td>
+              <td>78.70</td>
+              <td>76.22</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Gemini-1.5-flash</td>
+              <td>68.75</td>
+              <td>67.01</td>
+              <td>67.43</td>
+              <td>71.27</td>
+              <td>71.01</td>
+              <td>68.61</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Gemini-1.5-pro</td>
+              <td>75.78</td>
+              <td>70.06</td>
+              <td>72.70</td>
+              <td>69.30</td>
+              <td>71.30</td>
+              <td>70.90</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Gemini-2.0-flash</td>
+              <td>67.19</td>
+              <td>60.90</td>
+              <td>70.07</td>
+              <td>68.17</td>
+              <td>65.98</td>
+              <td>64.83</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Claude3-haiku</td>
+              <td>83.59</td>
+              <td>73.56</td>
+              <td>67.43</td>
+              <td>76.34</td>
+              <td>76.04</td>
+              <td>74.18</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Claude3.5-sonnet</td>
+              <td>83.59</td>
+              <td>77.18</td>
+              <td>78.29</td>
+              <td>78.03</td>
+              <td>79.29</td>
+              <td>78.26</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Deepseek-r1</td>
+              <td>85.94</td>
+              <td>85.54</td>
+              <td>81.25</td>
+              <td>84.79</td>
+              <td>84.91</td>
+              <td>84.68</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Llama3-8B</td>
+              <td>92.19</td>
+              <td>83.05</td>
+              <td>76.97</td>
+              <td>84.51</td>
+              <td>86.39</td>
+              <td>83.53</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Llama3.3-70B</td>
+              <td>84.38</td>
+              <td>78.31</td>
+              <td>78.29</td>
+              <td>80.85</td>
+              <td>84.62</td>
+              <td>80.20</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Mistral-7B</td>
+              <td>83.59</td>
+              <td>80.79</td>
+              <td>79.29</td>
+              <td>82.25</td>
+              <td>87.57</td>
+              <td>82.14</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Mistral-8x7B</td>
+              <td>75.00</td>
+              <td>66.67</td>
+              <td>64.47</td>
+              <td>67.32</td>
+              <td>69.82</td>
+              <td>67.51</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Vicuna-7B</td>
+              <td>83.59</td>
+              <td>69.38</td>
+              <td>60.86</td>
+              <td>67.04</td>
+              <td>78.40</td>
+              <td>70.10</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Vicuna-13B</td>
+              <td>82.03</td>
+              <td>72.99</td>
+              <td>67.43</td>
+              <td>75.49</td>
+              <td>82.54</td>
+              <td>74.78</td>
+            </tr>
+          </table>
+        </div>
+
       </div>
     </div>
   </div>
@@ -1306,10 +1626,1106 @@ of each category appearing alongside others within the same question. It reveals
           </table>
         </div>
 
+      </div> <!-- end column -->
+    </div> <!-- end columns -->
+  </div> <!-- end container -->
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Results on Existing Foundation Models</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/table1.png" alt="Accuracy on LLMs under different settings" width="70%"/>
+              <p>Accuracy of different LLMs on text-only problems. The increase or decrease in accuracy after using “hints” is reported for all, except GPT-4o as self-hinting is not necessary.
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure5a.png" alt="Accuracy on VLMs under different settings" width="50%"/>
+              <p>
+                Accuracy (%) of different VLMs on text-with-image problems in  
+                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="labsafety">LabSafety</span>.
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure5b.png" alt="Accuracy on sampled LabSafety Bench" width="50%"/>
+              <p>Accuracy of trained humans on Sampled LabSafety Bench compared to top-performing models.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/table4.png" alt="Accuracy on LLMs under different levels" width="42%"/>
+              <p>Accuracy of different models on easy and hard question sets</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">GPT-4o Error Analysis</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure6a.png" alt="" width="38%"/>
+              <p>An example of misidentifying nonexistent options.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure6b.png" alt="" width="60%"/>
+              <p>An example of misaligning safety priorities.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/err1.png" alt="" width="60%"/>
+              <p>An example of misaligning safety priorities.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/err2.png" alt="" width="60%"/>
+              <p>An example of hallucination.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/err3.png" alt="" width="60%"/>
+              <p>An example of overfitting to specific scenarios.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/err4.png" alt="" width="60%"/>
+              <p>An example of misinterpreting the option.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
       </div>
     </div>
   </div>
 </section>
 
+
+<!-- ================
+     BibTeX
+   ================ -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>@misc{zhou2024labsafetybenchbenchmarkingllms,
+      title={LabSafety Bench: Benchmarking LLMs on Safety Issues in Scientific Labs}, 
+      author={Yujun Zhou and Jingdong Yang and Kehan Guo and Pin-Yu Chen and Tian Gao and Werner Geyer and Nuno Moniz and Nitesh V Chawla and Xiangliang Zhang},
+      year={2024},
+      eprint={2410.14182},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2410.14182}, 
+}</code></pre>
+  </div>
+</section>
+
+<section>
+  <div class="section" id="org-banners" style="display:flex">
+    <a href="https://www.nd.edu/" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images/logos/ND.png" style="width: 200px; height: auto;">
+    </a>
+    <a href="https://research.ibm.com/" target="blank" class="ext-link">
+        <img class="center-block org-banner" src="static/images/logos/IBM.webp" style="width: 250px; height: auto;">
+    </a>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+<!-- =============================
+     新增：图7 & 图8 两个Leaderboard
+     ============================= -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+
+        <!-- Hazards Identification Test (Figure 7) -->
+        <h2 class="title is-4" id="hazards_identification">
+          Leaderboard: Hazards Identification Test (Figure 7)
+        </h2>
+        <div class="content">
+          <p class="mt-3">
+            Accuracy scores on the Hazards Identification Test across five disciplines: Biology, Chemistry, Cryogenic_Liquids, General, and Physics.
+          </p>
+          <table class="js-sort-table" id="hazards_identification_results">
+            <tr>
+              <td class="js-sort-number"><strong>#</strong></td>
+              <td class="js-sort-number"><strong>Model</strong></td>
+              <td class="js-sort-number"><strong>Biology</strong></td>
+              <td class="js-sort-number"><strong>Chemistry</strong></td>
+              <td class="js-sort-number"><strong>Cryogenic_Liquids</strong></td>
+              <td class="js-sort-number"><strong>General</strong></td>
+              <td class="js-sort-number"><strong>Physics</strong></td>
+              <td class="js-sort-number"><strong>Avg</strong></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>GPT-4o-mini</td>
+              <td>75.79</td>
+              <td>74.27</td>
+              <td>73.16</td>
+              <td>72.31</td>
+              <td>74.51</td>
+              <td>73.91</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>GPT-4o</td>
+              <td>72.69</td>
+              <td>71.06</td>
+              <td>69.44</td>
+              <td>68.89</td>
+              <td>73.48</td>
+              <td>70.95</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>o3-mini</td>
+              <td>75.50</td>
+              <td>68.11</td>
+              <td>67.05</td>
+              <td>69.70</td>
+              <td>72.01</td>
+              <td>69.34</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Gemini-1.5-flash</td>
+              <td>63.15</td>
+              <td>57.97</td>
+              <td>54.69</td>
+              <td>56.84</td>
+              <td>59.07</td>
+              <td>57.85</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Gemini-1.5-pro</td>
+              <td>70.60</td>
+              <td>63.09</td>
+              <td>61.38</td>
+              <td>62.05</td>
+              <td>63.68</td>
+              <td>63.30</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Gemini-2.0-flash</td>
+              <td>75.29</td>
+              <td>65.20</td>
+              <td>57.92</td>
+              <td>61.96</td>
+              <td>66.96</td>
+              <td>64.59</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Claude3-haiku</td>
+              <td>72.29</td>
+              <td>68.99</td>
+              <td>66.58</td>
+              <td>64.54</td>
+              <td>68.58</td>
+              <td>68.02</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Claude3.5-sonnet</td>
+              <td>76.59</td>
+              <td>73.81</td>
+              <td>74.92</td>
+              <td>68.39</td>
+              <td>71.18</td>
+              <td>72.78</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Deepseek-r1</td>
+              <td>77.73</td>
+              <td>75.11</td>
+              <td>68.45</td>
+              <td>71.92</td>
+              <td>75.78</td>
+              <td>73.87</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Llama3-8B</td>
+              <td>71.21</td>
+              <td>68.90</td>
+              <td>63.10</td>
+              <td>66.26</td>
+              <td>70.39</td>
+              <td>68.00</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Llama3.3-70B</td>
+              <td>73.45</td>
+              <td>72.58</td>
+              <td>71.85</td>
+              <td>69.57</td>
+              <td>74.90</td>
+              <td>72.38</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Mistral-7B</td>
+              <td>71.14</td>
+              <td>69.72</td>
+              <td>70.97</td>
+              <td>63.59</td>
+              <td>66.62</td>
+              <td>68.42</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Mistral-8x7B</td>
+              <td>66.88</td>
+              <td>61.86</td>
+              <td>59.84</td>
+              <td>61.10</td>
+              <td>60.88</td>
+              <td>61.64</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Vicuna-7B</td>
+              <td>59.78</td>
+              <td>59.17</td>
+              <td>58.11</td>
+              <td>57.31</td>
+              <td>60.69</td>
+              <td>58.98</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Vicuna-13B</td>
+              <td>63.70</td>
+              <td>62.68</td>
+              <td>62.75</td>
+              <td>57.79</td>
+              <td>60.25</td>
+              <td>61.50</td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+              
+<section class="section">
+  <div class="container">
+
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Results on Existing Foundation Models</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/table1.png" alt="Accuracy on LLMs under different settings" width="70%"/>
+              <p>Accuracy of different LLMs on text-only problems. The increase or decrease in accuracy after using “hints” is reported for all, except GPT-4o as self-hinting is not necessary.
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure5a.png" alt="Accuracy on VLMs under different settings" width="50%"/>
+              <p>
+                Accuracy (%) of different VLMs on text-with-image problems in  
+                <img src="static/images/LabSafety.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="labsafety">LabSafety</span>.
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure5b.png" alt="Accuracy on sampled LabSafety Bench" width="50%"/>
+              <p>Accuracy of trained humans on Sampled LabSafety Bench compared to top-performing models.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/table4.png" alt="Accuracy on LLMs under different levels" width="42%"/>
+              <p>Accuracy of different models on easy and hard question sets</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">GPT-4o Error Analysis</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure6a.png" alt="" width="38%"/>
+              <p>An example of misidentifying nonexistent options.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure6b.png" alt="" width="60%"/>
+              <p>An example of misaligning safety priorities.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/err1.png" alt="" width="60%"/>
+              <p>An example of misaligning safety priorities.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/err2.png" alt="" width="60%"/>
+              <p>An example of hallucination.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/err3.png" alt="" width="60%"/>
+              <p>An example of overfitting to specific scenarios.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/err4.png" alt="" width="60%"/>
+              <p>An example of misinterpreting the option.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================
+     BibTeX
+   ================ -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>@misc{zhou2024labsafetybenchbenchmarkingllms,
+      title={LabSafety Bench: Benchmarking LLMs on Safety Issues in Scientific Labs}, 
+      author={Yujun Zhou and Jingdong Yang and Kehan Guo and Pin-Yu Chen and Tian Gao and Werner Geyer and Nuno Moniz and Nitesh V Chawla and Xiangliang Zhang},
+      year={2024},
+      eprint={2410.14182},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2410.14182}, 
+}</code></pre>
+  </div>
+</section>
+
+<section>
+  <div class="section" id="org-banners" style="display:flex">
+    <a href="https://www.nd.edu/" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images/logos/ND.png" style="width: 200px; height: auto;">
+    </a>
+    <a href="https://research.ibm.com/" target="blank" class="ext-link">
+        <img class="center-block org-banner" src="static/images/logos/IBM.webp" style="width: 250px; height: auto;">
+    </a>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+<!-- =============================
+     新增：图7 & 图8 两个Leaderboard
+     ============================= -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+
+        <!-- Hazards Identification Test (Figure 7) -->
+        <h2 class="title is-4" id="hazards_identification">
+          Leaderboard: Hazards Identification Test (Figure 7)
+        </h2>
+        <div class="content">
+          <p class="mt-3">
+            Accuracy scores on the Hazards Identification Test across five disciplines: Biology, Chemistry, Cryogenic_Liquids, General, and Physics.
+          </p>
+          <table class="js-sort-table" id="hazards_identification_results">
+            <tr>
+              <td class="js-sort-number"><strong>#</strong></td>
+              <td class="js-sort-number"><strong>Model</strong></td>
+              <td class="js-sort-number"><strong>Biology</strong></td>
+              <td class="js-sort-number"><strong>Chemistry</strong></td>
+              <td class="js-sort-number"><strong>Cryogenic_Liquids</strong></td>
+              <td class="js-sort-number"><strong>General</strong></td>
+              <td class="js-sort-number"><strong>Physics</strong></td>
+              <td class="js-sort-number"><strong>Avg</strong></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>GPT-4o-mini</td>
+              <td>75.79</td>
+              <td>74.27</td>
+              <td>73.16</td>
+              <td>72.31</td>
+              <td>74.51</td>
+              <td>73.91</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>GPT-4o</td>
+              <td>72.69</td>
+              <td>71.06</td>
+              <td>69.44</td>
+              <td>68.89</td>
+              <td>73.48</td>
+              <td>70.95</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>o3-mini</td>
+              <td>75.50</td>
+              <td>68.11</td>
+              <td>67.05</td>
+              <td>69.70</td>
+              <td>72.01</td>
+              <td>69.34</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Gemini-1.5-flash</td>
+              <td>63.15</td>
+              <td>57.97</td>
+              <td>54.69</td>
+              <td>56.84</td>
+              <td>59.07</td>
+              <td>57.85</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Gemini-1.5-pro</td>
+              <td>70.60</td>
+              <td>63.09</td>
+              <td>61.38</td>
+              <td>62.05</td>
+              <td>63.68</td>
+              <td>63.30</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Gemini-2.0-flash</td>
+              <td>75.29</td>
+              <td>65.20</td>
+              <td>57.92</td>
+              <td>61.96</td>
+              <td>66.96</td>
+              <td>64.59</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Claude3-haiku</td>
+              <td>72.29</td>
+              <td>68.99</td>
+              <td>66.58</td>
+              <td>64.54</td>
+              <td>68.58</td>
+              <td>68.02</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Claude3.5-sonnet</td>
+              <td>76.59</td>
+              <td>73.81</td>
+              <td>74.92</td>
+              <td>68.39</td>
+              <td>71.18</td>
+              <td>72.78</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Deepseek-r1</td>
+              <td>77.73</td>
+              <td>75.11</td>
+              <td>68.45</td>
+              <td>71.92</td>
+              <td>75.78</td>
+              <td>73.87</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Llama3-8B</td>
+              <td>71.21</td>
+              <td>68.90</td>
+              <td>63.10</td>
+              <td>66.26</td>
+              <td>70.39</td>
+              <td>68.00</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Llama3.3-70B</td>
+              <td>73.45</td>
+              <td>72.58</td>
+              <td>71.85</td>
+              <td>69.57</td>
+              <td>74.90</td>
+              <td>72.38</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Mistral-7B</td>
+              <td>71.14</td>
+              <td>69.72</td>
+              <td>70.97</td>
+              <td>63.59</td>
+              <td>66.62</td>
+              <td>68.42</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Mistral-8x7B</td>
+              <td>66.88</td>
+              <td>61.86</td>
+              <td>59.84</td>
+              <td>61.10</td>
+              <td>60.88</td>
+              <td>61.64</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Vicuna-7B</td>
+              <td>59.78</td>
+              <td>59.17</td>
+              <td>58.11</td>
+              <td>57.31</td>
+              <td>60.69</td>
+              <td>58.98</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Vicuna-13B</td>
+              <td>63.70</td>
+              <td>62.68</td>
+              <td>62.75</td>
+              <td>57.79</td>
+              <td>60.25</td>
+              <td>61.50</td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+              
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="leaderboard">Leaderboard on 
+          <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+          <span class="labsafety">LabSafety Bench</span>
+        </h2>
+        <!-- 第一部分：LLM on Text-only Questions -->
+        <h2 class="title is-4" id="llm_text_only">Leaderboard: LLMs on Text-only Questions</h2>
+        <div class="content">
+          <p class="mt-3">Accuracy scores on the <b>Text-only</b> subset (632 samples) of 
+            <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="labsafety">LabSafety Bench</span> across different categories.
+          </p>
+          <table class="js-sort-table" id="llm_text_only_results">
+            <tr>
+              <td class="js-sort-number"><strong>#</strong></td>
+              <td class="js-sort-number"><strong>Model</strong></td>
+              <td class="js-sort-number"><strong><u>ALL</u></strong></td>
+              <td class="js-sort-number"><strong>BH</strong></td>
+              <td class="js-sort-number"><strong>CH</strong></td>
+              <td class="js-sort-number"><strong>RH</strong></td>
+              <td class="js-sort-number"><strong>PH</strong></td>
+              <td class="js-sort-number"><strong>RS</strong></td>
+              <td class="js-sort-number"><strong>EWM</strong></td>
+              <td class="js-sort-number"><strong>EU</strong></td>
+              <td class="js-sort-number"><strong>ES</strong></td>
+              <td class="js-sort-number"><strong>PPE</strong></td>
+              <td class="js-sort-number"><strong>ER</strong></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><b>Llama3-70B</b></td>
+              <td>78.32</td>
+              <td>76.92</td>
+              <td>78.75</td>
+              <td>71.73</td>
+              <td>87.30</td>
+              <td>79.75</td>
+              <td>73.33</td>
+              <td>76.50</td>
+              <td>70.00</td>
+              <td>87.95</td>
+              <td>78.64</td>
+            </tr>
+            <!-- 其他模型数据... -->
+          </table>
+        </div>
+
+        <!-- 第二部分：VLM on Text-with-image Questions -->
+        <h2 class="title is-4" id="VLM_text_image">Leaderboard: VLMs on Text-with-image Questions</h2>
+        <div class="content">
+          <p class="mt-3">Accuracy scores on the <b>Text-with-image</b> subset (133 samples) of 
+            <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="labsafety">LabSafety Bench</span> across different categories.
+          <table class="js-sort-table" id="VLM_text_image_results">
+            <tr>
+              <td class="js-sort-number"><strong>#</strong></td>
+              <td class="js-sort-number"><strong>Model</strong></td>
+              <td class="js-sort-number"><strong><u>ALL</u></strong></td>
+              <td class="js-sort-number"><strong>BH</strong></td>
+              <td class="js-sort-number"><strong>CH</strong></td>
+              <td class="js-sort-number"><strong>RH</strong></td>
+              <td class="js-sort-number"><strong>PH</strong></td>
+              <td class="js-sort-number"><strong>RS</strong></td>
+              <td class="js-sort-number"><strong>EWM</strong></td>
+              <td class="js-sort-number"><strong>EU</strong></td>
+              <td class="js-sort-number"><strong>ES</strong></td>
+              <td class="js-sort-number"><strong>PPE</strong></td>
+              <td class="js-sort-number"><strong>ER</strong></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><b>InstructBlip-7B</b></td>
+              <td>26.32</td>
+              <td>37.50</td>
+              <td>20.55</td>
+              <td>31.25</td>
+              <td>26.67</td>
+              <td>27.91</td>
+              <td>37.50</td>
+              <td>31.58</td>
+              <td>0.00</td>
+              <td>40.00</td>
+              <td>17.65</td>
+            </tr>
+            <!-- 其他模型数据... -->
+          </table>
+        </div>
+
+        <!-- 第三部分：Proprietary Models on Both Types of Questions -->
+        <h2 class="title is-4" id="proprietary_models">Leaderboard: Models on Both Types of Questions</h2>
+        
+        <div class="content">
+          <p class="mt-3">Accuracy scores on the whole dataset of 
+            <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="labsafety">LabSafety Bench</span> across different categories.
+          <table class="js-sort-table" id="proprietary_results">
+            <tr>
+              <td class="js-sort-number"><strong>#</strong></td>
+              <td class="js-sort-number"><strong>Model</strong></td>
+              <td class="js-sort-number"><strong><u>ALL</u></strong></td>
+              <td class="js-sort-number"><strong>BH</strong></td>
+              <td class="js-sort-number"><strong>CH</strong></td>
+              <td class="js-sort-number"><strong>RH</strong></td>
+              <td class="js-sort-number"><strong>PH</strong></td>
+              <td class="js-sort-number"><strong>RS</strong></td>
+              <td class="js-sort-number"><strong>EWM</strong></td>
+              <td class="js-sort-number"><strong>EU</strong></td>
+              <td class="js-sort-number"><strong>ES</strong></td>
+              <td class="js-sort-number"><strong>PPE</strong></td>
+              <td class="js-sort-number"><strong>ER</strong></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><b>Gemini-1.5-Flash</b></td>
+              <td>74.32</td>
+              <td>75.89</td>
+              <td>76.01</td>
+              <td>71.15</td>
+              <td>70.51</td>
+              <td>77.87</td>
+              <td>79.52</td>
+              <td>72.85</td>
+              <td>80.95</td>
+              <td>75.00</td>
+              <td>73.33</td>
+            </tr>
+            <!-- 其他模型数据... -->
+          </table>
+
+          <b>Top-3 Human*:</b> Since some human participants are junior researchers who may not fully represent the true capabilities of experienced experts, we selected the top-3 scorers
+          and calculated their accuracy across each subcategory.
+          <br>
+          <b>Hazardous Substances:</b> <b>BH:</b> Biological Hazards, <b>CH:</b> Chemical Hazards, <b>RH:</b> Radiation Hazards, <b>PH:</b> Physical Hazards.
+          <br>
+          <b>Responsibility and Compliance:</b> <b>RS:</b> Responsibility for Safety, <b>EWM:</b> Environmental and Waste Management.
+          <br>
+          <b>Equipment and Material Handling:</b> <b>EU:</b> Equipment Usage, <b>ES:</b> Electricity Safety, <b>PPE:</b> Personal Protective Equipment.
+          <br>
+          <b>Emergency Response:</b> <b>ER:</b> Emergency Response.
+        </div>
+        
+        <!-- Hazards Identification Test (Figure 7) -->
+        <h2 class="title is-4" id="hazards_identification">
+          Leaderboard: Hazards Identification Test (Figure 7)
+        </h2>
+        <div class="content">
+          <p class="mt-3">
+            Accuracy scores on the Hazards Identification Test across five disciplines: Biology, Chemistry, Cryogenic_Liquids, General, and Physics.
+          </p>
+          <table class="js-sort-table" id="hazards_identification_results">
+            <tr>
+              <td class="js-sort-number"><strong>#</strong></td>
+              <td class="js-sort-number"><strong>Model</strong></td>
+              <td class="js-sort-number"><strong>Biology</strong></td>
+              <td class="js-sort-number"><strong>Chemistry</strong></td>
+              <td class="js-sort-number"><strong>Cryogenic_Liquids</strong></td>
+              <td class="js-sort-number"><strong>General</strong></td>
+              <td class="js-sort-number"><strong>Physics</strong></td>
+              <td class="js-sort-number"><strong>Avg</strong></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>GPT-4o-mini</td>
+              <td>75.79</td>
+              <td>74.27</td>
+              <td>73.16</td>
+              <td>72.31</td>
+              <td>74.51</td>
+              <td>73.91</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>GPT-4o</td>
+              <td>72.69</td>
+              <td>71.06</td>
+              <td>69.44</td>
+              <td>68.89</td>
+              <td>73.48</td>
+              <td>70.95</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>o3-mini</td>
+              <td>75.50</td>
+              <td>68.11</td>
+              <td>67.05</td>
+              <td>69.70</td>
+              <td>72.01</td>
+              <td>69.34</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Gemini-1.5-flash</td>
+              <td>63.15</td>
+              <td>57.97</td>
+              <td>54.69</td>
+              <td>56.84</td>
+              <td>59.07</td>
+              <td>57.85</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Gemini-1.5-pro</td>
+              <td>70.60</td>
+              <td>63.09</td>
+              <td>61.38</td>
+              <td>62.05</td>
+              <td>63.68</td>
+              <td>63.30</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Gemini-2.0-flash</td>
+              <td>75.29</td>
+              <td>65.20</td>
+              <td>57.92</td>
+              <td>61.96</td>
+              <td>66.96</td>
+              <td>64.59</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Claude3-haiku</td>
+              <td>72.29</td>
+              <td>68.99</td>
+              <td>66.58</td>
+              <td>64.54</td>
+              <td>68.58</td>
+              <td>68.02</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Claude3.5-sonnet</td>
+              <td>76.59</td>
+              <td>73.81</td>
+              <td>74.92</td>
+              <td>68.39</td>
+              <td>71.18</td>
+              <td>72.78</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Deepseek-r1</td>
+              <td>77.73</td>
+              <td>75.11</td>
+              <td>68.45</td>
+              <td>71.92</td>
+              <td>75.78</td>
+              <td>73.87</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Llama3-8B</td>
+              <td>71.21</td>
+              <td>68.90</td>
+              <td>63.10</td>
+              <td>66.26</td>
+              <td>70.39</td>
+              <td>68.00</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Llama3.3-70B</td>
+              <td>73.45</td>
+              <td>72.58</td>
+              <td>71.85</td>
+              <td>69.57</td>
+              <td>74.90</td>
+              <td>72.38</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Mistral-7B</td>
+              <td>71.14</td>
+              <td>69.72</td>
+              <td>70.97</td>
+              <td>63.59</td>
+              <td>66.62</td>
+              <td>68.42</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Mistral-8x7B</td>
+              <td>66.88</td>
+              <td>61.86</td>
+              <td>59.84</td>
+              <td>61.10</td>
+              <td>60.88</td>
+              <td>61.64</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Vicuna-7B</td>
+              <td>59.78</td>
+              <td>59.17</td>
+              <td>58.11</td>
+              <td>57.31</td>
+              <td>60.69</td>
+              <td>58.98</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Vicuna-13B</td>
+              <td>63.70</td>
+              <td>62.68</td>
+              <td>62.75</td>
+              <td>57.79</td>
+              <td>60.25</td>
+              <td>61.50</td>
+            </tr>
+          </table>
+        </div>
+
+      </div> <!-- end column -->
+    </div> <!-- end columns -->
+  </div> <!-- end container -->
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Results on Existing Foundation Models</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/table1.png" alt="Accuracy on LLMs under different settings" width="70%"/>
+              <p>Accuracy of different LLMs on text-only problems. The increase or decrease in accuracy after using “hints” is reported for all, except GPT-4o as self-hinting is not necessary.
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure5a.png" alt="Accuracy on VLMs under different settings" width="50%"/>
+              <p>
+                Accuracy (%) of different VLMs on text-with-image problems in  
+                <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+                <span class="labsafety">LabSafety</span>.
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure5b.png" alt="Accuracy on sampled LabSafety Bench" width="50%"/>
+              <p>Accuracy of trained humans on Sampled LabSafety Bench compared to top-performing models.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/table4.png" alt="Accuracy on LLMs under different levels" width="42%"/>
+              <p>Accuracy of different models on easy and hard question sets</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">GPT-4o Error Analysis</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure6a.png" alt="" width="38%"/>
+              <p>An example of misidentifying nonexistent options.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Figure6b.png" alt="" width="60%"/>
+              <p>An example of misaligning safety priorities.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/err1.png" alt="" width="60%"/>
+              <p>An example of misaligning safety priorities.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/err2.png" alt="" width="60%"/>
+              <p>An example of hallucination.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/err3.png" alt="" width="60%"/>
+              <p>An example of overfitting to specific scenarios.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/err4.png" alt="" width="60%"/>
+              <p>An example of misinterpreting the option.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================
+     BibTeX
+   ================ -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>@misc{zhou2024labsafetybenchbenchmarkingllms,
+      title={LabSafety Bench: Benchmarking LLMs on Safety Issues in Scientific Labs}, 
+      author={Yujun Zhou and Jingdong Yang and Kehan Guo and Pin-Yu Chen and Tian Gao and Werner Geyer and Nuno Moniz and Nitesh V Chawla and Xiangliang Zhang},
+      year={2024},
+      eprint={2410.14182},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2410.14182}, 
+}</code></pre>
+  </div>
+</section>
+
+<section>
+  <div class="section" id="org-banners" style="display:flex">
+    <a href="https://www.nd.edu/" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images/logos/ND.png" style="width: 200px; height: auto;">
+    </a>
+    <a href="https://research.ibm.com/" target="blank" class="ext-link">
+        <img class="center-block org-banner" src="static/images/logos/IBM.webp" style="width: 250px; height: auto;">
+    </a>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+</footer>
 </body>
 </html>
