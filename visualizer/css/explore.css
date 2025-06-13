@@ -122,13 +122,20 @@ input[type=button] {
 .box {
     padding: 10px;
     margin: 0;
-    background-color: rgb(31, 38, 52);
+    background-color: #fff;
     border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    border: 1.5px solid #b5b5b5;
     /* box-shadow: 5px 5px 5px rgba(0,0,0,0.2); */
     overflow-y: auto;
     max-height: 100vh;
     max-width: 89vw;
+    color: #222;
+}
+@media screen and (max-width: 600px) {
+    .box {
+        background-color: #fff;
+        color: #222;
+    }
 }
 
 #title {
