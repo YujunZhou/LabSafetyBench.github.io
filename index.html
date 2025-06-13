@@ -798,15 +798,15 @@
     /* Tech card for results */
     .tech-result-card {
       position: relative;
-      background: rgba(30, 40, 50, 0.8);
+      background: #fff;
+      color: var(--text-color);
+      border: 1px solid var(--border-color);
       border-radius: 12px;
       overflow: hidden;
       padding: 20px;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s, box-shadow 0.3s;
       backdrop-filter: blur(5px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: white;
     }
 
     .tech-result-card:hover {
@@ -825,12 +825,10 @@
     }
 
     .tech-result-title {
+      color: var(--primary-color);
+      text-shadow: none;
       font-size: 1.2rem;
       margin-bottom: 15px;
-      color: white;
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-      position: relative;
-      display: inline-block;
     }
 
     .tech-result-title::after {
@@ -1369,6 +1367,49 @@
       .results-carousel {
         min-height: 500px;
       }
+    }
+
+    /* 聊天气泡样式（如有） */
+    .chat-bubble {
+      background: #f5f7fa;
+      color: var(--text-color);
+      border: 1px solid var(--border-color);
+    }
+
+    /* 统一内容区字体颜色 */
+    .content, .section, .card {
+      color: var(--text-color);
+    }
+
+    /* 放大Evaluation Results区域的图表和外框，并加深字体颜色和边框 */
+    .evaluation-results-container {
+      border: 2.5px solid #888;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+      padding: 32px 24px;
+      margin: 32px auto;
+      max-width: 1200px;
+      width: 98%;
+    }
+    .evaluation-results-title {
+      color: #222;
+      font-size: 2.1rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .evaluation-results-img {
+      display: block;
+      margin: 0 auto;
+      width: 98%;
+      max-width: 1100px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .evaluation-results-container * {
+      color: #222 !important;
+      font-weight: 600;
     }
   </style>
   
@@ -2215,11 +2256,11 @@
   <div class="overview-floating-dot-1"></div>
   <div class="overview-floating-dot-2"></div>
   
-  <div class="container is-max-desktop">
+  <div class="container" style="max-width: 100vw;">
     <div class="content has-text-centered">
-      <div class="box" style="background: transparent; color: var(--text-color); border: none; position: relative; overflow: hidden; padding: 2rem;">
+      <div class="box" style="background: transparent; color: var(--text-color); border: none; position: relative; overflow: hidden; padding: 1.2rem; width: 100%; max-width: none;">
         <div style="position: relative; z-index: 1;">
-          <img src="static/images/Figure1_new.png" alt="Overview of LabSafety Bench" width="90%" class="has-shadow overview-image"/>
+          <img src="static/images/Figure1_new.png" alt="Overview of LabSafety Bench" style="width: 100%; max-width: 1200px; margin: 0 auto; display: block;" class="has-shadow overview-image"/>
           
           <h3 class="overview-title" style="color: var(--text-color); font-weight: 600; margin-bottom: 1.5rem; text-shadow: none;">
             <img src="static/images/LabSafety.png" style="width:1.5em; vertical-align: middle;" alt="Logo"/>
