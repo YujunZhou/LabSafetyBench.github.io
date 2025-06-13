@@ -1411,6 +1411,77 @@
       color: #222 !important;
       font-weight: 600;
     }
+
+    /* 统一实验结果区及其后所有内容区、卡片、终端、case study等的颜色和宽度 */
+    .tech-result-card, .glass, .hologram, .case-study-card, .box {
+      background: #fff !important;
+      color: #222 !important;
+      max-width: 1200px;
+      margin: 2.5rem auto !important;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+      border: 1.5px solid #e1e5eb;
+    }
+    .terminal, .terminal-content {
+      background: #f8f9fb !important;
+      color: #222 !important;
+      font-weight: 500;
+    }
+    .dark-section, .dark-section .container, .dark-section .box, .dark-section .tech-result-card {
+      background: #fff !important;
+      color: #222 !important;
+    }
+    .dark-section .title, .dark-section h2, .dark-section h3, .dark-section h4, .dark-section h5, .dark-section h6 {
+      color: #222 !important;
+    }
+    .tech-table, .tech-table th, .tech-table td {
+      background: #fff !important;
+      color: #222 !important;
+      font-weight: 500;
+    }
+    .tech-table thead tr {
+      background: #e8f0fe !important;
+      color: #222 !important;
+    }
+    .tech-table tbody tr {
+      background: #fff !important;
+      color: #222 !important;
+    }
+    .tech-table tbody tr:nth-child(even) {
+      background: #f8f9fb !important;
+    }
+    /* 图3（GPT-4o Error Case Study）排版优化 */
+    .case-study-card, .tech-result-card.hologram {
+      margin-top: 3.5rem !important;
+      margin-bottom: 3.5rem !important;
+      padding: 2.2rem 2rem !important;
+      background: #fff !important;
+      color: #222 !important;
+      max-width: 1200px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+      border: 1.5px solid #e1e5eb;
+    }
+    .case-study-card h3, .tech-result-card.hologram h3 {
+      color: #222 !important;
+      font-weight: 700;
+    }
+    /* 所有实验结果相关的图片、表格、卡片、终端等，宽度放大，背景白色，字体深色 */
+    .evaluation-results-container, .results-carousel, .box, .glass, .hologram {
+      max-width: 1200px;
+      margin: 2.5rem auto !important;
+      background: #fff !important;
+      color: #222 !important;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+      border: 1.5px solid #e1e5eb;
+    }
+    /* 去除灰色背景+浅色字，全部替换为白色背景+深色字 */
+    .data-scroll, .terminal, .terminal-content {
+      background: #f8f9fb !important;
+      color: #222 !important;
+    }
+    .data-scroll-content {
+      color: #388e3c !important;
+      font-weight: 600;
+    }
   </style>
   
   <title>LabSafety Bench: Benchmarking LLMs on Safety Issues in Scientific Labs</title>
