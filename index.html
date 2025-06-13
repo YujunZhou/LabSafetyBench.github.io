@@ -18,27 +18,27 @@
 
   <style>
     :root {
-      --primary-color: #3273dc;
-      --secondary-color: #f5f7fa;
-      --text-color: #333;
-      --accent-color: #6fbf73;
-      --danger-color: #ed4b82;
-      --light-bg: #f9f9f9;
-      --dark-bg: #1c2331;
-      --border-color: #e1e5eb;
-      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --primary-color: #6b9bd2;
+      --secondary-color: #f8f9fb;
+      --text-color: #444;
+      --accent-color: #8bb998;
+      --danger-color: #d18fb0;
+      --light-bg: #fafbfc;
+      --dark-bg: #f0f2f5;
+      --border-color: #e8eaed;
+      --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
       --transition: all 0.3s ease;
-      --neon-blue: #4facfe;
-      --neon-purple: #7367f0;
-      --neon-pink: #f97794;
-      --neon-green: #00f2c3;
+      --neon-blue: #7ab8e8;
+      --neon-purple: #9b8fe6;
+      --neon-pink: #e6a8c1;
+      --neon-green: #7dd3c0;
     }
     
     body {
       font-family: 'Google Sans', 'Noto Sans', sans-serif;
       color: var(--text-color);
       line-height: 1.6;
-      background-color: #fff;
+      background-color: var(--light-bg);
       overflow-x: hidden;
     }
     
@@ -152,15 +152,16 @@
 
     /* Terminal effect */
     .terminal {
-      background-color: #0a0a0a;
-      color: #33ff33;
+      background-color: #f5f6f7;
+      color: #5a6c7d;
       font-family: 'Courier New', monospace;
       padding: 20px;
       border-radius: 10px;
       position: relative;
       overflow: hidden;
       margin: 20px 0;
-      box-shadow: 0 5px 15px rgba(0, 255, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
     }
 
     .terminal::before {
@@ -194,7 +195,7 @@
     .circle-green { background-color: #27c93f; }
 
     .terminal-title {
-      color: #ccc;
+      color: #7a8496;
       font-size: 0.9rem;
       margin-left: 10px;
     }
@@ -908,8 +909,8 @@
 
     /* Dark section styling */
     .dark-section {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      color: white;
+      background: linear-gradient(135deg, #f5f6f8 0%, #ebecef 100%);
+      color: var(--text-color);
       padding: 4rem 2rem;
       position: relative;
       overflow: hidden;
@@ -937,8 +938,8 @@
     }
 
     .dark-section .title {
-      color: white;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      color: var(--text-color);
+      text-shadow: none;
     }
 
     /* Progress indicator */
@@ -1498,35 +1499,7 @@
       transition: background-color 0.3s ease, color 0.3s ease;
     }
     
-    /* Dark mode toggle button */
-    .dark-mode-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-      background: rgba(0, 0, 0, 0.2);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-      backdrop-filter: blur(5px);
-    }
-    
-    .dark-mode-toggle:hover {
-      transform: rotate(30deg);
-      background: rgba(0, 0, 0, 0.4);
-    }
-    
-    .dark-mode-toggle i {
-      font-size: 1.5rem;
-    }
+
     
     /* Card styles for dark mode */
     .box {
@@ -1817,10 +1790,7 @@
     <div class="loader-text">Loading LabSafety Bench...</div>
   </div>
 
-  <!-- Dark mode toggle button -->
-  <button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle Dark Mode">
-    <i class="fas fa-moon"></i>
-  </button>
+
 
   <!-- Tech decoration dots -->
   <div class="tech-decorations">
@@ -1983,6 +1953,19 @@
               </div>
               
               <div class="author-card">
+                <a href="https://zhenwen-nlp.github.io/" class="author-link" target="_blank">
+                  <div class="author-content">
+                    <div class="author-name">Zhenwen Liang</div>
+                    <div class="author-affiliation">
+                      <span class="affiliation-badge primary">1</span>
+                      <span>Notre Dame</span>
+                    </div>
+                  </div>
+                  <i class="fas fa-external-link-alt author-social-icon"></i>
+                </a>
+              </div>
+              
+              <div class="author-card">
                 <a href="https://sites.google.com/site/pinyuchenpage/home" class="author-link" target="_blank">
                   <div class="author-content">
                     <div class="author-name">Pin-Yu Chen</div>
@@ -2129,13 +2112,13 @@
 </section>
 
 <!-- Animated Category Visualization -->
-<section class="section" id="category-visualization" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding-top: 4rem; padding-bottom: 0; color: white; margin-bottom: 0;">
+<section class="section" id="category-visualization" style="background: linear-gradient(135deg, #f2f3f5 0%, #e8eaed 100%); padding-top: 4rem; padding-bottom: 0; color: var(--text-color); margin-bottom: 0;">
   <div class="container">
-    <h2 class="title is-2 project-title" style="color: white;">
-      <img src="static/images/LabSafety.png" style="width:1.5em;vertical-align: middle" alt="Logo"/>
-      <span class="labsafety neon-highlight" data-text="LabSafety Bench">LabSafety Bench</span> Categories
-    </h2>
-    <p class="category-description" style="color: rgba(255, 255, 255, 0.8);">Our comprehensive evaluation framework covers the following key areas of laboratory safety:</p>
+          <h2 class="title is-2 project-title" style="color: var(--text-color);">
+        <img src="static/images/LabSafety.png" style="width:1.5em;vertical-align: middle" alt="Logo"/>
+        <span class="labsafety neon-highlight" data-text="LabSafety Bench">LabSafety Bench</span> Categories
+      </h2>
+      <p class="category-description" style="color: #666;">Our comprehensive evaluation framework covers the following key areas of laboratory safety:</p>
     
     <!-- Data visualization animation -->
     <div style="text-align: center; margin-bottom: 2rem;">
@@ -2221,10 +2204,10 @@
 </section>
 
 <!-- 渐变过渡区域 -->
-<div style="height: 80px; background: linear-gradient(to bottom, #16213e 0%, rgba(30, 40, 60, 0.9) 100%); margin-top: -1px; margin-bottom: -1px; position: relative; z-index: 1;"></div>
+<div style="height: 80px; background: linear-gradient(to bottom, #e8eaed 0%, rgba(240, 242, 245, 0.9) 100%); margin-top: -1px; margin-bottom: -1px; position: relative; z-index: 1;"></div>
 
 <!-- Teaser section continues -->
-<section class="hero teaser" style="margin-top: 0; background: linear-gradient(135deg, rgba(30, 40, 60, 0.9) 0%, rgba(25, 35, 55, 0.95) 100%); position: relative; overflow: hidden; padding-top: 0;">
+<section class="hero teaser" style="margin-top: 0; background: linear-gradient(135deg, rgba(240, 242, 245, 0.9) 0%, rgba(245, 247, 250, 0.95) 100%); position: relative; overflow: hidden; padding-top: 0;">
   <!-- Tech circuit pattern background for the entire section -->
   <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(circle at 25px 25px, rgba(79, 172, 254, 0.1) 2px, transparent 0), linear-gradient(to right, rgba(115, 103, 240, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(115, 103, 240, 0.05) 1px, transparent 1px); background-size: 50px 50px; z-index: 0; opacity: 0.8;"></div>
   
@@ -2234,16 +2217,16 @@
   
   <div class="container is-max-desktop">
     <div class="content has-text-centered">
-      <div class="box" style="background: transparent; color: white; border: none; position: relative; overflow: hidden; padding: 2rem;">
+      <div class="box" style="background: transparent; color: var(--text-color); border: none; position: relative; overflow: hidden; padding: 2rem;">
         <div style="position: relative; z-index: 1;">
           <img src="static/images/Figure1_new.png" alt="Overview of LabSafety Bench" width="90%" class="has-shadow overview-image"/>
           
-          <h3 class="overview-title" style="color: white; font-weight: 600; margin-bottom: 1.5rem; text-shadow: 0 0 10px rgba(79, 172, 254, 0.5);">
+          <h3 class="overview-title" style="color: var(--text-color); font-weight: 600; margin-bottom: 1.5rem; text-shadow: none;">
             <img src="static/images/LabSafety.png" style="width:1.5em; vertical-align: middle;" alt="Logo"/>
             <span class="labsafety neon-highlight" data-text="LabSafety Bench">LabSafety Bench</span>
           </h3>
           
-          <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 1rem; font-size: 1.1rem; line-height: 1.5;">
+          <p style="color: #666; margin-bottom: 1rem; font-size: 1.1rem; line-height: 1.5;">
             A comprehensive benchmark for evaluating LLMs on laboratory safety protocols.
           </p>
           
@@ -2293,7 +2276,7 @@
           <div class="box mt-4">
             <h3 class="title is-5 mb-3" style="color: var(--primary-color);">Dataset Summary</h3>
             <p>
-              LabSafety Bench comprises 765 multiple-choice questions (632 text-only and 133 text-with-image) aligned with US OSHA protocols, along with 520 realistic laboratory scenarios that generate a total of 4,090 open-ended questions. Our evaluations across eight proprietary models, seven open-weight LLMs, and four VLMs reveal that even state-of-the-art models fall short of the safety threshold required for reliable operation.
+              LabSafety Bench comprises 765 multiple-choice questions (632 text-only and 133 text-with-image) aligned with US OSHA protocols, along with 404 realistic laboratory scenarios that generate a total of 3,128 open-ended questions. Our evaluations across eight proprietary models, seven open-weight LLMs, and four VLMs reveal that even state-of-the-art models fall short of the safety threshold required for reliable operation.
             </p>
           </div>
 
@@ -2341,7 +2324,7 @@
             <span class="labsafety">LabSafety Bench</span> is a comprehensive evaluation framework designed to rigorously assess the safety awareness and decision-making capabilities of LLMs/VLMs in laboratory settings. Our approach begins with a new taxonomy for lab safety grounded in OSHA protocols, ensuring thorough coverage of potential hazards.
           </p>
           <p>
-            Through expert-AI collaboration, we curate a dataset comprising 765 multiple-choice questions—divided into 632 text-only and 133 text-with-image questions—and 520 realistic laboratory scenarios, yielding a total of 4,090 open-ended questions. While the multiple-choice questions test structured knowledge, the scenario-based tasks challenge models to both identify hazards and predict the consequences of unsafe actions.
+            Through expert-AI collaboration, we curate a dataset comprising 765 multiple-choice questions—divided into 632 text-only and 133 text-with-image questions—and 404 realistic laboratory scenarios, yielding a total of 3,128 open-ended questions. While the multiple-choice questions test structured knowledge, the scenario-based tasks challenge models to both identify hazards and predict the consequences of unsafe actions.
           </p>
           <p>
             This dual-task design enables a holistic evaluation of both factual knowledge and practical decision-making in high-stakes lab environments.
@@ -2398,7 +2381,7 @@
         <div class="data-scroll-content">
           [SYSTEM]: Initializing performance analysis...<br>
           [DATA]: Loading benchmark results for 19 models<br>
-          [INFO]: Analyzing models on 765 multiple-choice questions and 520 scenarios<br>
+          [INFO]: Analyzing models on 765 multiple-choice questions and 404 scenarios<br>
           [STATS]: GPT-4o: Accuracy 84.96% | Precision 86.32% | Recall 83.71%<br>
           [STATS]: Claude-3.5-Sonnet: Accuracy 83.04% | Precision 84.56% | Recall 82.19%<br>
           [STATS]: Gemini-1.5-Pro: Accuracy 79.91% | Precision 81.22% | Recall 78.64%<br>
@@ -3373,7 +3356,7 @@
         var typed = new Typed('#typing-text', {
           strings: [
             'Initializing LabSafety Bench...',
-            'Benchmarking completed: 765 questions | 520 scenarios | 19 models'
+            'Benchmarking completed: 765 questions | 404 scenarios | 19 models'
           ],
           typeSpeed: 40,
           backSpeed: 20,
@@ -3462,7 +3445,7 @@
         new Typed('#typing-text', {
           strings: [
             'Initializing LabSafety Bench...',
-            'Benchmarking completed: 765 questions | 520 scenarios | 19 models'
+            'Benchmarking completed: 765 questions | 404 scenarios | 19 models'
           ],
           typeSpeed: 40,
           backSpeed: 20,
