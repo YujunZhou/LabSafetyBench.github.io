@@ -2753,12 +2753,15 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-full content">
-        <h2 class="title is-3 has-text-centered" id="leaderboard">
-          <i class="fas fa-trophy mr-2"></i> Leaderboard on 
-          <img src="static/images/LabSafety.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-          <span class="labsafety">LabSafety Bench</span>
-        </h2>
-        <div style="width:100%; max-width:600px; margin:0 auto 1.5em auto; border-bottom:3px solid #3273dc; opacity:0.25;"></div>
+        <div id="leaderboard" style="display: flex; align-items: center; justify-content: center; gap: 0.7em; margin-bottom: 0.5em; flex-wrap: nowrap;">
+          <span style="display: flex; align-items: center; gap: 0.5em;">
+            <i class="fas fa-trophy" style="font-size:2.1rem; color:#142047;"></i>
+            <span style="font-weight:600; font-size:2.1rem; color:#222;">Leaderboard on</span>
+          </span>
+          <img src="static/images/LabSafety.png" style="width:2.2em;vertical-align: middle; margin: 0 0.2em;" alt="Logo"/>
+          <span class="labsafety" style="font-size:2.1rem; font-weight:800; color:#142047; letter-spacing:1px;">LabSafety Bench</span>
+        </div>
+        <div style="width:100%; max-width:600px; margin:0 auto 1.5em auto; border-bottom:3px solid #888; opacity:0.35;"></div>
         
         <!-- LLM on Text-only Questions -->
         <div class="box p-5 mt-5">
